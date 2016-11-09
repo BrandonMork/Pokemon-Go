@@ -1,3 +1,5 @@
+// Author: Brandon
+
 #include <iostream>           //  cin >> cout << endl
 #include <fstream>            //  open close
 #include <iomanip>
