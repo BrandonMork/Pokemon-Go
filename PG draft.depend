@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1479233132 source:d:\pokemon go\profile.cpp
+	<iostream>
+	<string>
+	"profile.h"
+
+1479232964 d:\pokemon go\profile.h
+	<string>
+
+1479410974 source:d:\pokemon go\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	"profile.h"
+	<string>
+	<stdlib.h>
+	"plotter.h"
+
+1479410506 d:\pokemon go\plotter.h
+	<windows.h>
+	<mmsystem.h>
+	<conio.h>
+
+1479410442 source:d:\pokemon go\plotter.cpp
+	<iostream>
+	"plotter.h"
+	<ctime>
+	<iostream>
+
