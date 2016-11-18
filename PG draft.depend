@@ -27,3 +27,31 @@
 	<ctime>
 	<iostream>
 
+1479511082 source:c:\users\mork\desktop\poke\pokemon-go.git\trunk\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	"profile.h"
+	<string>
+	<stdlib.h>
+	"plotter.h"
+
+1479511072 c:\users\mork\desktop\poke\pokemon-go.git\trunk\profile.h
+	<string>
+
+1479511361 c:\users\mork\desktop\poke\pokemon-go.git\trunk\plotter.h
+	<windows.h>
+	<mmsystem.h>
+	<conio.h>
+
+1479511072 source:c:\users\mork\desktop\poke\pokemon-go.git\trunk\plotter.cpp
+	<iostream>
+	"plotter.h"
+	<ctime>
+	<iostream>
+
+1479511072 source:c:\users\mork\desktop\poke\pokemon-go.git\trunk\profile.cpp
+	<iostream>
+	<string>
+	"profile.h"
+

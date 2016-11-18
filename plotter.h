@@ -37,6 +37,7 @@ struct Point
 	//void display(ostream& out);
 
 };
+
 class Plotter
 {
     protected:
