@@ -31,10 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="brandon.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="plotter.cpp" />
 		<Unit filename="plotter.h" />
+		<Unit filename="pokemonMenus.cpp" />
+		<Unit filename="pokemonMenus.h" />
 		<Unit filename="profile.cpp" />
 		<Unit filename="profile.h" />
 		<Unit filename="rellek97.txt" />

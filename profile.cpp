@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "profile.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -117,14 +118,17 @@ string gender(ostream& out, istream& in)
   return gend;
 }
 
-profile::profile(string a, string b, string c, string d, string e, string f, string g)
+profile::profile(string a, string b, string c, string d, string e, string f, string g, int x = 130, int y = 30)
 {
   user = a;
   pass = b;
   profHairColor = c;
   profSkinColor = d;
   profEyeColor = e;
+  profOutColor = f;
   profGender = g;
+  currentX = x;
+  currentY = y;
 }
 void profile::setHair(ostream& out, istream& in)
 {
@@ -151,11 +155,51 @@ void profile::setOutfit(ostream& out, istream& in)
   profOutColor = outfitColor(out, in);
 }
 
-void profile::setPassword()
+void profile::setPassword(ostream& out, istream& in)
 {
+  string oldPass;
+  string newPass;
+  string testNewPass;
+  int count = 1;
+
+  do
+  {
+    system("cls");
+    if (count > 1)
+      out << "Password incorrect, please try again...\n\n";
+
+    out << "Please enter old password. If you cant remember, type in 'back':";
+    in >> oldPass;
+
+    count++;
+
+  }while(oldPass != pass && oldPass != "back");
+
+  if (oldPass == pass)
+  {
+    system("cls");
+    count = 1;
+    do
+    {
+      if (count > 1)
+        out << "\nPasswords do not match...try again...\n";
+
+      out << "Please Enter a Password: ";
+      in >> newPass;
+      out << "Please Reenter Password: ";
+      in >> testNewPass;
+      count++;
+    }while (newPass != testNewPass);
+
+    pass = newPass;
+  }
 
 }
 
+string profile::getUser() const
+{
+  return user;
+}
 string profile::getHair() const
 {
   return profHairColor;
@@ -179,9 +223,10 @@ string profile::getGender() const
 
 void profile::writeProfInfo(ostream& out)
 {
+  out.clear();
   out << user << endl << pass << endl << profHairColor << endl << profSkinColor
       << endl << profEyeColor << endl << profOutColor << endl << profGender
-      << endl;
+      << endl << currentX << endl << currentY;
 
 
 }

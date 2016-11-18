@@ -17,6 +17,7 @@ string gender(ostream&, istream&);
 class profile
 {
 private:
+
   string user;
   string pass;
   string profOutColor;
@@ -25,14 +26,19 @@ private:
   string profSkinColor;
   string profGender;
 
+
 public:
-  profile(string, string, string, string, string, string, string);
+
+  int currentX;
+  int currentY;
+  profile(string, string, string, string, string, string, string, int, int);
   string getHair() const;
   string getSkin() const;
   string getEye() const;
   string getOutfit() const;
   string getGender() const;
-  void setPassword();
+  string getUser() const;
+  void setPassword(ostream&, istream&);
   void setHair(ostream&, istream&);
   void setSkin(ostream&, istream&);
   void setEye(ostream&, istream&);

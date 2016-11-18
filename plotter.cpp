@@ -5,6 +5,7 @@ using namespace std;
 #include "plotter.h"
 #include <ctime>
 #include <iostream>
+#include "profile.h"
 
 
 Point::Point()
@@ -121,20 +122,32 @@ void Plotter::cls( HANDLE hConsole )
   return;
 }
 
-void mapDisplay()
+void mapDisplay(ostream& out, int& x, int& y)
 {
-  //srand(time(0));
-  cin.get();
+  srand(time(0));
   Plotter map1;
   ink color1;
   ink color2;
-  int currX = 0;
-  int currY = 0;
+  int currX = x;
+  int currY = y;
   int prevX = currX;
   int prevY = currY;
   char key;
-  int y;
   Point map2[261][61];
+
+  cout << "Once Gameplay Has Started, Press 'b' at Anytime to Exit...";
+
+  Sleep(500);
+
+  cout << "\n\nPress 'c' to continue...";
+
+  while (key != 'c')
+  {
+    if (kbhit())
+    {
+      key = getch();
+    }
+  }
 
   for (int x = 0; x <= 260; x++)
   {
@@ -166,39 +179,44 @@ void mapDisplay()
 
     while(key != 'b')
     {
-        if (kbhit)      // in conio
+      if (kbhit)      // in conio
+      {
+        key = getch();
+        switch (key)
         {
-            key = getch();
-            switch (key)
-            {
-                case 'd':
-                    if (currX < 260)
-                      currX++;
-                    break;
-                case 'a':
-                    if (currX > 0)
-                        currX--;
-                    break;
-                case 'w':
-                    if (currY > 0)
-                        currY--;
-                    break;
-                case 's':
-                    if (currY < 60)
-                      currY++;
-                    break;
-            }
-
-            map1.setColor(map2[prevX][prevY].getColor());
-            map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
-            map1.setColor(green);
-            map1.plot(currX, currY, SQUARE);
-            prevX = currX;
-            prevY =currY;
+          case 'd':
+              if (currX < 260)
+                currX++;
+              break;
+          case 'a':
+              if (currX > 0)
+                  currX--;
+              break;
+          case 'w':
+              if (currY > 0)
+                  currY--;
+              break;
+          case 's':
+              if (currY < 60)
+                currY++;
+              break;
         }
+        Sleep(250);
+        map1.setColor(map2[prevX][prevY].getColor());
+        map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
+        map1.setColor(green);
+        map1.plot(currX, currY, SQUARE);
+
+
+        prevX = currX;
+        prevY = currY;
+        x = currX;
+        y = currY;
+      }
+      if (rand() % 20 == 5)
     }
 
-
+map1.setColor(white);
 map1.clear();
 
 }

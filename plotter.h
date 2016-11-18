@@ -37,7 +37,6 @@ struct Point
 	//void display(ostream& out);
 
 };
-
 class Plotter
 {
     protected:
@@ -55,6 +54,6 @@ class Plotter
        void setColor(ink);
 };
 
-void mapDisplay();
+void mapDisplay(ostream&, int&, int&);
 
 #endif /*PLOTTER_H_*/
