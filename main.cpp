@@ -1,11 +1,12 @@
-// Author: Brandon
+
 
 #include <iostream>           //  cin >> cout << endl
 #include <fstream>            //  open close
 #include <iomanip>
-#include "myFunctions.h"
+#include "profile.h"
 #include <string>             //  string c_str()
 #include <stdlib.h>
+#include "plotter.h"
 
 using namespace std;
 
@@ -22,14 +23,15 @@ int main()
   int editChoice;
   int avChoice = 0;
   string userFile;
-  string password;
-  string tempPassword;
-  string username;
-  string hColor;
-  string eColor;
-  string oColor;
-  string sColor;
-  string gende;
+  string password;        //  stores password for account
+  string tempPassword;    //  stores password to test validation of password
+  string username;        //  stores username
+  string hColor;          //  stores hair color
+  string eColor;          //  stores eye color
+  string oColor;          //  stores outfit color
+  string sColor;          //  stores skin color
+  string gende;           //  stores gender
+  //
   string message;
   ifstream in;
   ofstream out;
@@ -68,6 +70,7 @@ int main()
       {
         if (count2 > 1)
           cout << "\nPasswords do not match...try again...\n";
+
         cout << "Please Enter a Password: ";
         cin >> password;
         cout << "Please Reenter Password: ";
@@ -77,26 +80,26 @@ int main()
       //  Choosing and Writing Avatar and info to User File
       out << username << endl << password << endl;
 
+      cout.flush();
+      out << hairColor(cout, cin) << endl;
       system("cls");
-      out << hairColor() << endl;
+      out << skinColor(cout, cin) << endl;
       system("cls");
-      out << skinColor() << endl;
+      out << eyeColor(cout, cin) << endl;
       system("cls");
-      out << eyeColor() << endl;
+      out << outfitColor(cout, cin) << endl;
       system("cls");
-      out << outfitColor() << endl;
-      system("cls");
-      out << gender();
+      out << gender(cout, cin);
     }
 
     //  Sign in to Account
     do
     {
       system("cls");
-      in.close();
+
       if (count3 > 1)
       {
-
+        in.close();
         cout << "Invalid Username or Password, try again...\n";
       }
 
@@ -115,6 +118,8 @@ int main()
       count3++;
 
     }while(!in.is_open() || password != tempPassword);
+
+    out.open(userFile.c_str());
 
     in >> hColor >> sColor >> eColor >> oColor >> gende;
 
@@ -142,7 +147,7 @@ int main()
       //  Choice for Gameplay
       if (usrChoice == 1)
       {
-
+        mapDisplay();
       }
 
       //  Choice for editing profile
@@ -202,23 +207,23 @@ int main()
                     switch (avChoice)
                     {
                       case 1:
-                        profile.setHair();
+                        profile.setHair(cout, cin);
                         break;
 
                       case 2:
-                        profile.setOutfit();
+                        profile.setOutfit(cout, cin);
                         break;
 
                       case 3:
-                        profile.setEye();
+                        profile.setEye(cout, cin);
                         break;
 
                       case 4:
-                        profile.setSkin();
+                        profile.setSkin(cout, cin);
                         break;
 
                       case 5:
-                        profile.setGender();
+                        profile.setGender(cout, cin);
                     }
                   }
                 }while (avChoice != 6);
@@ -228,10 +233,18 @@ int main()
       }
     }while (usrChoice != 3);
 
-
+    profile.writeProfInfo(out);
   }
   system("cls");
+
+
 
   cout << "\nThank You For Playing!! Come Back and Catch 'Em All!!\n\n";
 
   return 0;
+
+
+
+
+
+}
