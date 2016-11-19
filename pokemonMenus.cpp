@@ -1,11 +1,13 @@
 #include <fstream>
+#include <iostream>
 #include "profile.h"
 #include <stdlib.h>
 #include "plotter.h"
 #include "pokemonMenus.h"
+#include <conio.h>
 
 using namespace std;
-
+Plotter a;
 int introMenu(ostream& out, istream& in)
 {
   int choice;
@@ -57,7 +59,7 @@ void newUserCreation(ostream& out, istream& in)
   //  Choosing and Writing Avatar and info to User File
   out2 << username << endl << password << endl;
 
-  system("cls");
+  a.clear();
   out2 << hairColor(out, in) << endl;
   system("cls");
   out2 << skinColor(out, in) << endl;

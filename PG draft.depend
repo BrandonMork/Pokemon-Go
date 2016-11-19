@@ -68,7 +68,7 @@
 
 1479494688 c:\users\kellerr\desktop\pokemon\trunk\pokemonmenus.h
 
-1479513084 source:c:\users\kellerr\desktop\pokemon\trunk\plotter.cpp
+1479514857 source:c:\users\kellerr\desktop\pokemon\trunk\plotter.cpp
 	<iostream>
 	"plotter.h"
 	<ctime>
@@ -80,12 +80,14 @@
 	<mmsystem.h>
 	<conio.h>
 
-1479497390 source:c:\users\kellerr\desktop\pokemon\trunk\pokemonmenus.cpp
+1479516083 source:c:\users\kellerr\desktop\pokemon\trunk\pokemonmenus.cpp
 	<fstream>
+	<iostream>
 	"profile.h"
 	<stdlib.h>
 	"plotter.h"
 	"pokemonMenus.h"
+	<conio.h>
 
 1479496376 source:c:\users\kellerr\desktop\pokemon\trunk\profile.cpp
 	<iostream>

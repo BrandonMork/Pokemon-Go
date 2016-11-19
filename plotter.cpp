@@ -7,7 +7,6 @@ using namespace std;
 #include <iostream>
 #include "profile.h"
 
-
 Point::Point()
 {
   x = 0.0;
@@ -199,7 +198,6 @@ void mapDisplay(ostream& out, int& x, int& y)
           case 's':
               if (currY < 60)
                 currY++;
-              break;
         }
         Sleep(100);
         map1.setColor(map2[prevX][prevY].getColor());
