@@ -201,7 +201,7 @@ void mapDisplay(ostream& out, int& x, int& y)
                 currY++;
               break;
         }
-        Sleep(250);
+        Sleep(100);
         map1.setColor(map2[prevX][prevY].getColor());
         map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
         map1.setColor(green);
@@ -213,7 +213,7 @@ void mapDisplay(ostream& out, int& x, int& y)
         x = currX;
         y = currY;
       }
-      if (rand() % 20 == 5)
+      //if (rand() % 20 == 5)
     }
 
 map1.setColor(white);
