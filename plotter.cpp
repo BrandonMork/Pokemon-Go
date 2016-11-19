@@ -1,4 +1,5 @@
 using namespace std;
+#include <iostream>
 #include "plotter.h"
 #include <ctime>
 #include <iostream>
