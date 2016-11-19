@@ -39,6 +39,10 @@
 		<Unit filename="profile.cpp" />
 		<Unit filename="profile.h" />
 		<Unit filename="rellek97.txt" />
+		<Unit filename="brandon.txt" />
+		<Unit filename="Pokemon.h" />
+		<Unit filename="Pokemon.cpp" />
+		
 		<Extensions>
 			<code_completion />
 			<envvars />
