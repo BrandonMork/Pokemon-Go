@@ -182,6 +182,7 @@ void mapDisplay(ostream& out, int& x, int& y)
               if (currY < 60)
                 currY++;
         }
+
         Sleep(100);
         map1.setColor(map2[prevX][prevY].getColor());
         map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());

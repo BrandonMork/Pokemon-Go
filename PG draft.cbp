@@ -31,6 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="PG draft.cbp" />
+		<Unit filename="PG draft.depend" />
+		<Unit filename="PG draft.layout" />
+		<Unit filename="README.md" />
+		<Unit filename="brandon.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="plotter.cpp" />
 		<Unit filename="plotter.h" />
@@ -38,11 +43,8 @@
 		<Unit filename="pokemonMenus.h" />
 		<Unit filename="profile.cpp" />
 		<Unit filename="profile.h" />
+		<Unit filename="rel.txt" />
 		<Unit filename="rellek97.txt" />
-		<Unit filename="brandon.txt" />
-		<Unit filename="Pokemon.h" />
-		<Unit filename="Pokemon.cpp" />
-		
 		<Extensions>
 			<code_completion />
 			<envvars />
