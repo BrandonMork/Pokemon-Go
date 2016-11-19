@@ -1,7 +1,4 @@
-#include <iostream>
-
 using namespace std;
-
 #include "plotter.h"
 #include <ctime>
 #include <iostream>
@@ -32,16 +29,11 @@ ink Point::getColor() const
 {
   return color;
 }
-/*void Point::display(ostream& out)
+
+void Point::display(ostream& out)
 {
 	out << "(" << x << "," << y << ")";
-}*/
-
-
-
-
-
-
+}
 
 Plotter::Plotter()
 {
@@ -86,9 +78,6 @@ void Plotter::clear()
 }
 
 
-
-
-
 void Plotter::cls( HANDLE hConsole )
 {
   COORD coordScreen = { 0, 0 };    // here's where we'll home the cursor
@@ -98,24 +87,19 @@ void Plotter::cls( HANDLE hConsole )
   DWORD dwConSize;                 // number of character cells in the current buffer
 
   // get the number of character cells in the current buffer
-
   GetConsoleScreenBufferInfo( hConsole, &csbi );
   dwConSize = csbi.dwSize.X * csbi.dwSize.Y;
 
   // fill the entire screen with blanks
-
   FillConsoleOutputCharacter( hConsole, (TCHAR) ' ', dwConSize, coordScreen, &cCharsWritten );
 
   // get the current text attribute
-
   GetConsoleScreenBufferInfo( hConsole, &csbi );
 
   // now set the buffer's attributes accordingly
-
   FillConsoleOutputAttribute( hConsole, csbi.wAttributes, dwConSize, coordScreen, &cCharsWritten );
 
   // put the cursor at (0, 0)
-
   SetConsoleCursorPosition( hConsole, coordScreen );
 
   return;
@@ -143,9 +127,7 @@ void mapDisplay(ostream& out, int& x, int& y)
   while (key != 'c')
   {
     if (kbhit())
-    {
       key = getch();
-    }
   }
 
   for (int x = 0; x <= 260; x++)
