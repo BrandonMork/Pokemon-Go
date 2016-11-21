@@ -230,3 +230,23 @@ void profile::writeProfInfo(ostream& out)
 
 
 }
+
+int profile::getPokeball() const
+{
+  return myBack.pokeball;
+}
+
+int profile::getPotion() const
+{
+  return myBack.potion;
+}
+
+void profile::setPokeball(int x)
+{
+  myBack.pokeball = x;
+}
+
+void profile::setPotion(int x)
+{
+ myBack.potion = x;
+}
