@@ -107,7 +107,7 @@
 	<mmsystem.h>
 	<conio.h>
 
-1479698390 c:\users\brandon\desktop\poke\trunk\profile.h
+1479698768 c:\users\brandon\desktop\poke\trunk\profile.h
 	<string>
 
 1479696821 source:c:\users\brandon\desktop\poke\trunk\pokemonmenus.cpp
@@ -121,11 +121,12 @@
 
 1479696821 c:\users\brandon\desktop\poke\trunk\pokemonmenus.h
 
-1479696821 source:c:\users\brandon\desktop\poke\trunk\profile.cpp
+1479699319 source:c:\users\brandon\desktop\poke\trunk\profile.cpp
 	<iostream>
 	<string>
 	"profile.h"
-	<stdlib.h>
+	<cstdlib>
+	<ctime>
 
 1479696821 source:c:\users\brandon\desktop\poke\trunk\main.cpp
 	<iostream>

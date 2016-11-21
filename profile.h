@@ -52,6 +52,7 @@ class profile
     void setOutfit(ostream&, istream&);
     void setGender(ostream&, istream&);
     void writeProfInfo(ostream&);
+    void Pokestop();
 
 };
 

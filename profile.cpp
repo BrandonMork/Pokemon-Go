@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 #include "profile.h"
-#include <stdlib.h>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -249,4 +250,11 @@ void profile::setPokeball(int x)
 void profile::setPotion(int x)
 {
  myBack.potion = x;
+}
+
+void profile::Pokestop()
+{
+  srand(time(NULL));
+  myBack.pokeball += rand() % 4;
+  myBack.potion += rand() % 4;
 }
