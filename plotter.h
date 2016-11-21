@@ -34,7 +34,7 @@ struct Point
 	char getCharacter() const;
 	ink getColor() const;
 
-	//void display(ostream& out);
+	void display(ostream& out);
 
 };
 class Plotter
