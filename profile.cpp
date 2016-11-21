@@ -102,7 +102,7 @@ string gender(ostream& out, istream& in)
 {
   int select;
   string gend;
-  out << "Please choose your outfit color: "
+  out << "Please choose your gender: "
        << "\n1. Male\n2. Female\n";
   in >> select;
 
