@@ -14,33 +14,22 @@ class Pokemon
     string move1;
     string move2;
   public:
-    //constructor
+
     Pokemon();
+    Pokemon(string n, string t, string m2);
 
-    void setName(string n);
     string getName() const;
-
-    void setType(string t);
     string getType() const;
-
-    void setCP(int c);
     int getCP() const;
-
-    void setHP(int h);
     int getHP() const;
-
-    void setMove1(string m);
     string getMove1() const;
-
-    void setMove2(string m);
     string getMove2() const;
-
     int randCP();
     int randHP();
     string randMove1();
     void randPokemon();
-
-
+    void writePokeInfo(ostream&);
 
 };
 #endif // POKEMON_H
+
