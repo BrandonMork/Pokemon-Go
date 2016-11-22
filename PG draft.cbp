@@ -34,6 +34,7 @@
 		<Unit filename="PG draft.cbp" />
 		<Unit filename="PG draft.depend" />
 		<Unit filename="PG draft.layout" />
+		<Unit filename="Pokemon.h" />
 		<Unit filename="README.md" />
 		<Unit filename="brandon.txt" />
 		<Unit filename="main.cpp" />
