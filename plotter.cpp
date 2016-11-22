@@ -110,22 +110,20 @@ void mapDisplay(ostream& out, int& x, int& y)
 {
   srand(time(0));
   Plotter map1;
-  ink color1;
-  ink color2;
+  ink color;
   int currX = x;
   int currY = y;
   int prevX = currX;
   int prevY = currY;
   char key;
   char character;
-  char character2;
   Point map2[261][61];
 
-  cout << "Once Gameplay Has Started, Press 'b' at Anytime to Exit...";
+  out << "Once Gameplay Has Started, Press 'b' at Anytime to Exit...";
 
-  Sleep(500);
+  Sleep(1500);
 
-  cout << "\n\nPress 'c' to continue...";
+  out << "\n\nPress 'c' to continue...";
 
   while (key != 'c')
   {
@@ -137,21 +135,21 @@ void mapDisplay(ostream& out, int& x, int& y)
   {
     for (y = 0; y <= 60; y++)
     {
-      color2 = green;
+      color = green;
       character = GRASS;
       if ((x > 18 && x < 28) || (x > 86 && x < 96) || (x > 156 && x < 166))
       {
-        color2 = darkyellow;
+        color = darkyellow;
         character = SQUARE;
       }
       if ((y > 18 && y < 22) || ((y > 40 && y < 44) && x < 157))
       {
-        color2 = darkyellow;
+        color = darkyellow;
         character = SQUARE;
       }
       if (x > 180 && x < 220 && y > 30 && y < 55)
       {
-        color2 = blue;
+        color = blue;
         character = PATH;
       }
 
@@ -159,7 +157,7 @@ void mapDisplay(ostream& out, int& x, int& y)
       //  If you want to add in specific block colors and objects
       //  do it here
 
-      map2[x][y] = Point(x, y, character, color2);
+      map2[x][y] = Point(x, y, character, color);
       map1.setColor(map2[x][y].getColor());
       map1.plot(x, y, map2[x][y].getCharacter());
     }
@@ -204,7 +202,7 @@ void mapDisplay(ostream& out, int& x, int& y)
       //if (rand() % 20 == 5)
     }
 
-map1.setColor(white);
-map1.clear();
+  map1.setColor(white);
+  map1.clear();
 
 }

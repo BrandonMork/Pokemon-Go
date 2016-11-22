@@ -35,8 +35,11 @@ int main()
   //  Data Abstraction
   int count3 = 1;
   int usrChoice;
-  int xCoor = 0;
-  int yCoor = 0;
+  int XP = 0;
+  int potion = 0;
+  int pokeball = 0;
+  int xCoor = 130;
+  int yCoor = 30;
   string userFile;
   string password;        //  stores password for account
   string tempPassword;    //  stores password to test validation of password
@@ -96,9 +99,11 @@ int main()
 
     out.open(userFile.c_str());
 
-    in >> hColor >> sColor >> eColor >> oColor >> gende >> xCoor >> yCoor;
+    in >> hColor >> sColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> XP >> pokeball >> potion;
 
-    profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor);
+    backpack myPack(pokeball, potion);
+
+    profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
 
     //  Update
     //  Game Menu

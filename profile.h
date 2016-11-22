@@ -14,6 +14,8 @@ struct backpack
 {
     int pokeball;
     int potion;
+
+    backpack(int = 0, int = 0);
 };
 
 class profile
@@ -27,6 +29,7 @@ class profile
     string profHairColor;
     string profSkinColor;
     string profGender;
+    int XP;
     backpack myBack;
 
 
@@ -34,7 +37,7 @@ class profile
 
     int currentX;
     int currentY;
-    profile(string, string, string, string, string, string, string, int, int);
+    profile(string, string, string, string, string, string, string, int, int, int, backpack);
     string getHair() const;
     string getSkin() const;
     string getEye() const;

@@ -119,7 +119,7 @@ string gender(ostream& out, istream& in)
   return gend;
 }
 
-profile::profile(string a, string b, string c, string d, string e, string f, string g, int x = 130, int y = 30)
+profile::profile(string a, string b, string c, string d, string e, string f, string g, int x, int y, int xp, backpack mypack)
 {
   user = a;
   pass = b;
@@ -130,6 +130,8 @@ profile::profile(string a, string b, string c, string d, string e, string f, str
   profGender = g;
   currentX = x;
   currentY = y;
+  XP = xp;
+  myBack = mypack;
 }
 void profile::setHair(ostream& out, istream& in)
 {
@@ -227,9 +229,16 @@ void profile::writeProfInfo(ostream& out)
   out.clear();
   out << user << endl << pass << endl << profHairColor << endl << profSkinColor
       << endl << profEyeColor << endl << profOutColor << endl << profGender
-      << endl << currentX << endl << currentY;
+      << endl << currentX << endl << currentY << endl << XP << endl
+      << myBack.pokeball << endl << myBack.potion << endl;
 
 
+}
+
+backpack::backpack(int a, int b)
+{
+  pokeball = a;
+  potion = b;
 }
 
 int profile::getPokeball() const
