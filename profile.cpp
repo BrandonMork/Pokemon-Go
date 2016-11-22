@@ -254,7 +254,15 @@ void profile::setPotion(int x)
 
 void profile::Pokestop()
 {
-  srand(time(NULL));
-  myBack.pokeball += rand() % 4;
-  myBack.potion += rand() % 4;
+  time_t now = time(0);
+  static time_t last = 0;
+
+  if(now - last <= 0)
+  {
+    srand(time(NULL));
+    myBack.pokeball += rand() % 4;
+    myBack.potion += rand() % 4;
+    last = now;
+  }
+
 }
