@@ -105,6 +105,8 @@ int main()
 
     profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
 
+    profile.readPokemon(in);
+
     //  Update
     //  Game Menu
     gameMenuLoop(cout, cin, profile);

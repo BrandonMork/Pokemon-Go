@@ -42,7 +42,7 @@ Plotter::Plotter()
        coordScreen.Y = 0;
 
        hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
-       SetConsoleTextAttribute(hConsoleOutput, green);
+       SetConsoleTextAttribute(hConsoleOutput, white);
 
 }
 
@@ -150,7 +150,7 @@ void mapDisplay(ostream& out, int& x, int& y)
       if (x > 180 && x < 220 && y > 30 && y < 55)
       {
         color = blue;
-        character = PATH;
+        character = WATER;
       }
 
 

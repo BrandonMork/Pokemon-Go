@@ -1,6 +1,7 @@
 #ifndef POKEMONMENUS_H
 #define POKEMONMENUS_H
 
+
 int introMenu(ostream&, istream&);
 
 void newUserCreation(ostream&, istream&);

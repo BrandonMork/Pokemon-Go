@@ -39,6 +39,16 @@ Pokemon::Pokemon(string n, string t, string m2)
   move2 = m2;
 }
 
+Pokemon::Pokemon(string n, string t, int c, int h, string m1, string m2)
+{
+  name = n;
+  type = t;
+  cp = c;
+  hp = h;
+  move1 = m1;
+  move2 = m2;
+}
+
 string Pokemon::getName() const
 {
   return name;
@@ -79,12 +89,7 @@ int Pokemon::randHP()
 {
   srand(time(0));
   return rand() % 91 + 10;
-}name = allPokemon[0].getName();
-    type = allPokemon[0].getType();
-    cp = allPokemon[0].getCP();
-    hp = allPokemon[0].getHP();
-    move1 = allPokemon[0].getMove1();
-    move2 = allPo
+}
 
 string Pokemon::randMove1()
 {
@@ -196,9 +201,8 @@ void Pokemon::randPokemon()
   }
 }
 
-void writePokeInfo(ostream& out)
+void Pokemon::writePokeInfo(ostream& out)
 {
-  out << name << " " << type << " " << cp << " "
-      << hp << " " << move1 << " " << move2 << endl;
-
+  /*out << name << " " << type << " " << cp << " "
+      << hp << " " << move1 << " " << move2 << "\n";*/
 }

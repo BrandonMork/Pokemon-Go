@@ -1,6 +1,7 @@
 #ifndef PROFILE_H
 #define PROFILE_H
 #include <string>
+#include "Pokemon.h"
 
 using namespace std;
 
@@ -31,6 +32,7 @@ class profile
     string profGender;
     int XP;
     backpack myBack;
+    Pokemon myPokemon[250];
 
 
   public:
@@ -56,6 +58,8 @@ class profile
     void setGender(ostream&, istream&);
     void writeProfInfo(ostream&);
     void Pokestop();
+    void readPokemon(istream&);
+    void writePokemon(ostream&, int);
 
 };
 

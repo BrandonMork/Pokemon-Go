@@ -226,13 +226,14 @@ string profile::getGender() const
 
 void profile::writeProfInfo(ostream& out)
 {
+  int i = 1;
   out.clear();
   out << user << endl << pass << endl << profHairColor << endl << profSkinColor
       << endl << profEyeColor << endl << profOutColor << endl << profGender
       << endl << currentX << endl << currentY << endl << XP << endl
       << myBack.pokeball << endl << myBack.potion << endl;
 
-
+  writePokemon(out, i);
 }
 
 backpack::backpack(int a, int b)
@@ -274,4 +275,31 @@ void profile::Pokestop()
     last = now;
   }
 
+}
+
+void profile::readPokemon(istream& in)
+{
+  string name,
+         type,
+         move1,
+         move2;
+  int CP,
+      HP,
+      i = 0;
+
+  while(in >> name >> type >> CP >> HP >> move1 >> move2)
+  {
+    myPokemon[i] = Pokemon(name, type, CP, HP, move1, move2);
+    i++;
+  }
+}
+
+void profile::writePokemon(ostream& out, int i)
+{
+  for(int j = 0; j < i; j++)
+  {
+    out << myPokemon[j].getName() << " " << myPokemon[j].getType() << " "
+        << myPokemon[j].getCP() << " " << myPokemon[j].getHP() << " "
+        << myPokemon[j].getMove1() << " " << myPokemon[j].getMove2() << "\n";
+  }
 }

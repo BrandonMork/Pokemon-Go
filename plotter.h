@@ -11,7 +11,7 @@ const char TOP    = 223;
 const char BOTTOM = 220;
 const char BLANK  = ' ';
 const char GRASS  = 177;
-const char PATH   = 178;
+const char WATER   = 178;
 
 
 enum ink

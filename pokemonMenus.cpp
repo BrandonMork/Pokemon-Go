@@ -73,13 +73,10 @@ void newUserCreation(ostream& out, istream& in)
 
 void gameMenuLoop(ostream& out, istream& in, profile& a)
 {
-  int count;
   int choice;
   do
     {
       system("cls");
-
-      count = 1;
 
       choice = gameMainMenu(out, in, a);
 

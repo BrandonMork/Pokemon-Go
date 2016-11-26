@@ -17,7 +17,7 @@ class Pokemon
 
     Pokemon();
     Pokemon(string n, string t, string m2);
-
+    Pokemon(string, string, int, int, string, string);
     string getName() const;
     string getType() const;
     int getCP() const;
