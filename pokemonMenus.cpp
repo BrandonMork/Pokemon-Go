@@ -83,7 +83,7 @@ void gameMenuLoop(ostream& out, istream& in, profile& a)
       //  Choice for Gameplay
       if (choice == 1)
       {
-        mapDisplay(out, a.currentX, a.currentY);
+        mapDisplay(out, a.currentX, a.currentY, a.getOutfit());
       }
 
       //  Choice for editing profile

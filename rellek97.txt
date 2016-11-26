@@ -5,8 +5,8 @@ White
 Blue
 Red
 Male
-133
-37
+181
+58
 0
 0
 0

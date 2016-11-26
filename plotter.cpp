@@ -106,7 +106,7 @@ void Plotter::cls( HANDLE hConsole )
   return;
 }
 
-void mapDisplay(ostream& out, int& x, int& y)
+void mapDisplay(ostream& out, int& x, int& y, string a)
 {
   srand(time(0));
   Plotter map1;
@@ -163,44 +163,51 @@ void mapDisplay(ostream& out, int& x, int& y)
     }
   }
 
-    while(key != 'b')
+  if (a == "Red")
+    color = red;
+  else if (a == "Blue")
+    color = blue;
+  else if (a == "Yellow")
+    color = yellow;
+
+  while(key != 'b')
+  {
+    if (kbhit)      // in conio
     {
-      if (kbhit)      // in conio
+      key = getch();
+      switch (key)
       {
-        key = getch();
-        switch (key)
-        {
-          case 'd':
-              if (currX < 260)
-                currX++;
-              break;
-          case 'a':
-              if (currX > 0)
-                  currX--;
-              break;
-          case 'w':
-              if (currY > 0)
-                  currY--;
-              break;
-          case 's':
-              if (currY < 60)
-                currY++;
-        }
-
-        Sleep(100);
-        map1.setColor(map2[prevX][prevY].getColor());
-        map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
-        map1.setColor(green);
-        map1.plot(currX, currY, SQUARE);
-
-
-        prevX = currX;
-        prevY = currY;
-        x = currX;
-        y = currY;
+        case 'd':
+            if (currX < 260 && !( x == 180 && (y > 30 && y < 55)))
+              currX++;
+            break;
+        case 'a':
+            if (currX > 0 && !( x == 220 && (y > 30 && y < 55)))
+                currX--;
+            break;
+        case 'w':
+            if (currY > 0 && !( y == 55 && (x > 180 && x < 220)))
+                currY--;
+            break;
+        case 's':
+            if (currY < 60 && !( y == 30 && (x > 180 && x < 220)))
+              currY++;
       }
-      //if (rand() % 20 == 5)
+
+      Sleep(100);
+      map1.setColor(map2[prevX][prevY].getColor());
+      map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
+      map1.setColor(color);
+      map1.plot(currX, currY, SQUARE);
+
+
+      prevX = currX;
+      prevY = currY;
+      x = currX;
+      y = currY;
     }
+    //if (rand() % 20 == 5)
+  }
 
   map1.setColor(white);
   map1.clear();

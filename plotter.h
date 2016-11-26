@@ -54,6 +54,6 @@ class Plotter
        void setColor(ink);
 };
 
-void mapDisplay(ostream&, int&, int&);
+void mapDisplay(ostream&, int&, int&, string);
 
 #endif /*PLOTTER_H_*/

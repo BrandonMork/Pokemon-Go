@@ -158,6 +158,11 @@ void profile::setOutfit(ostream& out, istream& in)
   profOutColor = outfitColor(out, in);
 }
 
+void profile::setNumPokemon(int i)
+{
+  numPokemon = i;
+}
+
 void profile::setPassword(ostream& out, istream& in)
 {
   string oldPass;
@@ -197,6 +202,11 @@ void profile::setPassword(ostream& out, istream& in)
     pass = newPass;
   }
 
+}
+
+int profile::getNumPokemon() const
+{
+  return numPokemon;
 }
 
 string profile::getUser() const
@@ -277,15 +287,14 @@ void profile::Pokestop()
 
 }
 
-void profile::readPokemon(istream& in)
+void profile::readPokemon(istream& in, int& i)
 {
   string name,
          type,
          move1,
          move2;
   int CP,
-      HP,
-      i = 0;
+      HP;
 
   while(in >> name >> type >> CP >> HP >> move1 >> move2)
   {

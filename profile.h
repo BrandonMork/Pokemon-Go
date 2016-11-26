@@ -2,6 +2,7 @@
 #define PROFILE_H
 #include <string>
 #include "Pokemon.h"
+#include "plotter.h"
 
 using namespace std;
 
@@ -23,31 +24,62 @@ class profile
 {
   private:
 
-    string user;
-    string pass;
-    string profOutColor;
-    string profEyeColor;
-    string profHairColor;
-    string profSkinColor;
-    string profGender;
-    int XP;
-    backpack myBack;
-    Pokemon myPokemon[250];
+    string user;              //  Username of the profile
+    string pass;              //  profile password
+    string profOutColor;      //  avatar outfit color
+    string profEyeColor;      //  avatar eyecolor
+    string profHairColor;     //  avatar hair color
+    string profSkinColor;     //  avatar race/ethnicity
+    string profGender;        //  avatar gender
+    int XP;                   //  profile XP
+    int numPokemon;           //  total pokemon owned by user
+    backpack myBack;          //  backpack of pokeballs and potions
+    Pokemon myPokemon[250];   //  array of pokemon the user owns
 
 
   public:
 
-    int currentX;
-    int currentY;
+    int currentX;             //  current X position on map
+    int currentY;             //  current Y position on map
+
+    /*
+      Precondition:
+              none
+      Postcondition:
+              a profile object is created with the arguments/values passed
+              to it
+      Return:
+              none
+      Description:
+              This function creates a profile object from the arguments passed
+              to it
+    */
     profile(string, string, string, string, string, string, string, int, int, int, backpack);
+
+    /*
+      Precondition:
+              a profile object exists with a designated hair color
+      Postcondition:
+              The string stored as the hair color of the profile avatar is
+              returned
+              The hair color remains unchanged
+      Return:
+              string
+      Description:
+              This function grabs and returns the string stored as the hair
+              color of the avatar for the profile
+    */
     string getHair() const;
     string getSkin() const;
     string getEye() const;
     string getOutfit() const;
     string getGender() const;
     string getUser() const;
+    ink getMapDot() const;
     int getPokeball() const;
     int getPotion() const;
+    int getNumPokemon() const;
+    void setNumPokemon(int);
     void setPokeball(int);
     void setPotion(int);
     void setPassword(ostream&, istream&);
@@ -58,7 +90,7 @@ class profile
     void setGender(ostream&, istream&);
     void writeProfInfo(ostream&);
     void Pokestop();
-    void readPokemon(istream&);
+    void readPokemon(istream&, int&);
     void writePokemon(ostream&, int);
 
 };

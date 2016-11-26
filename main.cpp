@@ -40,6 +40,7 @@ int main()
   int pokeball = 0;
   int xCoor = 130;
   int yCoor = 30;
+  int pokemonCount = 0;
   string userFile;
   string password;        //  stores password for account
   string tempPassword;    //  stores password to test validation of password
@@ -105,7 +106,7 @@ int main()
 
     profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
 
-    profile.readPokemon(in);
+    profile.readPokemon(in, pokemonCount);
 
     //  Update
     //  Game Menu
