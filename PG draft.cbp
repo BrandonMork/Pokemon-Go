@@ -34,6 +34,7 @@
 		<Unit filename="PG draft.cbp" />
 		<Unit filename="PG draft.depend" />
 		<Unit filename="PG draft.layout" />
+		<Unit filename="Pokemon.cpp" />
 		<Unit filename="Pokemon.h" />
 		<Unit filename="README.md" />
 		<Unit filename="brandon.txt" />
@@ -44,7 +45,6 @@
 		<Unit filename="pokemonMenus.h" />
 		<Unit filename="profile.cpp" />
 		<Unit filename="profile.h" />
-		<Unit filename="rel.txt" />
 		<Unit filename="rellek97.txt" />
 		<Extensions>
 			<code_completion />

@@ -109,6 +109,19 @@ void Pokemon::randPokemon()
 {
   srand(time(0));
   int num = rand() % 10 + 1;
+  /*
+  If you take away the "+ 1" from up there you can use "num" as the array
+  cell assigner so you can make it simpler and clean......RK
+
+  The changed code is commented below for implementation when everyone sees
+
+  name = allPokemon[num].getName();
+  type = allPokemon[num].getType();
+  cp = allPokemon[num].getCP();
+  hp = allPokemon[num].getHP();
+  move1 = allPokemon[num].getMove1();
+  move2 = allPokemon[num].getMove2();
+  */
   if(num == 1)
   {
     name = allPokemon[0].getName();
