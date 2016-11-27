@@ -13,11 +13,12 @@ class Pokemon
     int hp;
     string move1;
     string move2;
-  public:
 
+  public:
+    //constructors
     Pokemon();
     Pokemon(string n, string t, string m2);
-    Pokemon(string, string, int, int, string, string);
+
     string getName() const;
     string getType() const;
     int getCP() const;
@@ -32,4 +33,3 @@ class Pokemon
 
 };
 #endif // POKEMON_H
-
