@@ -13,7 +13,17 @@
 #include <fstream>
 #include "profile.h"
 
+/*
+  Precondition:
+        an input stream has been declared
+        an output stream has been declared
+  Postcondiditon:
+        a char is returned
 
+  Return:
+
+  Description:
+*/
 char introMenu(ostream&, istream&);
 
 void newUserCreation(ostream&, istream&);

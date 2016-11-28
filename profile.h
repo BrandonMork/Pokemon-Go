@@ -423,11 +423,29 @@ class profile
 
     void Pokestop();
 
+    /*
+      Precondition:
+              a profile object exists with an empty pokemon array
+              an input stream is declared
+              an integer value exists
+      Postcondition:
+              All of the pokemon in the profile's data file will be
+              read in and inserted into the array of pokemon in the profile
+              object
+      Return:
+              void
+      Description:
+              This function reads in all of the information about the user's
+              pokemon from their data file and creates pokemon objects in
+              the array of pokemon in the user's profile
+    */
     void readPokemon(istream&, int&);
 
     /*
       Precondition:
               a profile object exists with pokemon objects in the array
+              an output stream is declared
+              an integer value exists
       Postcondition:
               All of the pokemon in the profile's pokemon array will be
               displayed to the output stream passed to the function

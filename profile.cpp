@@ -11,25 +11,40 @@
 
 using namespace std;
 
+Plotter l;
+
 string outfitColor(ostream& out, istream& in)
 {
   char select;
   string color;
-  out << "Please choose your outfit color: "
-       << "\n1. Red\n2. Yellow\n3. Blue\n";
-  select = getch();
+  int count = 0;
 
-  switch (select)
+  do
   {
-    case '1':
-      color = "Red";
-      break;
-    case '2':
-      color = "Yellow";
-      break;
-    case '3':
-      color = "Blue";
-  }
+    if (count > 0)
+    {
+      l.clear();
+      out << "Invalid choice...Please try again\n\n";
+    }
+    out << "Please choose your outfit color: "
+         << "\n1. Red\n2. Yellow\n3. Blue\n";
+    select = getch();
+
+    switch (select)
+    {
+      case '1':
+        color = "Red";
+        break;
+      case '2':
+        color = "Yellow";
+        break;
+      case '3':
+        color = "Blue";
+    }
+    count++;
+
+  }while(select != '1' && select != '2' && select != '3');
+
 
   return color;
 }
@@ -38,21 +53,34 @@ string eyeColor(ostream& out, istream& in)
 {
   char select;
   string color;
-  out << "Please choose your eye color: "
-       << "\n1. Green\n2. Brown\n3. Blue\n";
-  select = getch();
+  int count = 0;
 
-  switch (select)
+  do
   {
-    case '1':
-      color = "Green";
-      break;
-    case '2':
-      color = "Brown";
-      break;
-    case '3':
-      color = "Blue";
-  }
+    if (count > 0)
+    {
+      l.clear();
+      out << "Invalid choice...Please try again\n\n";
+    }
+    out << "Please choose your eye color: "
+         << "\n1. Green\n2. Brown\n3. Blue\n";
+    select = getch();
+
+    switch (select)
+    {
+      case '1':
+        color = "Green";
+        break;
+      case '2':
+        color = "Brown";
+        break;
+      case '3':
+        color = "Blue";
+    }
+    count++;
+
+  }while(select != '1' && select != '2' && select != '3');
+
 
   return color;
 }
@@ -61,21 +89,35 @@ string hairColor(ostream& out, istream& in)
 {
   char select;
   string color;
-  out << "Please choose your hair color: "
-       << "\n1. Brown\n2. Blonde\n3. Black\n";
-  select = getch();
+  int count = 0;
 
-  switch (select)
+  do
   {
-    case '1':
-      color = "Brown";
-      break;
-    case '2':
-      color = "Blonde";
-      break;
-    case '3':
-      color = "Black";
-  }
+    if (count > 0)
+    {
+      l.clear();
+      out << "Invalid choice...Please try again\n\n";
+    }
+    out << "Please choose your hair color: "
+         << "\n1. Brown\n2. Blonde\n3. Black\n";
+    select = getch();
+
+    switch (select)
+    {
+      case '1':
+        color = "Brown";
+        break;
+      case '2':
+        color = "Blonde";
+        break;
+      case '3':
+        color = "Black";
+    }
+    count++;
+
+  }while(select != '1' && select != '2' && select != '3');
+
+
 
   return color;
 }
@@ -83,22 +125,35 @@ string hairColor(ostream& out, istream& in)
 string skinColor(ostream& out, istream& in)
 {
   char select;
+  int count = 0;
   string color;
-  out << "Please choose your skin color: "
-       << "\n1. White\n2. Brown\n3. Black\n";
-  select = getch();
-
-  switch (select)
+  do
   {
-    case '1':
-      color = "White";
-      break;
-    case '2':
-      color = "Brown";
-      break;
-    case '3':
-      color = "Black";
-  }
+    if (count > 0)
+    {
+      l.clear();
+      out << "Invalid choice...Please try again\n\n";
+    }
+
+    out << "Please choose your skin color: "
+       << "\n1. White\n2. Brown\n3. Black\n";
+    select = getch();
+
+    switch (select)
+    {
+      case '1':
+        color = "White";
+        break;
+      case '2':
+        color = "Brown";
+        break;
+      case '3':
+        color = "Black";
+    }
+    count++;
+
+  }while(select != '1' && select != '2' && select != '3');
+
 
   return color;
 }
@@ -107,19 +162,30 @@ string gender(ostream& out, istream& in)
 {
   char select;
   string gend;
-  out << "Please choose your gender: "
-       << "\n1. Male\n2. Female\n";
-  select = getch();
+  int count = 0;
 
-  switch (select)
+  do
   {
-    case '1':
-      gend = "Male";
-      break;
-    case '2':
-      gend = "Female";
+    if (count > 0)
+    {
+      l.clear();
+      out << "Invalid choice...Please try again\n\n";
+    }
+    out << "Please choose your gender: "
+         << "\n1. Male\n2. Female\n";
+    select = getch();
 
-  }
+    switch (select)
+    {
+      case '1':
+        gend = "Male";
+        break;
+      case '2':
+        gend = "Female";
+    }
+    count++;
+
+  }while(select != '1' && select != '2');
 
   return gend;
 }
