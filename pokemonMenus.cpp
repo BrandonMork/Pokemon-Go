@@ -1,27 +1,26 @@
 #include <fstream>
-#include <iostream>
 #include "profile.h"
-#include <stdlib.h>
-#include "plotter.h"
 #include "pokemonMenus.h"
-#include <conio.h>
 
 using namespace std;
-Plotter a;
-int introMenu(ostream& out, istream& in)
+Plotter p;
+char introMenu(ostream& out, istream& in)
 {
-  int choice;
+  char choice;
   int count = 0;
   do
    {
      count++;
 
      if (count > 1)
+     {
+       p.clear();
        out << "Invalid Selection, Please select again...";
+     }
 
      out << "\n\n1. Existing User\n2. New User\n3. Exit Game\n";
-     in >> choice;
-   }while (choice < 1 && choice > 3);
+     choice = getch();
+   }while (choice != '1' && choice != '2' && choice != '3');
 
   return choice;
 }
@@ -35,7 +34,7 @@ void newUserCreation(ostream& out, istream& in)
   ofstream out2;
   int count = 0;
 
-  system("cls");
+  p.clear();
   out << "Please Enter a Username: ";
   in >> username;
 
@@ -59,58 +58,59 @@ void newUserCreation(ostream& out, istream& in)
   //  Choosing and Writing Avatar and info to User File
   out2 << username << endl << password << endl;
 
-  a.clear();
+  p.clear();
   out2 << hairColor(out, in) << endl;
-  system("cls");
+  p.clear();
   out2 << skinColor(out, in) << endl;
-  system("cls");
+  p.clear();
   out2 << eyeColor(out, in) << endl;
-  system("cls");
+  p.clear();
   out2 << outfitColor(out, in) << endl;
-  system("cls");
+  p.clear();
   out2 << gender(out, in);
 }
 
 void gameMenuLoop(ostream& out, istream& in, profile& a)
 {
-  int choice;
+  char choice;
   do
     {
-      system("cls");
+      p.clear();
 
       choice = gameMainMenu(out, in, a);
 
       //  Choice for Gameplay
-      if (choice == 1)
+      if (choice == '1')
       {
         mapDisplay(out, a.currentX, a.currentY, a.getOutfit());
       }
 
       //  Choice for editing profile
-      if (choice == 2)
+      if (choice == '2')
       {
         editProfileMenu(out, in, a);
       }
-    }while (choice != 3);
+    }while (choice != '3');
 }
 
-int gameMainMenu(ostream& out, istream& in, profile& a)
+char gameMainMenu(ostream& out, istream& in, profile& a)
 {
   int count = 0;
-  int choice;
+  char choice;
   do
   {
+    p.clear();
     out << "Welcome " << a.getUser() << "!\n\n" << "What would you like to do?";
 
     if (count > 1)
       out << "\n\nInvalid choice, please try again...";
 
     out << "\n1. Play\n2. Edit Profile\n3. Exit Game\n";
-    in >> choice;
+    choice = getch();
 
     count++;
 
-  }while (choice < 1 && choice > 3);
+  }while (choice != '1' && choice != '2' && choice != '3');
 
   return choice;
 }
@@ -118,8 +118,8 @@ int gameMainMenu(ostream& out, istream& in, profile& a)
 
 void editProfileMenu(ostream& out, istream& in, profile& a)
 {
-  int choice;
-  int avChoice;
+  char choice;
+  char avChoice;
   do
   {
     int count = 1;
@@ -127,29 +127,29 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
     //  Menu for attributes to edit
     do
     {
-      system("cls");
+      p.clear();
 
       if (count > 1)
         out << "Invalid choice, please try again...\n";
 
       out << "What would you like to change?"
            << "\n1. Password\n2. Avatar\n3. Back\n";
-      in >> choice;
+      choice = getch();
       count++;
 
-    }while (choice < 1 && choice > 3);
+    }while (choice != '1' && choice != '2' && choice != '3');
 
-    if (choice != 3)
+    if (choice != '3')
     {
       switch (choice)
       {
         //  Edit Password
-        case 1:
+        case '1':
           a.setPassword(out, in);
           break;
 
         //  Edit Avatar
-        case 2:
+        case '2':
           do
           {
             int count2 = 1;
@@ -157,7 +157,7 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
             //  Menu for Avatar Attribute to Edit
             do
             {
-              system("cls");
+              p.clear();
 
               if (count2 > 1)
                 out << "Invalid choice, please try again...\n";
@@ -165,38 +165,39 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
               out << "What would you like to change?"
                    << "\n1. Hair Color\n2. Outfit Color\n3. Eye Color\n4. Skin"
                    << "Color\n5. Gender\n6. Back\n";
-              in >> avChoice;
+              avChoice = getch();
 
               count2++;
-            }while (avChoice < 1 && avChoice > 6);
+            }while (avChoice != '1' && avChoice != '2' && avChoice != '3' &&
+                    avChoice != '4' && avChoice != '5' && avChoice != '6');
 
-
-            if (avChoice != 6)
+            p.clear();
+            if (avChoice != '6')
             {
               switch (avChoice)
               {
-                case 1:
+                case '1':
                   a.setHair(out, in);
                   break;
 
-                case 2:
+                case '2':
                   a.setOutfit(out, in);
                   break;
 
-                case 3:
+                case '3':
                   a.setEye(out, in);
                   break;
 
-                case 4:
+                case '4':
                   a.setSkin(out, in);
                   break;
 
-                case 5:
+                case '5':
                   a.setGender(out, in);
               }
             }
-          }while (avChoice != 6);
+          }while (avChoice != '6');
       }
     }
-  }while (choice != 3);
+  }while (choice != '3');
 }

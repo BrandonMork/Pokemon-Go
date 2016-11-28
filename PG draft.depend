@@ -136,10 +136,11 @@
 	<stdlib.h>
 	"pokemonMenus.h"
 
-1480133782 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\main.cpp
+1480316358 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\main.cpp
 	<iostream>
 	<fstream>
 	"profile.h"
+	"plotter.h"
 	<string>
 	<stdlib.h>
 	"pokemonMenus.h"
@@ -149,41 +150,34 @@
 	"Pokemon.h"
 	"plotter.h"
 
-1480130319 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemonmenus.h
+1480314579 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemonmenus.h
 
-1480136163 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemonmenus.cpp
+1480315828 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemonmenus.cpp
 	<fstream>
-	<iostream>
 	"profile.h"
-	<stdlib.h>
-	"plotter.h"
 	"pokemonMenus.h"
-	<conio.h>
 
-1480136163 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.h
+1480316005 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.h
 	<windows.h>
 	<mmsystem.h>
 	<conio.h>
 
-1480136163 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.cpp
+1480315926 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.cpp
 	<iostream>
-	<string>
 	"profile.h"
-	<cstdlib>
 	<ctime>
 
-1480136241 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.cpp
+1480316014 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.cpp
 	<iostream>
 	"plotter.h"
 	<ctime>
-	<iostream>
-	"profile.h"
 
-1480129805 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemon.cpp
+1480313576 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemon.cpp
 	"Pokemon.h"
 	<cstdlib>
 	<time.h>
+	<fstream>
 
-1480129805 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemon.h
+1480313710 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemon.h
 	<string>
 

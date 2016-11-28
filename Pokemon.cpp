@@ -116,5 +116,15 @@ void Pokemon::writePokeInfo(ostream& out)
       << hp << " " << move1 << " " << move2 << endl;
 }
 
+Pokemon::Pokemon(string a, string b, int c, int d, string e, string f)
+{
+  name = a;
+  type = b;
+  cp = c;
+  hp = d;
+  move1 = e;
+  move2 = f;
+}
+
 
 

@@ -24,6 +24,7 @@
 #include <iostream>           //  cin >> cout <<
 #include <fstream>            //  open close
 #include "profile.h"          //  profile writeProfInfo
+#include "plotter.h"
 #include <string>             //  string c_str()
 #include <stdlib.h>           //  system
 #include "pokemonMenus.h"     //  gameMenuLoop
@@ -33,8 +34,9 @@ using namespace std;
 int main()
 {
   //  Data Abstraction
+  Plotter a;
   int count3 = 1;
-  int usrChoice;
+  char usrChoice;
   int XP = 0;
   int potion = 0;
   int pokeball = 0;
@@ -62,10 +64,10 @@ int main()
   usrChoice = introMenu(cout, cin);
 
 
-  if (usrChoice == 1 || usrChoice == 2)
+  if (usrChoice == '1' || usrChoice == '2')
   {
     //  Creation of New User
-    if (usrChoice == 2)
+    if (usrChoice == '2')
     {
       newUserCreation(cout, cin);
     }
@@ -74,7 +76,7 @@ int main()
     //  Sign in to Account
     do
     {
-      system("cls");
+      a.clear();
 
       if (count3 > 1)
       {
@@ -83,38 +85,45 @@ int main()
       }
 
 
-      cout << "Sign in. If you do not know\nUsername: ";
+      cout << "Sign in. If you do not know your username or password, type in"
+           << " 'exit' for username to exit the game.\nUsername: ";
       cin >> username;
-      cout << "Password: ";
-      cin >> password;
 
-      userFile = username + ".txt";
+      if (username != "exit")
+      {
+        cout << "Password: ";
+        cin >> password;
 
-      in.open(userFile.c_str());
+        userFile = username + ".txt";
 
-      in >> username >> tempPassword;
+        in.open(userFile.c_str());
+
+        in >> username >> tempPassword;
+      }
 
       count3++;
 
-    }while(!in.is_open() || password != tempPassword);
+    }while((!in.is_open() || password != tempPassword) && username != "exit");
 
-    out.open(userFile.c_str());
+    if (username != "exit")
+    {
+      out.open(userFile.c_str());
 
-    in >> hColor >> sColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> XP >> pokeball >> potion;
+      in >> hColor >> sColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> XP >> pokeball >> potion;
 
-    backpack myPack(pokeball, potion);
+      backpack myPack(pokeball, potion);
 
-    profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
+      profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
 
-    profile.readPokemon(in, pokemonCount);
+      profile.readPokemon(in, pokemonCount);
 
-    //  Update
-    //  Game Menu
-    gameMenuLoop(cout, cin, profile);
+      //  Update
+      //  Game Menu
+      gameMenuLoop(cout, cin, profile);
 
-    //  Draw
-    profile.writeProfInfo(out);
-
+      //  Draw
+      profile.writeProfInfo(out);
+    }
   }
   system("cls");
 

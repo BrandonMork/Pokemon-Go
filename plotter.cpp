@@ -2,8 +2,6 @@ using namespace std;
 #include <iostream>
 #include "plotter.h"
 #include <ctime>
-#include <iostream>
-#include "profile.h"
 
 Point::Point()
 {

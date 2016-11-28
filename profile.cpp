@@ -1,28 +1,26 @@
 #include <iostream>
-#include <string>
 #include "profile.h"
-#include <cstdlib>
 #include <ctime>
 
 using namespace std;
 
 string outfitColor(ostream& out, istream& in)
 {
-  int select;
+  char select;
   string color;
   out << "Please choose your outfit color: "
        << "\n1. Red\n2. Yellow\n3. Blue\n";
-  in >> select;
+  select = getch();
 
   switch (select)
   {
-    case 1:
+    case '1':
       color = "Red";
       break;
-    case 2:
+    case '2':
       color = "Yellow";
       break;
-    case 3:
+    case '3':
       color = "Blue";
   }
 
@@ -31,21 +29,21 @@ string outfitColor(ostream& out, istream& in)
 
 string eyeColor(ostream& out, istream& in)
 {
-  int select;
+  char select;
   string color;
   out << "Please choose your eye color: "
        << "\n1. Green\n2. Brown\n3. Blue\n";
-  in >> select;
+  select = getch();
 
   switch (select)
   {
-    case 1:
+    case '1':
       color = "Green";
       break;
-    case 2:
+    case '2':
       color = "Brown";
       break;
-    case 3:
+    case '3':
       color = "Blue";
   }
 
@@ -54,21 +52,21 @@ string eyeColor(ostream& out, istream& in)
 
 string hairColor(ostream& out, istream& in)
 {
-  int select;
+  char select;
   string color;
   out << "Please choose your hair color: "
        << "\n1. Brown\n2. Blonde\n3. Black\n";
-  in >> select;
+  select = getch();
 
   switch (select)
   {
-    case 1:
+    case '1':
       color = "Brown";
       break;
-    case 2:
+    case '2':
       color = "Blonde";
       break;
-    case 3:
+    case '3':
       color = "Black";
   }
 
@@ -77,21 +75,21 @@ string hairColor(ostream& out, istream& in)
 
 string skinColor(ostream& out, istream& in)
 {
-  int select;
+  char select;
   string color;
   out << "Please choose your skin color: "
        << "\n1. White\n2. Brown\n3. Black\n";
-  in >> select;
+  select = getch();
 
   switch (select)
   {
-    case 1:
+    case '1':
       color = "White";
       break;
-    case 2:
+    case '2':
       color = "Brown";
       break;
-    case 3:
+    case '3':
       color = "Black";
   }
 
@@ -100,18 +98,18 @@ string skinColor(ostream& out, istream& in)
 
 string gender(ostream& out, istream& in)
 {
-  int select;
+  char select;
   string gend;
   out << "Please choose your gender: "
        << "\n1. Male\n2. Female\n";
-  in >> select;
+  select = getch();
 
   switch (select)
   {
-    case 1:
+    case '1':
       gend = "Male";
       break;
-    case 2:
+    case '2':
       gend = "Female";
 
   }
@@ -307,8 +305,6 @@ void profile::writePokemon(ostream& out, int i)
 {
   for(int j = 0; j < i; j++)
   {
-    out << myPokemon[j].getName() << " " << myPokemon[j].getType() << " "
-        << myPokemon[j].getCP() << " " << myPokemon[j].getHP() << " "
-        << myPokemon[j].getMove1() << " " << myPokemon[j].getMove2() << "\n";
+    myPokemon[j].writePokeInfo(out);
   }
 }
