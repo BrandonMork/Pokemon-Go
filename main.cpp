@@ -107,7 +107,7 @@ int main()
 
     if (username != "exit")
     {
-      out.open(userFile.c_str());
+
 
       in >> hColor >> sColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> XP >> pokeball >> potion;
 
@@ -121,6 +121,7 @@ int main()
       //  Game Menu
       gameMenuLoop(cout, cin, profile);
 
+      out.open(userFile.c_str());
       //  Draw
       profile.writeProfInfo(out);
     }
