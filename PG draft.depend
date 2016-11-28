@@ -145,7 +145,7 @@
 	<stdlib.h>
 	"pokemonMenus.h"
 
-1480362479 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.h
+1480372820 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.h
 	<string>
 	<iostream>
 	"Pokemon.h"
@@ -159,14 +159,15 @@
 1480361994 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemonmenus.cpp
 	"pokemonMenus.h"
 
-1480361994 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.h
+1480374619 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.h
 	<windows.h>
+	"profile.h"
 	<mmsystem.h>
 	<conio.h>
 	<ctime>
 	<iostream>
 
-1480363330 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.cpp
+1480372815 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.cpp
 	"profile.h"
 
 1480361994 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.cpp

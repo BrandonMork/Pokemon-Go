@@ -29,10 +29,13 @@
 #define PLOTTER_H_
 
 #include <windows.h>
+#include "profile.h"
 #include <mmsystem.h>
 #include <conio.h>
 #include <ctime>
 #include <iostream>
+
+using namespace std;
 
 const char SQUARE = 219;
 const char LEFT   = 221;
@@ -85,5 +88,7 @@ class Plotter
 };
 
 void mapDisplay(ostream&, int&, int&, string);
+
+void avatarDisplay(int x, int y, profile);
 
 #endif /*PLOTTER_H_*/
