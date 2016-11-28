@@ -2,23 +2,71 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="plotter.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="20" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="pokemonMenus.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="pokemonMenus.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3813" topLine="148" />
 		</Cursor>
 	</File>
+	<File name="pokemonMenus.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="52" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Pokemon.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2102" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="Pokemon.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="313" topLine="7" />
+			<Cursor1 position="313" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="20" />
 		</Folding>
+	</File>
+	<File name="profile.h" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11515" topLine="82" />
+		</Cursor>
+		<Folding>
+			<Collapse line="44" />
+			<Collapse line="58" />
+			<Collapse line="73" />
+			<Collapse line="88" />
+			<Collapse line="103" />
+			<Collapse line="118" />
+			<Collapse line="133" />
+			<Collapse line="148" />
+			<Collapse line="166" />
+			<Collapse line="182" />
+			<Collapse line="198" />
+			<Collapse line="213" />
+			<Collapse line="229" />
+			<Collapse line="245" />
+			<Collapse line="261" />
+			<Collapse line="275" />
+			<Collapse line="290" />
+			<Collapse line="305" />
+			<Collapse line="320" />
+			<Collapse line="335" />
+			<Collapse line="369" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="811" topLine="97" />
+		</Cursor>
+	</File>
+	<File name="profile.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="63" topLine="145" />
+		</Cursor>
+	</File>
+	<File name="plotter.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="20" topLine="0" />
+		</Cursor>
 	</File>
 	<File name="rellek97.txt" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -30,40 +78,12 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="profile.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="63" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Pokemon.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2102" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="plotter.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="896" topLine="24" />
+			<Cursor1 position="896" topLine="17" />
 		</Cursor>
 		<Folding>
 			<Collapse line="17" />
-		</Folding>
-	</File>
-	<File name="pokemonMenus.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="52" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="811" topLine="20" />
-		</Cursor>
-	</File>
-	<File name="profile.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="825" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="44" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>
