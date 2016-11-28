@@ -1,8 +1,36 @@
-using namespace std;
+/*
+  ************************************************
+                      Pokemon
+  ************************************************
+  - name: string
+  - type: string
+  - cp: int
+  - hp: int
+  - move1: string
+  - move2: string
+  ************************************************
+  + Pokemon():
+  + Pokemon(string,string,string):
+  + Pokemon(string,string,int,int,string,string):
+  + getName() const: string
+  + getType() const: string
+  + getCP() const: int
+  + getHP() const: int
+  + getMove1(): string
+  + getMove2(): string
+  + randCP(): int
+  + randHP(): int
+  + randMove1(): string
+  + randPokemon(): void
+  + writePokeInfo(ostream&): void
+  ************************************************
+*/
 
 #ifndef POKEMON_H
 #define POKEMON_H
 #include <string>
+
+using namespace std;
 
 class Pokemon
 {

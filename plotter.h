@@ -1,3 +1,20 @@
+/*
+  ************************************************
+                  Plotter
+  ************************************************
+  - coordScreen: COORD
+  - hConsoleOutput: HANDLE
+  - dummy: char
+  - pChar: char
+  - pInk: int
+  ************************************************
+  + Plotter():
+  + clear(): void
+  + move(int, int): void
+  + plot(int, int, char): void
+  + setColor(ink): void
+  ************************************************
+*/
 #ifndef PLOTTER_H_
 #define PLOTTER_H_
 #include <windows.h>

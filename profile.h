@@ -1,3 +1,49 @@
+/*
+  ************************************************
+                    Profile
+  ************************************************
+  - user: string
+  - pass: string
+  - profOutColor: string
+  - profEyeColor: string
+  - profHairColor: string
+  - profSkinColor: string
+  - profGender: string
+  - XP: int
+  - numPokemon: int
+  - myBack: backpack
+  - myPokemon: Pokemon
+  - currentX: int
+  - currentY: int
+  ************************************************
+  + profile():
+  + getHair() const: string
+  + getSkin() const: string
+  + getEye() const: string
+  + getOutfit() const: string
+  + getGender() const: string
+  + getUser() const: string
+  + getMapDot() const: ink
+  + getPokeball() const: int
+  + getPotion() const: int
+  + getNumPokemon() const: int
+  + setNumPokemon(int): void
+  + setPokeball(int): void
+  + setPotion(int): void
+  + setPotion(int): void
+  + setPassword(ostream&, istream&): void
+  + setHair(ostream&, istream&): void
+  + setSkin(ostream&, istream&): void
+  + setEye(ostream&, istream&): void
+  + setOutfit(ostream&, istream&): void
+  + setGender(ostream&, istream&): void
+  + writeProfInfo(ostream&): void
+  + Pokestop(): void
+  + readPokemon(istream&, int&): void
+  + writePokemon(ostream&, int): void
+  ************************************************
+*/
+
 #ifndef PROFILE_H
 #define PROFILE_H
 #include <string>
