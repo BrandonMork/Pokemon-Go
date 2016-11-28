@@ -1,4 +1,13 @@
 /*
+* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Assignment Title:       profile.h
+* Assignment Description: The header file for the profile class
+* Due Date:               11/29/2016
+* Date Created:           11/7/2016
+* Date Last Modified:     11/28/2016
+*/
+
+/*
   ************************************************
                     Profile
   ************************************************
@@ -46,9 +55,12 @@
 
 #ifndef PROFILE_H
 #define PROFILE_H
+
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 #include "plotter.h"
+#include <ctime>
 
 using namespace std;
 

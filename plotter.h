@@ -1,4 +1,13 @@
 /*
+* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Assignment Title:       plotter.h
+* Assignment Description: The header file for the plotter class
+* Due Date:               11/29/2016
+* Date Created:           11/7/2016
+* Date Last Modified:     11/28/2016
+*/
+
+/*
   ************************************************
                   Plotter
   ************************************************
@@ -15,11 +24,15 @@
   + setColor(ink): void
   ************************************************
 */
+
 #ifndef PLOTTER_H_
 #define PLOTTER_H_
+
 #include <windows.h>
 #include <mmsystem.h>
 #include <conio.h>
+#include <ctime>
+#include <iostream>
 
 const char SQUARE = 219;
 const char LEFT   = 221;

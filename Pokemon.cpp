@@ -1,7 +1,13 @@
+/*
+* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Assignment Title:       Pokemon.cpp
+* Assignment Description: The implementation file for the pokemon header
+* Due Date:               11/29/2016
+* Date Created:           11/7/2016
+* Date Last Modified:     11/28/2016
+*/
+
 #include "Pokemon.h"
-#include <cstdlib>
-#include <time.h>
-#include <fstream>
 
 using namespace std;
 

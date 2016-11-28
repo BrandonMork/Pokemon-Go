@@ -1,5 +1,12 @@
-#include <fstream>
-#include "profile.h"
+/*
+* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Assignment Title:       pokemonMenus.cpp
+* Assignment Description: The implementation file for the pokemon menus header
+* Due Date:               11/29/2016
+* Date Created:           11/7/2016
+* Date Last Modified:     11/28/2016
+*/
+
 #include "pokemonMenus.h"
 
 using namespace std;

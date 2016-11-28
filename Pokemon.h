@@ -1,4 +1,13 @@
 /*
+* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Assignment Title:       Pokemon.h
+* Assignment Description: The header file for the pokemon class
+* Due Date:               11/29/2016
+* Date Created:           11/7/2016
+* Date Last Modified:     11/28/2016
+*/
+
+/*
   ************************************************
                       Pokemon
   ************************************************
@@ -28,7 +37,11 @@
 
 #ifndef POKEMON_H
 #define POKEMON_H
+
 #include <string>
+#include <cstdlib>
+#include <time.h>
+#include <fstream>
 
 using namespace std;
 

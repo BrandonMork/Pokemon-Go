@@ -1,6 +1,13 @@
-#include <iostream>
+/*
+* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Assignment Title:       profile.cpp
+* Assignment Description: The implementation file for the profile class
+* Due Date:               11/29/2016
+* Date Created:           11/7/2016
+* Date Last Modified:     11/28/2016
+*/
+
 #include "profile.h"
-#include <ctime>
 
 using namespace std;
 
