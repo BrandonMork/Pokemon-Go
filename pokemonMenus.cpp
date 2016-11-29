@@ -166,7 +166,7 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
             {
               p.clear();
 
-              avatarDisplay(70, 10, a);
+              //a.avatarDisplay(70, 10);
               if (count2 > 1)
                 out << "Invalid choice, please try again...\n";
 

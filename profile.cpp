@@ -381,3 +381,221 @@ void profile::writePokemon(ostream& out, int i)
     myPokemon[j].writePokeInfo(out);
   }
 }
+
+void profile::avatarDisplay(int x, int y)
+{
+  Plotter avatar;
+  ink color = yellow;
+  char character;
+  Point man[40][20];
+
+  if (profOutColor == "Red")
+      color = red;
+  else if (profOutColor == "Blue")
+      color = blue;
+
+  for (int i = 0; i < 20; i ++)
+  {
+    for (int j = 0; j < 40; j++)
+    {
+      switch(i)
+      {
+        case 0:
+            if (j > 15 && j < 25)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 1:
+            if (j > 15 && j < 25)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 2:
+            if (j > 15 && j < 30)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 3:
+            if (j > 15 && j < 20)
+              man[j][i].color = darkyellow;
+            else if (j > 19 && j < 24)
+              man[j][i].color = lightgrey;
+            else
+              man[j][i].color = black;
+            if (getGender() == "Female")
+            {
+              if (j < 16 && j > 13)
+              man[j][i].color = darkyellow;
+            }
+            break;
+        case 4:
+            if (j == 23 || (j > 18 && j < 22))
+              man[j][i].color = lightgrey;
+            else if (j == 22)
+              man[j][i].color = blue;
+            else if (j > 15 && j < 19)
+              man[j][i].color = darkyellow;
+            else
+              man[j][i].color = black;
+            if (getGender() == "Female")
+            {
+              if (j < 16 && j > 13)
+              man[j][i].color = darkyellow;
+            }
+            break;
+
+        case 5:
+            if (j < 24 && j > 15)
+              man[j][i].color = lightgrey;
+            else
+              man[j][i].color = black;
+            if (getGender() == "Female")
+            {
+              if (j < 16 && j > 13)
+              man[j][i].color = darkyellow;
+            }
+            break;
+        case 6:
+            if (j < 25 && j > 15)
+              man[j][i].color = lightgrey;
+
+            else
+              man[j][i].color = black;
+            if (getGender() == "Female")
+            {
+              if (j < 16 && j > 13)
+              man[j][i].color = darkyellow;
+            }
+            break;
+        case 7:
+            if (j < 30 && j > 9)
+            {
+              man[j][i].color = color;
+              if (j == 12 || j == 27 || j ==13 || j == 26)
+                man[j][i].color = cyan;
+              else if (j > 16 && j < 23)
+                man[j][i].color = lightgrey;
+            }
+            else
+              man[j][i].color = black;
+            break;
+        case 8:
+            if (j < 30 && j > 9)
+            {
+              man[j][i].color = color;
+              if (j == 12 || j == 27 || j ==13 || j == 26)
+                man[j][i].color = cyan;
+            }
+
+            else
+              man[j][i].color = black;
+            break;
+        case 9:
+            if (j < 30 && j > 9)
+            {
+              man[j][i].color = color;
+              if (j == 13 || j == 26)
+                man[j][i].color = cyan;
+            }
+
+            else
+              man[j][i].color = black;
+            break;
+        case 10:
+            if (j < 30 && j > 9)
+            {
+              man[j][i].color = color;
+              if (j == 13 || j == 26)
+                man[j][i].color = cyan;
+            }
+
+            else
+              man[j][i].color = black;
+            break;
+        case 11:
+            if (j < 30 && j > 9)
+            {
+              man[j][i].color = color;
+              if (j == 13 || j == 26)
+                man[j][i].color = black;
+            }
+
+            else
+              man[j][i].color = black;
+            break;
+        case 12:
+            if (j < 30 && j > 9)
+            {
+              man[j][i].color = lightgrey;
+              if (j < 26 && j > 13)
+                man[j][i].color = color;
+              if (j == 13 || j == 26)
+                man[j][i].color = black;
+            }
+
+            else
+              man[j][i].color = black;
+            break;
+        case 13:
+            if (j < 26 && j > 13)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 14:
+            if (j < 26 && j > 13)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 15:
+            if (j < 26 && j > 13)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 16:
+            if (j < 26 && j > 13)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 17:
+            if (j < 26 && j > 13)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 18:
+            if (j < 26 && j > 13)
+              man[j][i].color = color;
+            else
+              man[j][i].color = black;
+            break;
+        case 19:
+            if (j < 28 && j > 11)
+              man[j][i].color = white;
+            else
+              man[j][i].color = black;
+            break;
+      }
+        if (i == 5 && (j == 24 || j == 20))
+          character = TOP;
+        else if (i == 6 && j > 20 && j < 24)
+          character = BOTTOM;
+        else if (i == 7 && (j == 10 || j == 29))
+          character = BOTTOM;
+        else if (i == 13)
+          character = BOTTOM;
+        else if (i > 14 && i < 20 && j == 20)
+          character = RIGHT;
+        else
+          character = SQUARE;
+        avatar.setColor(man[j][i].getColor());
+          avatar.plot((j + x), (i + y), character);
+    }
+  }
+}

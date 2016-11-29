@@ -2,57 +2,69 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="rellek97.txt" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="Pokemon.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="313" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="brandon.txt" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="105" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="plotter.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6414" topLine="99" />
-		</Cursor>
-	</File>
-	<File name="profile.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6326" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="profile.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2611" topLine="27" />
+			<Cursor1 position="6882" topLine="59" />
 		</Cursor>
 		<Folding>
 			<Collapse line="102" />
 			<Collapse line="116" />
 			<Collapse line="131" />
+			<Collapse line="146" />
+			<Collapse line="161" />
+			<Collapse line="176" />
+			<Collapse line="191" />
+			<Collapse line="206" />
+			<Collapse line="224" />
+			<Collapse line="240" />
+			<Collapse line="256" />
+			<Collapse line="271" />
+			<Collapse line="287" />
+			<Collapse line="303" />
+			<Collapse line="319" />
+			<Collapse line="333" />
+			<Collapse line="348" />
+			<Collapse line="363" />
+			<Collapse line="378" />
+			<Collapse line="393" />
+			<Collapse line="408" />
+			<Collapse line="425" />
+			<Collapse line="443" />
 		</Folding>
 	</File>
-	<File name="plotter.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="brandon.txt" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2154" topLine="49" />
+			<Cursor1 position="45" topLine="0" />
 		</Cursor>
-		<Folding>
-			<Collapse line="9" />
-		</Folding>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2801" topLine="105" />
 		</Cursor>
 	</File>
-	<File name="pokemonMenus.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Pokemon.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3596" topLine="157" />
+			<Cursor1 position="2102" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="profile.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7994" topLine="416" />
+		</Cursor>
+	</File>
+	<File name="pokemonMenus.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3644" topLine="154" />
+		</Cursor>
+	</File>
+	<File name="rellek97.txt" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="pokemonMenus.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -60,9 +72,17 @@
 			<Cursor1 position="551" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Pokemon.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="plotter.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2102" topLine="0" />
+			<Cursor1 position="819" topLine="7" />
+		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+		</Folding>
+	</File>
+	<File name="plotter.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2604" topLine="103" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

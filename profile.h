@@ -459,6 +459,8 @@ class profile
     */
     void writePokemon(ostream&, int);
 
+    void avatarDisplay(int, int);
+
 };
 
 
