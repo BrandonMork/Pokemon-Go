@@ -165,12 +165,13 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
             do
             {
               p.clear();
-
-              //a.avatarDisplay(70, 10);
+              a.avatarDisplay(20, 5);
+              p.move(0,0);
+              p.setColor(white);
               if (count2 > 1)
                 out << "Invalid choice, please try again...\n";
 
-              out << "What would you like to change?"
+              cout << "What would you like to change?"
                    << "\n1. Hair Color\n2. Outfit Color\n3. Eye Color\n4. Skin"
                    << "Color\n5. Gender\n6. Back\n";
               avChoice = getch();

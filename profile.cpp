@@ -595,7 +595,7 @@ void profile::avatarDisplay(int x, int y)
         else
           character = SQUARE;
         avatar.setColor(man[j][i].getColor());
-          avatar.plot((j + x), (i + y), character);
+        avatar.plot((j + x), (i + y), character);
     }
   }
 }

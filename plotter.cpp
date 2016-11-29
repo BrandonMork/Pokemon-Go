@@ -170,6 +170,8 @@ void mapDisplay(ostream& out, int& x, int& y, string a)
     }
   }
 
+  cout << "HELLO";
+
   if (a == "Red")
     color = red;
   else if (a == "Blue")

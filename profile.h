@@ -459,6 +459,20 @@ class profile
     */
     void writePokemon(ostream&, int);
 
+    /*
+      Precondition:
+              a profile object exists with pokemon objects in the array
+              an output stream is declared
+              an integer value exists
+      Postcondition:
+              The avatar atTributes remain unchanged
+              The avatar visualization is displayed to stdout
+      Return:
+              void
+      Description:
+              This function displays the avatar visualization to the screen
+              at a certain coordinate point
+    */
     void avatarDisplay(int, int);
 
 };
