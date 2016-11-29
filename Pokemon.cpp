@@ -8,20 +8,16 @@
 */
 
 #include "Pokemon.h"
+#include "plotter.h"
 
 using namespace std;
 
 Pokemon allPokemon[10] = {
               Pokemon("Pikachu", "Electric", "Thunderbolt"),
-              Pokemon("Bulbasaur", "Grass", "Razor_Leaf"),
               Pokemon("Charmander", "Fire", "Flamethrower"),
               Pokemon("Squirtle", "Water", "Water_Gun"),
-              Pokemon("Pidgey", "Flying", "Wing Attack"),
-              Pokemon("Rattata", "Normal", "Bite"),
-              Pokemon("Caterpie", "Bug", "String_Shot"),
-              Pokemon("Geodude", "Rock", "Rock _Throw"),
-              Pokemon("Gengar", "Ghost", "Shadow_Ball"),
-              Pokemon("Alakazam", "Psychic", "Psychic"),
+              Pokemon("Haunter", "Ghost", "Shadow_Ball"),
+              Pokemon("Kakuna", "Bug", "Struggle"),
               };
 
 
@@ -105,7 +101,7 @@ string Pokemon::randMove1()
 void Pokemon::randPokemon()
 {
   srand(time(0));
-  int num = rand() % 10;
+  int num = rand() % 5;
 
   name = allPokemon[num].getName();
   type = allPokemon[num].getType();
@@ -132,5 +128,467 @@ Pokemon::Pokemon(string a, string b, int c, int d, string e, string f)
   move2 = f;
 }
 
+void Pokemon::displayPokemon( int x, int y)
+{
+  if (name == "Squirtle")
+    displaySquirtle(x, y);
+  else if (name == "Pikachu")
+    displayPikachu(x, y);
+  else if (name == "Kakuna")
+    displayKakuna(x, y);
+  else if (name == "Charmander")
+    displayCharmander(x, y);
+  else if (name == "Haunter")
+    displayHaunter(x, y);
 
+}
+
+void clearPokemon(int x, int y)
+{
+  Plotter p;
+  p.setColor(black);
+  for (int i = 0; i < 30; i++)
+  {
+    for (int j = 0; j < 30; j++)
+      p.plot((j + x), (i + y), SQUARE);
+  }
+}
+
+void displayPikachu(int x, int y)
+{
+
+}
+
+void displayKakuna(int x, int y)
+{
+  Plotter a;
+  ink color;
+  Point Kakuna[17][17];
+
+  for(int i = 0; i < 17; i++)
+  {
+    for(int j = 0; j < 17; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          Kakuna[j][i].color = black;
+          break;
+        case 1:
+          if(j > 6 && j < 11)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 2:
+          if(j > 4 && j <13)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 3:
+          if(j > 4 && j <14)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 4:
+          if((j > 5 && j <15) || j == 4)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 5:
+          if((j > 5 && j <15) || j == 4)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 6:
+          if((j > 5 && j <9) || j == 4 || (j > 11 && j < 14))
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 7:
+          if((j > 4 && j <8) || (j > 10 && j < 13))
+            Kakuna[j][i].color = yellow;
+          else if(j == 9)
+            Kakuna[j][i].color = white;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 8:
+          if((j > 6 && j <11) || j == 13)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 9:
+          if((j > 10 && j <14) || j == 6)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 10:
+          if(j > 6 && j <14)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 11:
+          if(j > 6 && j <13)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 12:
+          if(j > 7 && j <13)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 13:
+          if(j > 7 && j <12)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 14:
+          if(j > 8 && j <12)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 15:
+          if(j > 8 && j <11)
+            Kakuna[j][i].color = yellow;
+          else
+            Kakuna[j][i].color = black;
+          break;
+        case 16:
+          Kakuna[j][i].color = black;
+      }
+      a.setColor(Kakuna[j][i].getColor());
+      a.plot((j + x), (i + y), SQUARE);
+    }
+  }
+}
+
+void displayCharmander(int x, int y)
+{
+
+}
+
+void displayHaunter(int x, int y)
+{
+  Plotter a;
+  ink color;
+  Point Haunter [30][19];
+  for(int i = 0;i < 19;i ++)
+  {
+    for(int j = 0;j < 30; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          Haunter[j][i].color = black;
+          break;
+        case 1:
+          if(j > 7 && j < 13)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 2:
+          if((j > 5 && j < 16) || (j > 0 && j < 3) || (j > 18 && j < 21))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 3:
+          if((j > 4 && j < 14) || (j > 0 && j < 4) || (j > 16 && j < 21))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 4:
+          if((j > 3 && j < 12) || (j == 2) || (j > 13 && j < 20))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 5:
+          if(j > 1 && j < 19)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 6:
+          if((j > 2 && j < 18) || (j > 18 && j < 21))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 7:
+          if((j > 2 && j < 12) || (j > 20 && j < 23) || (j > 24 && j < 27))
+            Haunter[j][i].color = purple;
+          else if((j > 12 && j < 17))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 8:
+          if((j > 2 && j < 10) || (j > 21 && j < 27) || (j > 12 && j < 21) || j == 1)
+            Haunter[j][i].color = purple;
+          else if(j == 12)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 9:
+          if((j > 2 && j < 9) || (j > 20 && j < 26) || (j > 12 && j < 18))
+            Haunter[j][i].color = purple;
+          else if(j < 13 && j > 10)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 10:
+          if((j > 3 && j < 8) || (j > 18 && j < 26) || (j > 12 && j < 16))
+            Haunter[j][i].color = purple;
+          else if((j < 13 && j > 10) || j == 9)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 11:
+          if((j > 3 && j < 8) || (j > 18 && j < 25) || (j > 11 && j < 18))
+            Haunter[j][i].color = purple;
+          else if(j < 12 && j > 8)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 12:
+          if((j > 3 && j < 13) || (j > 19 && j < 24) || (j > 14 && j < 19))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 13:
+          if((j > 5 && j < 10) || (j > 19 && j < 22))
+            Haunter[j][i].color = purple;
+          else if(j == 13)
+            Haunter[j][i].color = red;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 14:
+          if((j > 16 && j < 20))
+            Haunter[j][i].color = purple;
+          else if(j > 10 && j < 13)
+            Haunter[j][i].color = red;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 15:
+          if((j > 12 && j < 17) || j == 3 || j == 5)
+            Haunter[j][i].color = purple;
+          else if(j > 6 && j < 12)
+            Haunter[j][i].color = red;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 16:
+          if((j > 11 && j < 18) || j == 3 || j > 4 && j < 7)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 17:
+          if((j > 13 && j < 18) || j == 5 || j == 12)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 18:
+          if(j == 12 || j == 14 || j == 17)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+      }
+      a.setColor(Haunter[j][i].getColor());
+      a.plot((j + x), (i + y), SQUARE);
+    }
+  }
+}
+
+void displaySquirtle(int x, int y)
+{
+  Plotter a;
+  ink color;
+  Point Squirtle[21][15];
+
+  for(int i = 0; i < 15; i++)
+  {
+    for(int j = 0; j < 21; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          if((j > 3 && j < 8) || (j > 16 && j < 19))
+            Squirtle[j][i].color = cyan;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 1:
+          if((j > 2 && j < 10) || (j > 15))
+            Squirtle[j][i].color = cyan;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 2:
+          if((j > 2 && j < 10) || (j > 15 && j < 19) || j > 19)
+            Squirtle[j][i].color = cyan;
+          else if(j == 11)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 3:
+          if((j > 2 && j < 11) || (j > 14 && j < 18) || (j > 18))
+            Squirtle[j][i].color = cyan;
+          else if(j > 10 && j < 14)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 4:
+          if((j > 1 && j < 6) || (j > 7 && j < 11) || (j > 15 && j < 18) || (j == 19))
+            Squirtle[j][i].color = cyan;
+          else if(j == 6 || j == 11)
+            Squirtle[j][i].color = white;
+          else if(j > 11 && j < 15)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 5:
+          if((j > 1 && j < 6) || (j > 7 && j < 11) || j == 16)
+            Squirtle[j][i].color = cyan;
+          else if(j == 11)
+            Squirtle[j][i].color = white;
+          else if(j > 11 && j < 15)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 6:
+          if((j > 3 && j < 11))
+            Squirtle[j][i].color = cyan;
+          else if(j == 12)
+            Squirtle[j][i].color = white;
+          else if(j > 12 && j < 16)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 7:
+          if((j > 4 && j < 9) || (j > 10 && j < 13))
+            Squirtle[j][i].color = cyan;
+          else if(j == 13)
+            Squirtle[j][i].color = white;
+          else if(j > 13 && j < 16)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 8:
+          if(j == 4 || (j > 8 && j < 13))
+            Squirtle[j][i].color = cyan;
+          else if(j == 13)
+            Squirtle[j][i].color = white;
+          else if(j > 13 && j < 16)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 9:
+          if(j > 5 && j < 8)
+            Squirtle[j][i].color = yellow;
+          else if(j > 8 && j < 12)
+            Squirtle[j][i].color = cyan;
+          else if(j == 13)
+            Squirtle[j][i].color = white;
+          else if(j > 13 && j < 16)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 10:
+          if(j > 6 && j < 9)
+            Squirtle[j][i].color = yellow;
+          else if(j == 13)
+            Squirtle[j][i].color = white;
+          else if(j > 13 && j < 16)
+            Squirtle[j][i].color = darkyellow;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 11:
+          if(j > 7 && j < 13)
+            Squirtle[j][i].color = yellow;
+          else if(j == 14)
+            Squirtle[j][i].color = white;
+          else if(j == 6)
+            Squirtle[j][i].color = cyan;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 12:
+          if(j > 9 && j < 12)
+            Squirtle[j][i].color = yellow;
+          else if(j == 14)
+            Squirtle[j][i].color = white;
+          else if(j == 12)
+            Squirtle[j][i].color = cyan;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 13:
+          if(j > 10 && j < 13)
+            Squirtle[j][i].color = cyan;
+          else
+            Squirtle[j][i].color = black;
+          break;
+
+        case 14:
+          Squirtle[j][i].color = black;
+          break;
+
+        case 15:
+          Squirtle[j][i].color = black;
+          break;
+
+      }
+     a.setColor(Squirtle[j][i].getColor());
+     a.plot((j + x), (i + y), SQUARE);
+    }
+  }
+}
 

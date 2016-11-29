@@ -60,7 +60,6 @@
 #include <string>
 #include <iostream>
 #include "Pokemon.h"
-//#include "plotter.h"
 #include <ctime>
 
 using namespace std;

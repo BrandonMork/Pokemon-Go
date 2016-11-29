@@ -1,14 +1,18 @@
 brandon
 123
-Brown
+Blonde
 Black
 Green
 Red
 Male
-148
-53
-0
-0
-0
+152
+19
+5
+5
+5
 Pikachu Electric 10 10 Tackle Thunderbolt
-Gengar Ghost 440 26 Scratch Shadow_Ball
+Squirtle Water 273 42 Scratch Water_Gun
+Haunter Ghost 836 50 Quick_Attack Shadow_Ball
+Squirtle Water 457 15 Scratch Water_Gun
+Kakuna Bug 826 20 Quick_Attack Struggle
+Kakuna Bug 325 55 Tackle Struggle

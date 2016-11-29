@@ -214,7 +214,24 @@ class Pokemon
     */
     void writePokeInfo(ostream&);
 
+    void displayPokemon(int, int);
+
+
+
+
 };
+
+void displaySquirtle(int, int);
+
+void displayPikachu(int, int);
+
+void displayCharmander(int, int);
+
+void displayKakuna(int, int);
+
+void displayHaunter(int, int);
+
+void clearPokemon(int, int);
 #endif // POKEMON_H
 
 

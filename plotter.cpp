@@ -330,6 +330,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
           map1.clear();
           poke = true;
           spawnPoke.randPokemon();
+          spawnPoke.displayPokemon(115, 20);
 
 
           a.avatarDisplay(20, 20);
@@ -337,41 +338,75 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
           map1.move(0, 0);
           map1.setColor(white);
-          out << "A wild " << spawnPoke.getName() << " has appeared!!\n\n"
-              << "What would you like to do?\n1. "
-              << "Throw a Pokeball\n2. Run Away\n";
 
-          do
+          if (a.getNumPokemon() == 250)
           {
+            out << "Too many Pokemon caught....Please delete some and come "
+                << "out again\n\n Running Away.....";
+            Sleep(4000);
+          }
+          else if (a.getPokeball() == 0)
+          {
+            out << "You have no pokeballs in your backpack...Please visit a "
+                << "pokestop to get more out again\n\n Running Away.....";
+            Sleep(4000);
+          }
+          else
+          {
+            out << "A wild " << spawnPoke.getName() << " has appeared!!\n\n"
+                << "What would you like to do?\n1. "
+                << "Throw a Pokeball\n2. Run Away\n";
+
             do
             {
-              key = getch();
-            }while(key != '1' && key != '2');
-
-            if (key == '1')
-            {
-              pokeballArt(65, 20);
-              Sleep(1000);
-              clearPoke(65, 20);
-              pokeballArt(80, 10);
-              Sleep(1000);
-              clearPoke(80, 10);
-              pokeballArt(95, 20);
-              Sleep(1000);
-
-              if(rand() % 3 == 1)
+              do
               {
-                caught = true;
-                map1.move(60, 3);
-                map1.setColor(white);
-                out << "You Caught it!!!";
-                a.addPokemon(spawnPoke.getName(), spawnPoke.getType(),
-                             spawnPoke.getCP(), spawnPoke.getHP(),
-                             spawnPoke.getMove1(), spawnPoke.getMove2(), a.getNumPokemon());
-                Sleep(5000);
+                key = getch();
+              }while(key != '1' && key != '2');
+
+              if (key == '1')
+              {
+                if a.getPokeball() == 0);
+                {
+
+                }
+                else
+                {
+                  pokeballArt(65, 20);
+                  Sleep(1000);
+                  clearPoke(65, 20);
+                  pokeballArt(80, 10);
+                  Sleep(1000);
+                  clearPoke(80, 10);
+                  pokeballArt(95, 20);
+                  Sleep(1000);
+                  clearPoke(95, 20);
+
+                  if(rand() % 3 == 1)
+                  {
+                    clearPokemon(115, 20);
+                    pokeballArt(120, 35);
+                    caught = true;
+                    map1.move(60, 3);
+                    map1.setColor(white);
+                    out << "You Caught it!!!";
+                    a.addPokemon(spawnPoke.getName(), spawnPoke.getType(),
+                                 spawnPoke.getCP(), spawnPoke.getHP(),
+                                 spawnPoke.getMove1(), spawnPoke.getMove2(),
+                                 a.getNumPokemon());
+                    Sleep(5000);
+                  }
+                  else
+                  {
+                    pokeballArt(95, 35);
+                    Sleep(1000);
+                    clearPoke(95, 35);
+                  }
+                }
               }
-            }
-          }while (key == '1' && caught == false);
+            }while (key == '1' && caught == false);
+          }
+
         }
       }
     }
