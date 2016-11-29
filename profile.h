@@ -50,6 +50,7 @@
   + Pokestop(): void
   + readPokemon(istream&, int&): void
   + writePokemon(ostream&, int): void
+  + avatarDisplay(int, int): void
   ************************************************
 */
 
@@ -59,7 +60,7 @@
 #include <string>
 #include <iostream>
 #include "Pokemon.h"
-#include "plotter.h"
+//#include "plotter.h"
 #include <ctime>
 
 using namespace std;
@@ -220,7 +221,7 @@ class profile
               the ink variable that corresponds to the same color as the
               avatar outfit, and returns that ink
     */
-    ink getMapDot() const;
+    //ink getMapDot() const;
 
     /*
       Precondition:
@@ -461,11 +462,10 @@ class profile
 
     /*
       Precondition:
-              a profile object exists with pokemon objects in the array
-              an output stream is declared
-              an integer value exists
+              a profile object exists with avatar attributes assigned
+              two integer values exist
       Postcondition:
-              The avatar atTributes remain unchanged
+              The avatar attributes remain unchanged
               The avatar visualization is displayed to stdout
       Return:
               void

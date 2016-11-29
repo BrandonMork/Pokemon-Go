@@ -112,18 +112,119 @@ void Plotter::cls( HANDLE hConsole )
   return;
 }
 
+void pokeballArt(int x, int y)
+{
+  Plotter pokeball;
+  char character;
+  Point pok[14][7];
+  ink color;
 
-void mapDisplay(ostream& out, int& x, int& y, string a)
+  for (int i = 0; i < 7; i++)
+  {
+    for (int j = 0; j < 14; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          if (j == 6 || j == 7)
+            pok[j][i].color = grey;
+          else
+            pok[j][i].color = black;
+          break;
+        case 1:
+          if (j == 3 || j == 10)
+            pok[j][i].color = grey;
+          else if (j == 5 || j == 4)
+            pok[j][i].color = red;
+          else if (j == 8 || j == 9)
+            pok[j][i].color = white;
+          else
+            pok[j][i].color = black;
+          break;
+        case 2:
+          if (j == 1 || j == 12)
+            pok[j][i].color = grey;
+          else if (j > 1 && j < 6)
+            pok[j][i].color = red;
+          else if (j > 7 && j < 12)
+            pok[j][i].color = white;
+          else
+            pok[j][i].color = black;
+          break;
+        case 3:
+          if (j == 0 || j == 13)
+            pok[j][i].color = grey;
+          else if (j > 4 && j < 9)
+            pok[j][i].color = black;
+          else if (j > 8 && j < 13)
+            pok[j][i].color = white;
+          else
+            pok[j][i].color = red;
+          break;
+        case 4:
+          if (j == 1 || j == 12)
+            pok[j][i].color = grey;
+          else if (j > 1 && j < 6)
+            pok[j][i].color = red;
+          else if (j > 7 && j < 12)
+            pok[j][i].color = white;
+          else
+            pok[j][i].color = black;
+          break;
+        case 5:
+          if (j == 3 || j == 10)
+            pok[j][i].color = grey;
+          else if (j == 5 || j == 4)
+            pok[j][i].color = red;
+          else if (j == 8 || j == 9)
+            pok[j][i].color = white;
+          else
+            pok[j][i].color = black;
+          break;
+        case 6:
+          if (j == 6 || j == 7)
+            pok[j][i].color = grey;
+          else
+            pok[j][i].color = black;
+      }
+      if (i == 0)
+        character = BOTTOM;
+      else if (i == 6)
+        character = TOP;
+      else
+        character = SQUARE;
+      pokeball.setColor(pok[j][i].getColor());
+      pokeball.plot((j + x), (i + y), character);
+
+    }
+  }
+}
+
+void clearPoke(int x, int y)
+{
+  Plotter p;
+  p.setColor(black);
+  for (int i = 0; i < 7; i++)
+  {
+    for (int j = 0; j < 14; j++)
+      p.plot((j + x), (i + y), SQUARE);
+  }
+}
+
+
+void mapDisplay(ostream& out, int& x, int& y, profile a)
 {
   srand(time(0));
+  Pokemon spawnPoke;
   Plotter map1;
   ink color;
+  bool poke;
+  int count;
   int currX = x;
   int currY = y;
   int prevX = currX;
   int prevY = currY;
   char key;
-  char character;
   Point map2[261][61];
 
   out << "Once Gameplay Has Started, Press 'b' at Anytime to Exit...";
@@ -137,84 +238,128 @@ void mapDisplay(ostream& out, int& x, int& y, string a)
     if (kbhit())
       key = getch();
   }
-
   for (int x = 0; x <= 260; x++)
   {
     for (y = 0; y <= 60; y++)
     {
-      color = green;
-      character = GRASS;
+      map2[x][y].color = green;
+      map2[x][y].character = GRASS;
       if ((x > 18 && x < 28) || (x > 86 && x < 96) || (x > 156 && x < 166))
       {
-        color = darkyellow;
-        character = SQUARE;
+        map2[x][y].color = darkyellow;
+        map2[x][y].character = SQUARE;
       }
       if ((y > 18 && y < 22) || ((y > 40 && y < 44) && x < 157))
       {
-        color = darkyellow;
-        character = SQUARE;
+        map2[x][y].color = darkyellow;
+        map2[x][y].character = SQUARE;
       }
       if (x > 180 && x < 220 && y > 30 && y < 55)
       {
-        color = blue;
-        character = WATER;
+        map2[x][y].color = blue;
+        map2[x][y].character = WATER;
       }
-
 
       //  If you want to add in specific block colors and objects
       //  do it here
 
-      map2[x][y] = Point(x, y, character, color);
-      map1.setColor(map2[x][y].getColor());
-      map1.plot(x, y, map2[x][y].getCharacter());
+
     }
   }
-
-  if (a == "Red")
-    color = red;
-  else if (a == "Blue")
-    color = blue;
-  else if (a == "Yellow")
-    color = yellow;
-
-  while(key != 'b')
+  do
   {
-    if (kbhit)      // in conio
+    poke = false;
+    for (int i = 0; i < 261; i++)
     {
-      key = getch();
-      switch (key)
+      for (int j = 0; j < 61; j++)
       {
-        case 'd':
-            if (currX < 260 && !( x == 180 && (y > 30 && y < 55)))
-              currX++;
-            break;
-        case 'a':
-            if (currX > 0 && !( x == 220 && (y > 30 && y < 55)))
-                currX--;
-            break;
-        case 'w':
-            if (currY > 0 && !( y == 55 && (x > 180 && x < 220)))
-                currY--;
-            break;
-        case 's':
-            if (currY < 60 && !( y == 30 && (x > 180 && x < 220)))
-              currY++;
+        map1.setColor(map2[i][j].getColor());
+        map1.plot(i, j, map2[i][j].getCharacter());
       }
-
-      Sleep(100);
-      map1.setColor(map2[prevX][prevY].getColor());
-      map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
-      map1.setColor(color);
-      map1.plot(currX, currY, SQUARE);
-
-
-      prevX = currX;
-      prevY = currY;
-      x = currX;
-      y = currY;
     }
-    //if (rand() % 20 == 5)
-  }
+    //map2[x][y] = Point(x, y, map2[x][y].character, map2[x][y].color);
+
+    color = yellow;
+    if (a.getOutfit() == "Red")
+      color = red;
+    else if (a.getOutfit() == "Blue")
+      color = blue;
+
+
+    while(key != 'b' && poke == false)
+    {
+      if (kbhit)      // in conio
+      {
+        key = getch();
+        switch (key)
+        {
+          case 'd':
+              if (currX < 260 && !( x == 180 && (y > 30 && y < 55)))
+                currX++;
+              break;
+          case 'a':
+              if (currX > 0 && !( x == 220 && (y > 30 && y < 55)))
+                  currX--;
+              break;
+          case 'w':
+              if (currY > 0 && !( y == 55 && (x > 180 && x < 220)))
+                  currY--;
+              break;
+          case 's':
+              if (currY < 60 && !( y == 30 && (x > 180 && x < 220)))
+                currY++;
+        }
+
+        Sleep(100);
+        map1.setColor(map2[prevX][prevY].getColor());
+        map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
+        map1.setColor(color);
+        map1.plot(currX, currY, SQUARE);
+
+
+        prevX = currX;
+        prevY = currY;
+        x = currX;
+        y = currY;
+      }
+      if (key != 'b')
+      {
+        if (rand() % 20 == 5)
+        {
+          map1.clear();
+          poke = true;
+          spawnPoke.randPokemon();
+
+
+          a.avatarDisplay(20, 20);
+          count = 0;
+
+          map1.move(0, 0);
+          map1.setColor(white);
+          out << "A wild " << spawnPoke.getName() << " has appeared!!\n\n"
+              << "What would you like to do?\n1. "
+              << "Throw a Pokeball\n2. Run Away\n";
+          do
+          {
+            key = getch();
+          }while(key != '1' && key != '2');
+
+          if (key == '1')
+          {
+            pokeballArt(65, 20);
+            Sleep(1000);
+            clearPoke(65, 20);
+            pokeballArt(80, 10);
+            Sleep(1000);
+            clearPoke(80, 10);
+            pokeballArt(95, 20);
+            Sleep(1000);
+          }
+        }
+      }
+    }
+
+  }while(poke == true);
 
   map1.setColor(white);
   map1.clear();

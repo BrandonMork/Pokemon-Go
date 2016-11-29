@@ -4,9 +4,9 @@ Brown
 Black
 Green
 Red
-Female
-29
-0
+Male
+144
+49
 0
 0
 0

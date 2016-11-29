@@ -8,6 +8,7 @@
 */
 
 #include "pokemonMenus.h"
+#include "plotter.h"
 
 using namespace std;
 Plotter p;
@@ -89,7 +90,7 @@ void gameMenuLoop(ostream& out, istream& in, profile& a)
       //  Choice for Gameplay
       if (choice == '1')
       {
-        mapDisplay(out, a.currentX, a.currentY, a.getOutfit());
+        mapDisplay(out, a.currentX, a.currentY, a);
       }
 
       //  Choice for editing profile

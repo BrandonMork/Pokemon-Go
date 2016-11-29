@@ -32,6 +32,7 @@
 #include <mmsystem.h>
 #include <conio.h>
 #include <ctime>
+#include "profile.h"
 #include <iostream>
 
 using namespace std;
@@ -86,7 +87,11 @@ class Plotter
        void setColor(ink);
 };
 
-void mapDisplay(ostream&, int&, int&, string);
+void mapDisplay(ostream&, int&, int&, profile);
+
+void pokeballArt(int, int);
+
+void clearPoke(int, int);
 
 //void avatarDisplay(int x, int y, profile);
 

@@ -8,6 +8,7 @@
 */
 
 #include "profile.h"
+#include "plotter.h"
 
 using namespace std;
 
