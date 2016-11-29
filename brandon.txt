@@ -1,10 +1,10 @@
 brandon
 123
-Blonde
+Brown
 Black
-Blue
-Blue
-Male
+Green
+Red
+Female
 29
 0
 0

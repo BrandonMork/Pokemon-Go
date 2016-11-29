@@ -385,6 +385,8 @@ void profile::writePokemon(ostream& out, int i)
 void profile::avatarDisplay(int x, int y)
 {
   Plotter avatar;
+  ink hair = darkyellow;
+  ink eye = blue;
   ink color = yellow;
   char character;
   Point man[40][20];
@@ -393,6 +395,14 @@ void profile::avatarDisplay(int x, int y)
       color = red;
   else if (profOutColor == "Blue")
       color = blue;
+  if (profHairColor == "Black")
+      hair = black;
+  else if (profHairColor == "Blonde")
+      hair = yellow;
+  if (profEyeColor == "Green")
+      eye = darkgreen;
+  else if (profEyeColor == "Brown")
+      eye = darkyellow;
 
   for (int i = 0; i < 20; i ++)
   {
@@ -420,7 +430,7 @@ void profile::avatarDisplay(int x, int y)
             break;
         case 3:
             if (j > 15 && j < 20)
-              man[j][i].color = darkyellow;
+              man[j][i].color = hair;
             else if (j > 19 && j < 24)
               man[j][i].color = lightgrey;
             else
@@ -428,46 +438,46 @@ void profile::avatarDisplay(int x, int y)
             if (getGender() == "Female")
             {
               if (j < 16 && j > 13)
-              man[j][i].color = darkyellow;
+              man[j][i].color = hair;
             }
             break;
         case 4:
             if (j == 23 || (j > 18 && j < 22))
               man[j][i].color = lightgrey;
             else if (j == 22)
-              man[j][i].color = blue;
+              man[j][i].color = eye;
             else if (j > 15 && j < 19)
-              man[j][i].color = darkyellow;
+              man[j][i].color = hair;
             else
               man[j][i].color = black;
             if (getGender() == "Female")
             {
               if (j < 16 && j > 13)
-              man[j][i].color = darkyellow;
+              man[j][i].color = hair;
             }
             break;
 
         case 5:
-            if (j < 24 && j > 15)
+            if (j < 25 && j > 15)
               man[j][i].color = lightgrey;
             else
               man[j][i].color = black;
             if (getGender() == "Female")
             {
               if (j < 16 && j > 13)
-              man[j][i].color = darkyellow;
+              man[j][i].color = hair;
             }
             break;
         case 6:
-            if (j < 25 && j > 15)
+            if (j < 24 && j > 15)
               man[j][i].color = lightgrey;
 
             else
               man[j][i].color = black;
             if (getGender() == "Female")
             {
-              if (j < 16 && j > 13)
-              man[j][i].color = darkyellow;
+              if (j < 16 && j > 11)
+              man[j][i].color = hair;
             }
             break;
         case 7:
