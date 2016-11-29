@@ -184,3 +184,51 @@
 	<time.h>
 	<fstream>
 
+1480450609 source:h:\poke\trunk\main.cpp
+	<iostream>
+	<fstream>
+	"profile.h"
+	"plotter.h"
+	<string>
+	<stdlib.h>
+	"pokemonMenus.h"
+
+1480450608 h:\poke\trunk\profile.h
+	<string>
+	<iostream>
+	"Pokemon.h"
+	<ctime>
+
+1480450609 h:\poke\trunk\pokemon.h
+	<string>
+	<cstdlib>
+	<time.h>
+	<fstream>
+
+1480450609 h:\poke\trunk\plotter.h
+	<windows.h>
+	<mmsystem.h>
+	<conio.h>
+	<ctime>
+	"profile.h"
+	<iostream>
+
+1480450609 h:\poke\trunk\pokemonmenus.h
+	<fstream>
+	"profile.h"
+
+1480450609 source:h:\poke\trunk\plotter.cpp
+	"plotter.h"
+
+1480450609 source:h:\poke\trunk\pokemon.cpp
+	"Pokemon.h"
+	"plotter.h"
+
+1480450608 source:h:\poke\trunk\pokemonmenus.cpp
+	"pokemonMenus.h"
+	"plotter.h"
+
+1480450609 source:h:\poke\trunk\profile.cpp
+	"profile.h"
+	"plotter.h"
+

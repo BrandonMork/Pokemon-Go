@@ -284,7 +284,7 @@ void displayPikachu(int x, int y)
           break;
       }
       a.setColor(Pikachu[j][i].getColor());
-      a.plot(j, i, SQUARE);
+      a.plot(j + x, i + y, SQUARE);
     }
   }
 }
@@ -408,7 +408,149 @@ void displayKakuna(int x, int y)
 
 void displayCharmander(int x, int y)
 {
+  Plotter a;
+  ink color;
+  Point Charmander[21][16];
 
+  for(int i = 0; i < 16; i++)
+  {
+    for(int j = 0; j < 21; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          if((j > 4 && j < 9) || j == 18)
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 1:
+          if((j > 3 && j < 10) || (j > 17 && j < 20))
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 2:
+          if((j > 3 && j < 10) || (j > 17 && j < 20))
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 3:
+          if((j > 2 && j < 11) || j == 19 || (j > 16 && j < 21))
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 4:
+          if((j > 1 && j < 6) || (j > 7 && j < 11) || (j > 16 && j < 19) || j == 20)
+            Charmander[j][i].color = red;
+          else if(j == 19)
+            Charmander[j][i].color = yellow;
+          else if(j == 6)
+            Charmander[j][i].color = white;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 5:
+          if((j > 1 && j < 6) || (j > 7 && j < 12) || j == 17 || j == 20)
+            Charmander[j][i].color = red;
+          else if(j > 17 && j < 20)
+            Charmander[j][i].color = yellow;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 6:
+          if(j > 1 && j < 12)
+            Charmander[j][i].color = red;
+          else if(j == 18)
+            Charmander[j][i].color = yellow;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 7:
+          if((j > 2 && j < 13) || j == 18)
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 8:
+          if((j > 4 && j < 14) || (j > 16 && j < 19))
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 9:
+          if((j > 7 && j < 10) || (j > 10 && j < 14) || (j > 15 && j < 18))
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 10:
+          if(j > 9 && j < 18)
+            Charmander[j][i].color = red;
+          else if(j > 6 && j < 9)
+            Charmander[j][i].color = yellow;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 11:
+          if(j > 11 && j < 17)
+            Charmander[j][i].color = red;
+          else if(j > 6 && j < 10)
+            Charmander[j][i].color = yellow;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 12:
+          if((j > 10 && j < 15) || j == 6)
+            Charmander[j][i].color = red;
+          else if(j > 7 && j < 11)
+            Charmander[j][i].color = yellow;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 13:
+          if(j > 10 && j < 14)
+            Charmander[j][i].color = red;
+          else if(j > 8 && j < 11)
+            Charmander[j][i].color = yellow;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 14:
+          if(j == 12)
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+
+        case 15:
+          if(j > 10 && j < 14)
+            Charmander[j][i].color = red;
+          else
+            Charmander[j][i].color = black;
+          break;
+      }
+
+      a.setColor(Charmander[j][i].getColor());
+      a.plot(j + x, i + y, SQUARE);
+    }
+  }
 }
 
 void displayHaunter(int x, int y)
