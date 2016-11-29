@@ -366,7 +366,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
               if (key == '1')
               {
-                if a.getPokeball() == 0);
+                if(a.getPokeball() == 0)
                 {
 
                 }

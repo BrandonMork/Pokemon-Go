@@ -156,8 +156,139 @@ void clearPokemon(int x, int y)
 
 void displayPikachu(int x, int y)
 {
-
+  Plotter a;
+  ink color;
+  Point Pikachu [19][19];
+  for(int i = 0;i < 19;i ++)
+  {
+    for(int j = 0;j < 19; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          Pikachu[j][i].color = black;
+          break;
+        case 1:
+          if(j == 16)
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 2:
+          if((j > 14 && j < 18) || j == 5)
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 3:
+          if((j > 13 && j < 18) || (j > 3 && j < 6))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 4:
+          if((j > 13 && j < 17) || (j > 3 && j < 6) || (j > 10 && j < 13))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 5:
+          if((j > 12 && j < 16) || (j > 2 && j < 7) || (j > 8 && j < 12))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 6:
+          if((j > 1 && j < 11) || (j > 12 && j < 15))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 7:
+          if((j > 1 && j < 10) || (j > 13 && j < 16))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 8:
+          if((j > 1 && j < 11) || j == 15)
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 9:
+          if((j > 0 && j < 5) || (j > 6 && j < 12) || (j > 12 && j < 15))
+            Pikachu[j][i].color = yellow;
+          else if(j == 5)
+            Pikachu[j][i].color = white;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 10:
+          if((j > 1 && j < 5) || (j > 8 && j < 12) || (j > 12 && j < 15))
+            Pikachu[j][i].color = yellow;
+          else if(j > 6 && j < 9)
+            Pikachu[j][i].color = red;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 11:
+          if((j > 2 && j < 7) || (j > 7 && j < 13))
+            Pikachu[j][i].color = yellow;
+          else if(j == 7)
+            Pikachu[j][i].color = red;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 12:
+          if((j > 1 && j < 13))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 13:
+          if((j > 3 && j < 9) || (j > 9 && j < 13))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 14:
+          if((j > 3 && j < 8) || (j > 8 && j < 13))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 15:
+          if((j > 4 && j < 9) || (j > 9 && j < 13) || j == 3)
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 16:
+          if((j > 6 && j < 12))
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 17:
+          if(j == 10)
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+        case 18:
+          if(j > 8 && j < 12)
+            Pikachu[j][i].color = yellow;
+          else
+            Pikachu[j][i].color = black;
+          break;
+      }
+      a.setColor(Pikachu[j][i].getColor());
+      a.plot(j, i, SQUARE);
+    }
+  }
 }
+
 
 void displayKakuna(int x, int y)
 {
