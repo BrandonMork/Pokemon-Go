@@ -212,13 +212,14 @@ void clearPoke(int x, int y)
 }
 
 
-void mapDisplay(ostream& out, int& x, int& y, profile a)
+void mapDisplay(ostream& out, int& x, int& y, profile& a)
 {
   srand(time(0));
   Pokemon spawnPoke;
   Plotter map1;
   ink color;
   bool poke;
+  bool caught;
   int count;
   int currX = x;
   int currY = y;
@@ -339,22 +340,38 @@ void mapDisplay(ostream& out, int& x, int& y, profile a)
           out << "A wild " << spawnPoke.getName() << " has appeared!!\n\n"
               << "What would you like to do?\n1. "
               << "Throw a Pokeball\n2. Run Away\n";
+
           do
           {
-            key = getch();
-          }while(key != '1' && key != '2');
+            do
+            {
+              key = getch();
+            }while(key != '1' && key != '2');
 
-          if (key == '1')
-          {
-            pokeballArt(65, 20);
-            Sleep(1000);
-            clearPoke(65, 20);
-            pokeballArt(80, 10);
-            Sleep(1000);
-            clearPoke(80, 10);
-            pokeballArt(95, 20);
-            Sleep(1000);
-          }
+            if (key == '1')
+            {
+              pokeballArt(65, 20);
+              Sleep(1000);
+              clearPoke(65, 20);
+              pokeballArt(80, 10);
+              Sleep(1000);
+              clearPoke(80, 10);
+              pokeballArt(95, 20);
+              Sleep(1000);
+
+              if(rand() % 3 == 1)
+              {
+                caught = true;
+                map1.move(60, 3);
+                map1.setColor(white);
+                out << "You Caught it!!!";
+                a.addPokemon(spawnPoke.getName(), spawnPoke.getType(),
+                             spawnPoke.getCP(), spawnPoke.getHP(),
+                             spawnPoke.getMove1(), spawnPoke.getMove2(), a.getNumPokemon());
+                Sleep(5000);
+              }
+            }
+          }while (key == '1' && caught == false);
         }
       }
     }

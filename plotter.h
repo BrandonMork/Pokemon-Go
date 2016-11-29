@@ -87,7 +87,7 @@ class Plotter
        void setColor(ink);
 };
 
-void mapDisplay(ostream&, int&, int&, profile);
+void mapDisplay(ostream&, int&, int&, profile&);
 
 void pokeballArt(int, int);
 

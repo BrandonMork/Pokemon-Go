@@ -93,14 +93,14 @@ class profile
     int XP;                   //  profile XP
     int numPokemon;           //  total pokemon owned by user
     backpack myBack;          //  backpack of pokeballs and potions
-    Pokemon myPokemon[250];   //  array of pokemon the user owns
+
 
 
   public:
 
     int currentX;             //  current X position on map
     int currentY;             //  current Y position on map
-
+    Pokemon myPokemon[250];   //  array of pokemon the user owns
     /*
       Precondition:
               none
@@ -406,6 +406,8 @@ class profile
               their profile avatar
     */
     void setGender(ostream&, istream&);
+
+    void addPokemon(string, string, int, int, string, string, int);
 
     /*
       Precondition:

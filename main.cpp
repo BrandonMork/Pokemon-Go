@@ -117,6 +117,8 @@ int main()
 
       profile.readPokemon(in, pokemonCount);
 
+      profile.setNumPokemon(pokemonCount);
+
       //  Update
       //  Game Menu
       gameMenuLoop(cout, cin, profile);

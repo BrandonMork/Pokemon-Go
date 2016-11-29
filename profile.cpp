@@ -308,7 +308,7 @@ string profile::getGender() const
 
 void profile::writeProfInfo(ostream& out)
 {
-  int i = 1;
+  int i = getNumPokemon();
   out.clear();
   out << user << endl << pass << endl << profHairColor << endl << profSkinColor
       << endl << profEyeColor << endl << profOutColor << endl << profGender
@@ -342,6 +342,23 @@ void profile::setPokeball(int x)
 void profile::setPotion(int x)
 {
  myBack.potion = x;
+}
+
+void profile::addPokemon(string a, string b, int c, int d, string e, string f, int i)
+{
+  /*string name = a,
+         type = b,
+         move1 = e,
+         move2 = f;
+  int CP = c,
+      HP = d;*/
+
+    myPokemon[i] = Pokemon(a, b, c, d, e, f);
+    i++;
+
+    setNumPokemon(i);
+  //myPokemon[getNumPokemon()] = Pokemon(a, b, c, d, e, f);*/
+  //cout << i;
 }
 
 void profile::Pokestop()

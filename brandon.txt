@@ -5,9 +5,10 @@ Black
 Green
 Red
 Male
-144
-49
+148
+53
 0
 0
 0
 Pikachu Electric 10 10 Tackle Thunderbolt
+Gengar Ghost 440 26 Scratch Shadow_Ball

@@ -13,14 +13,14 @@ using namespace std;
 
 Pokemon allPokemon[10] = {
               Pokemon("Pikachu", "Electric", "Thunderbolt"),
-              Pokemon("Bulbasaur", "Grass", "Razor Leaf"),
+              Pokemon("Bulbasaur", "Grass", "Razor_Leaf"),
               Pokemon("Charmander", "Fire", "Flamethrower"),
-              Pokemon("Squirtle", "Water", "Water Gun"),
+              Pokemon("Squirtle", "Water", "Water_Gun"),
               Pokemon("Pidgey", "Flying", "Wing Attack"),
               Pokemon("Rattata", "Normal", "Bite"),
-              Pokemon("Caterpie", "Bug", "String Shot"),
-              Pokemon("Geodude", "Rock", "Rock Throw"),
-              Pokemon("Gengar", "Ghost", "Shadow Ball"),
+              Pokemon("Caterpie", "Bug", "String_Shot"),
+              Pokemon("Geodude", "Rock", "Rock _Throw"),
+              Pokemon("Gengar", "Ghost", "Shadow_Ball"),
               Pokemon("Alakazam", "Psychic", "Psychic"),
               };
 
@@ -97,7 +97,7 @@ string Pokemon::randMove1()
   if(num == 2)
     return "Scratch";
   if(num == 3)
-    return "Quick Attack";
+    return "Quick_Attack";
   else
     return "Headbutt";
 }
