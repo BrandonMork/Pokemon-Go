@@ -5,10 +5,155 @@ using namespace std;
 
 int main()
 {
+
   /*
   Plotter a;
   ink color;
-  Point Kakuna[17][17];
+  Point Haunter [30][19];
+  for(int i = 0;i < 19;i ++)
+  {
+    for(int j = 0;j < 30; j++)
+    {
+      switch(i)
+      {
+        case 0:
+          Haunter[j][i].color = black;
+          break;
+        case 1:
+          if(j > 7 && j < 13)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 2:
+          if((j > 5 && j < 16) || (j > 0 && j < 3) || (j > 18 && j < 21))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 3:
+          if((j > 4 && j < 14) || (j > 0 && j < 4) || (j > 16 && j < 21))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 4:
+          if((j > 3 && j < 12) || (j == 2) || (j > 13 && j < 20))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 5:
+          if(j > 1 && j < 19)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 6:
+          if((j > 2 && j < 18) || (j > 18 && j < 21))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 7:
+          if((j > 2 && j < 12) || (j > 20 && j < 23) || (j > 24 && j < 27))
+            Haunter[j][i].color = purple;
+          else if((j > 12 && j < 17))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 8:
+          if((j > 2 && j < 10) || (j > 21 && j < 27) || (j > 12 && j < 21) || j == 1)
+            Haunter[j][i].color = purple;
+          else if(j == 12)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 9:
+          if((j > 2 && j < 9) || (j > 20 && j < 26) || (j > 12 && j < 18))
+            Haunter[j][i].color = purple;
+          else if(j < 13 && j > 10)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 10:
+          if((j > 3 && j < 8) || (j > 18 && j < 26) || (j > 12 && j < 16))
+            Haunter[j][i].color = purple;
+          else if((j < 13 && j > 10) || j == 9)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 11:
+          if((j > 3 && j < 8) || (j > 18 && j < 25) || (j > 11 && j < 18))
+            Haunter[j][i].color = purple;
+          else if(j < 12 && j > 8)
+            Haunter[j][i].color = white;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 12:
+          if((j > 3 && j < 13) || (j > 19 && j < 24) || (j > 14 && j < 19))
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 13:
+          if((j > 5 && j < 10) || (j > 19 && j < 22))
+            Haunter[j][i].color = purple;
+          else if(j == 13)
+            Haunter[j][i].color = red;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 14:
+          if((j > 16 && j < 20))
+            Haunter[j][i].color = purple;
+          else if(j > 10 && j < 13)
+            Haunter[j][i].color = red;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 15:
+          if((j > 12 && j < 17) || j == 3 || j == 5)
+            Haunter[j][i].color = purple;
+          else if(j > 6 && j < 12)
+            Haunter[j][i].color = red;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 16:
+          if((j > 11 && j < 18) || j == 3 || j > 4 && j < 7)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 17:
+          if((j > 13 && j < 18) || j == 5 || j == 12)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+        case 18:
+          if(j == 12 || j == 14 || j == 17)
+            Haunter[j][i].color = purple;
+          else
+            Haunter[j][i].color = black;
+          break;
+      }
+      a.setColor(Haunter[j][i].getColor());
+      a.plot(j, i, SQUARE);
+    }
+  }
+*/
+
+  /*
+  Plotter a;
+  ink color;
+  Point Kakuna[15][17];
 
   for(int i = 0;i < 17; i ++)
   {
