@@ -48,8 +48,8 @@ using namespace std;
 class Pokemon
 {
   private:
-    string name;
-    string type;
+
+
     int cp;
     int hp;
     string move1;
@@ -57,6 +57,8 @@ class Pokemon
 
   public:
     //constructors
+    string name;
+    string type;
     Pokemon();
     Pokemon(string, string, string);
 
@@ -216,7 +218,7 @@ class Pokemon
 
     void displayPokemon(int, int);
 
-
+    void clearPokeData();
 
 
 };

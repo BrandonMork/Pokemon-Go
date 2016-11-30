@@ -9,6 +9,7 @@
 
 #include "profile.h"
 #include "plotter.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -308,14 +309,13 @@ string profile::getGender() const
 
 void profile::writeProfInfo(ostream& out)
 {
-  int i = getNumPokemon();
   out.clear();
   out << user << endl << pass << endl << profHairColor << endl << profSkinColor
       << endl << profEyeColor << endl << profOutColor << endl << profGender
       << endl << currentX << endl << currentY << endl << XP << endl
       << myBack.pokeball << endl << myBack.potion << endl;
 
-  writePokemon(out, i);
+  writePokemon(out);
 }
 
 backpack::backpack(int a, int b)
@@ -344,21 +344,57 @@ void profile::setPotion(int x)
  myBack.potion = x;
 }
 
-void profile::addPokemon(string a, string b, int c, int d, string e, string f, int i)
+void profile::subtrPokeball()
 {
-  /*string name = a,
-         type = b,
-         move1 = e,
-         move2 = f;
-  int CP = c,
-      HP = d;*/
+  if (myBack.pokeball > 0)
+    myBack.pokeball -= 1;
+}
 
-    myPokemon[i] = Pokemon(a, b, c, d, e, f);
-    i++;
+void profile::addPokemon(string a, string b, int c, int d, string e, string f)
+{
+  myPokemon[numPokemon] = Pokemon(a, b, c, d, e, f);
+  numPokemon++;
+}
 
-    setNumPokemon(i);
-  //myPokemon[getNumPokemon()] = Pokemon(a, b, c, d, e, f);*/
-  //cout << i;
+void profile::managePokemon(ostream& out, istream& in)
+{
+  int select;
+  int count;
+  do
+  {
+    count = 0;
+    do
+    {
+      l.clear();
+      out << setw(2) << left << setw(12) << "NAME" << setw(10) << "TYPE" << setw(6) << "CP"
+        << setw(6) << "HP" << setw(15) << "MOVE 1" << setw(15) << "MOVE 2"
+        << endl;
+
+      for(int j = 0; j < numPokemon; j++)
+      {
+        out << (j + 1) << ". ";
+        myPokemon[j].writePokeInfo(out);
+      }
+      if(count > 0)
+        out << "Invalid number....Please Enter Another";
+
+      out << "\n\nType in the number of the pokemon you would like to delete "
+          << "and press 'ENTER'.\n\nIf you want to exit, enter '99'";
+      in >> select;
+
+      count++;
+
+    }while(select < 0 || (select > numPokemon && select != 99));
+
+    if (select != 99)
+    {
+      for (; select < numPokemon; select++)
+        myPokemon[select - 1] = myPokemon[select];
+
+      numPokemon--;
+    }
+
+  }while(select != 99);
 }
 
 void profile::Pokestop()
@@ -376,8 +412,9 @@ void profile::Pokestop()
 
 }
 
-void profile::readPokemon(istream& in, int& i)
+void profile::readPokemon(istream& in)
 {
+  numPokemon = 0;
   string name,
          type,
          move1,
@@ -387,18 +424,28 @@ void profile::readPokemon(istream& in, int& i)
 
   while(in >> name >> type >> CP >> HP >> move1 >> move2)
   {
-    myPokemon[i] = Pokemon(name, type, CP, HP, move1, move2);
-    i++;
+    myPokemon[numPokemon] = Pokemon(name, type, CP, HP, move1, move2);
+    numPokemon++;
   }
 }
 
-void profile::writePokemon(ostream& out, int i)
+void profile::writePokemon(ostream& out)
 {
-  for(int j = 0; j < i; j++)
+  for(int j = 0; j < numPokemon; j++)
   {
     myPokemon[j].writePokeInfo(out);
   }
 }
+
+void profile::poketable(ostream& out)
+{
+  out << left << setw(12) << "NAME" << setw(10) << "TYPE" << setw(6) << "CP"
+      << setw(6) << "HP" << setw(15) << "MOVE 1" << setw(15) << "MOVE 2"
+      << endl;
+
+  writePokemon(out);
+}
+
 
 void profile::avatarDisplay(int x, int y)
 {
@@ -626,4 +673,154 @@ void profile::avatarDisplay(int x, int y)
         avatar.plot((j + x), (i + y), character);
     }
   }
+}
+
+void profile::sortPokemon(ostream& out)
+{
+  char choice;
+  int count;
+  int pokeCounter;
+  Pokemon temp;
+  bool swap;
+
+  do
+  {
+    l.clear();
+    pokeCounter = 0;
+    count = 0;
+    do
+    {
+
+      if (count > 0)
+      {
+        l.clear();
+        out << "Invalid choice...Please try again\n\n";
+      }
+      out << "What would you like to sort by?\n1. Name\n2. CP\n3. HP\n"
+          << "4. Go Back\n";
+
+      poketable(out);
+
+      choice = getch();
+      count++;
+
+    }while(choice != '1' && choice != '2' && choice != '3' && choice != '4');
+
+    switch (choice)
+    {
+      case '1':
+        do
+        {
+          swap = false;
+          for (int i = 0; i < (numPokemon - 1); i++)
+          {
+
+            if (myPokemon[i].name[0] > myPokemon[i + 1].name[0])
+            {
+              temp = myPokemon[i + 1];
+              myPokemon[i + 1] = myPokemon[i];
+              myPokemon[i] = temp;
+              swap = true;
+            }
+            else if (myPokemon[i].getName()[0] == myPokemon[i + 1].getName()[0])
+            {
+              if (myPokemon[i].getCP() > myPokemon[i + 1].getCP())
+              {
+                temp = myPokemon[i + 1];
+                myPokemon[i + 1] = myPokemon[i] ;
+                myPokemon[i] = temp;
+                swap = true;
+              }
+              else if (myPokemon[i].getCP() == myPokemon[i + 1].getCP())
+              {
+                if (myPokemon[i].getHP() > myPokemon[i + 1].getHP())
+                {
+                  temp = myPokemon[i + 1];
+                  myPokemon[i + 1] = myPokemon[i] ;
+                  myPokemon[i] = temp;
+                  swap = true;
+                }
+              }
+            }
+          }
+        }while(swap == true);
+        break;
+
+      case '2':
+        do
+        {
+          swap = false;
+          for(int i = 0; i < (numPokemon - 1); i++)
+          {
+            if (myPokemon[i].getCP() > myPokemon[i + 1].getCP())
+            {
+              temp = myPokemon[i + 1];
+              myPokemon[i + 1] = myPokemon[i];
+              myPokemon[i] = temp;
+              swap = true;
+            }
+            else if(myPokemon[i].getCP() == myPokemon[i + 1].getCP())
+            {
+              if (myPokemon[i].name[0] > myPokemon[i + 1].name[0])
+              {
+                temp = myPokemon[i + 1];
+                myPokemon[i + 1] = myPokemon[i];
+                myPokemon[i] = temp;
+                swap = true;
+              }
+              else if (myPokemon[i].getName()[0]
+                       == myPokemon[i + 1].getName()[0])
+              {
+                if (myPokemon[i].getHP() > myPokemon[i + 1].getHP())
+                {
+                  temp = myPokemon[i + 1];
+                  myPokemon[i + 1] = myPokemon[i];
+                  myPokemon[i] = temp;
+                  swap = true;
+                }
+              }
+            }
+          }
+        }while (swap == true);
+        break;
+
+      case '3':
+        do
+        {
+          swap = false;
+          for(int i = 0; i < (numPokemon - 1); i++)
+          {
+            if (myPokemon[i].getHP() > myPokemon[i + 1].getHP())
+            {
+              temp = myPokemon[i + 1];
+              myPokemon[i + 1] = myPokemon[i];
+              myPokemon[i] = temp;
+              swap = true;
+            }
+            else if(myPokemon[i].getHP() == myPokemon[i + 1].getHP())
+            {
+              if (myPokemon[i].name[0] > myPokemon[i + 1].name[0])
+              {
+                temp = myPokemon[i + 1];
+                myPokemon[i + 1] = myPokemon[i];
+                myPokemon[i] = temp;
+                swap = true;
+              }
+              else if (myPokemon[i].getName()[0]
+                       == myPokemon[i + 1].getName()[0])
+              {
+                if (myPokemon[i].getCP() > myPokemon[i + 1].getCP())
+                {
+                  temp = myPokemon[i + 1];
+                  myPokemon[i + 1] = myPokemon[i];
+                  myPokemon[i] = temp;
+                  swap = true;
+                }
+              }
+            }
+          }
+        }while (swap == true);
+    }
+  }while (choice != '4');
+
 }

@@ -115,9 +115,7 @@ int main()
 
       profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
 
-      profile.readPokemon(in, pokemonCount);
-
-      profile.setNumPokemon(pokemonCount);
+      profile.readPokemon(in);
 
       //  Update
       //  Game Menu

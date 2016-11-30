@@ -141,13 +141,15 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
         out << "Invalid choice, please try again...\n";
 
       out << "What would you like to change?"
-           << "\n1. Password\n2. Avatar\n3. Back\n";
+           << "\n1. Password\n2. Avatar\n3. Sort Pokemon\n4. Manage Pokemon"
+           << "\n5. Back\n";
       choice = getch();
       count++;
 
-    }while (choice != '1' && choice != '2' && choice != '3');
+    }while (choice != '1' && choice != '2' && choice != '3' && choice != '4'
+            && choice != '5');
 
-    if (choice != '3')
+    if (choice != '5')
     {
       switch (choice)
       {
@@ -207,7 +209,16 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
               }
             }
           }while (avChoice != '6');
+          break;
+
+        case '3':
+          a.sortPokemon(out);
+          break;
+
+        case '4':
+          a.managePokemon(out, in);
       }
     }
-  }while (choice != '3');
+  }while (choice != '5');
 }
+

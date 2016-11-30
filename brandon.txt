@@ -5,14 +5,33 @@ Black
 Green
 Red
 Male
-152
-19
+96
+22
 5
+20
 5
-5
-Pikachu Electric 10 10 Tackle Thunderbolt
-Squirtle Water 273 42 Scratch Water_Gun
-Haunter Ghost 836 50 Quick_Attack Shadow_Ball
-Squirtle Water 457 15 Scratch Water_Gun
-Kakuna Bug 826 20 Quick_Attack Struggle
-Kakuna Bug 325 55 Tackle Struggle
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Haunter     Ghost     181   42    Tackle         Shadow_Ball    
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       181   42    Tackle         Struggle       

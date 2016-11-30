@@ -9,6 +9,7 @@
 
 #include "Pokemon.h"
 #include "plotter.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -114,8 +115,8 @@ void Pokemon::randPokemon()
 
 void Pokemon::writePokeInfo(ostream& out)
 {
-  out << name << " " << type << " " << cp << " "
-      << hp << " " << move1 << " " << move2 << endl;
+  out << left << setw(12) << name << setw(10) << type << setw(6) << cp << setw(6)
+      << hp << setw(15) << move1 << setw(15) << move2 << endl;
 }
 
 Pokemon::Pokemon(string a, string b, int c, int d, string e, string f)
@@ -141,6 +142,16 @@ void Pokemon::displayPokemon( int x, int y)
   else if (name == "Haunter")
     displayHaunter(x, y);
 
+}
+
+void Pokemon::clearPokeData()
+{
+  name.clear();
+  type.clear();
+  move1.clear();
+  move2.clear();
+  //hp.clear();
+  //cp.clear();
 }
 
 void clearPokemon(int x, int y)
@@ -864,4 +875,5 @@ void displaySquirtle(int x, int y)
     }
   }
 }
+
 

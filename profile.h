@@ -51,6 +51,10 @@
   + readPokemon(istream&, int&): void
   + writePokemon(ostream&, int): void
   + avatarDisplay(int, int): void
+  + subtrPokeball(): void
+  + addPokemon(string, string, int, int, string, string, int): void
+  + sortPokemon(ostream&): void
+  + poketable(ostream&): void
   ************************************************
 */
 
@@ -99,7 +103,7 @@ class profile
 
     int currentX;             //  current X position on map
     int currentY;             //  current Y position on map
-    Pokemon myPokemon[250];   //  array of pokemon the user owns
+    Pokemon myPokemon[25];    //  array of pokemon the user owns
     /*
       Precondition:
               none
@@ -406,7 +410,33 @@ class profile
     */
     void setGender(ostream&, istream&);
 
-    void addPokemon(string, string, int, int, string, string, int);
+    /*
+      Precondition:
+              a profile object exists
+      Postcondition:
+              The value of pokeball in myBack decrements by 1
+      Return:
+              void
+      Description:
+              This function decreases the number of pokeballs in myBack by 1
+    */
+    void subtrPokeball();
+
+    /*
+      Precondition:
+              a profile object exists
+              4 strings and 2 ints exist
+      Postcondition:
+              The value of teh strings and ints remains unchanged
+              A pokemon object is created at the first available spot in the
+              myPokemon array
+      Return:
+              void
+      Description:
+              This function adds a pokemon object to the array that contains a
+              profile's caught pokemon
+    */
+    void addPokemon(string, string, int, int, string, string);
 
     /*
       Precondition:
@@ -441,7 +471,7 @@ class profile
               pokemon from their data file and creates pokemon objects in
               the array of pokemon in the user's profile
     */
-    void readPokemon(istream&, int&);
+    void readPokemon(istream&);
 
     /*
       Precondition:
@@ -459,12 +489,11 @@ class profile
               This function writes all information for the pokemon in the
               profile object to the output stream
     */
-    void writePokemon(ostream&, int);
+    void writePokemon(ostream&);
 
     /*
       Precondition:
               a profile object exists with avatar attributes assigned
-              two integer values exist
       Postcondition:
               The avatar attributes remain unchanged
               The avatar visualization is displayed to stdout
@@ -475,6 +504,51 @@ class profile
               at a certain coordinate point
     */
     void avatarDisplay(int, int);
+
+    /*
+      Precondition:
+              a profile object exists
+      Postcondition:
+              The pokemon objects in myPokemon are unchanged
+              The pokemon objects are rearranged in the order that the user
+              desires them to be displayed and written
+      Return:
+              void
+      Description:
+              This function rearranges the order of the caught pokemon objects
+              in the array where they reside and also displays the list of all
+              of the pokemon in the array
+    */
+    void sortPokemon(ostream&);
+
+    /*
+      Precondition:
+              a profile object exists
+      Postcondition:
+              The pokemon objects in the array of myPokemon remain unchanged
+              The pokemon objects in the myPokemon array are displayed in a
+              table with headers
+      Return:
+              void
+      Description:
+              This function displays the avatar visualization to the screen
+              at a certain coordinate point
+    */
+    void poketable(ostream&);
+
+    /*
+      Precondition:
+              a profile object exists with avatar attributes assigned
+      Postcondition:
+              The avatar attributes remain unchanged
+              The avatar visualization is displayed to stdout
+      Return:
+              void
+      Description:
+              This function displays the avatar visualization to the screen
+              at a certain coordinate point
+    */
+    void managePokemon(ostream&, istream&);
 
 };
 
