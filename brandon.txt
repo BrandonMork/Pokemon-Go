@@ -8,7 +8,7 @@ Male
 96
 42
 5
-20
+0
 5
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
