@@ -368,7 +368,9 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
               {
                 if(a.getPokeball() == 0)
                 {
-
+                  map1.move(60, 3);
+                  map1.setColor(white);
+                  out << "No More Pokeballs....Please Visit a Pokestop for More";
                 }
                 else
                 {
@@ -392,8 +394,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                     out << "You Caught it!!!";
                     a.addPokemon(spawnPoke.getName(), spawnPoke.getType(),
                                  spawnPoke.getCP(), spawnPoke.getHP(),
-                                 spawnPoke.getMove1(), spawnPoke.getMove2(),
-                                 a.getNumPokemon());
+                                 spawnPoke.getMove1(), spawnPoke.getMove2());
                     Sleep(5000);
                   }
                   else
