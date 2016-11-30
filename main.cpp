@@ -42,7 +42,6 @@ int main()
   int pokeball = 0;
   int xCoor = 130;
   int yCoor = 30;
-  int pokemonCount = 0;
   string userFile;
   string password;        //  stores password for account
   string tempPassword;    //  stores password to test validation of password
@@ -52,8 +51,8 @@ int main()
   string oColor;          //  stores outfit color
   string sColor;          //  stores skin color
   string gende;           //  stores gender
-  ifstream in;
-  ofstream out;
+  ifstream in;            //  input file stream object
+  ofstream out;           //  output file stream object
 
 
 

@@ -68,16 +68,80 @@
 
 using namespace std;
 
+/*
+  Precondition:
+          an input stream exists
+          an output stream exists
+  Postcondition:
+          A string, whose message is determined by the user, is returned
+  Return:
+          string
+  Description:
+          This function displays a menu for the user to choose the outfit
+          color of their avatar in gameplay and reads in their choice
+*/
 string outfitColor(ostream&, istream&);
+
+/*
+  Precondition:
+          an input stream exists
+          an output stream exists
+  Postcondition:
+          A string, whose message is determined by the user, is returned
+  Return:
+          string
+  Description:
+          This function displays a menu for the user to choose the eye color
+          of their avatar in gameplay and reads in their choice
+*/
 string eyeColor(ostream&, istream&);
+
+/*
+  Precondition:
+          an input stream exists
+          an output stream exists
+  Postcondition:
+          A string, whose message is determined by the user, is returned
+  Return:
+          string
+  Description:
+          This function displays a menu for the user to choose the hair color
+          of their avatar in gameplay and reads in their choice
+*/
 string hairColor(ostream&, istream&);
+
+/*
+  Precondition:
+          an input stream exists
+          an output stream exists
+  Postcondition:
+          A string, whose message is determined by the user, is returned
+  Return:
+          string
+  Description:
+          This function displays a menu for the user to choose the skin color
+          of their avatar in gameplay and reads in their choice
+*/
 string skinColor(ostream&, istream&);
+
+/*
+  Precondition:
+          an input stream exists
+          an output stream exists
+  Postcondition:
+          A string, whose message is determined by the user, is returned
+  Return:
+          string
+  Description:
+          This function displays a menu for the user to choose the gender
+          of their avatar in gameplay and reads in their choice
+*/
 string gender(ostream&, istream&);
 
 struct backpack
 {
-    int pokeball;
-    int potion;
+    int pokeball;             //  number of pokeballs in the backpack
+    int potion;               //  number of potions in the backpack
 
     backpack(int = 0, int = 0);
 };
@@ -96,14 +160,13 @@ class profile
     int XP;                   //  profile XP
     int numPokemon;           //  total pokemon owned by user
     backpack myBack;          //  backpack of pokeballs and potions
-
+    Pokemon myPokemon[25];    //  array of pokemon the user owns
 
 
   public:
 
     int currentX;             //  current X position on map
     int currentY;             //  current Y position on map
-    Pokemon myPokemon[25];    //  array of pokemon the user owns
     /*
       Precondition:
               none
@@ -116,7 +179,8 @@ class profile
               This function creates a profile object from the arguments passed
               to it
     */
-    profile(string, string, string, string, string, string, string, int, int, int, backpack);
+    profile(string, string, string, string, string, string, string, int, int,
+            int, backpack);
 
     /*
       Precondition:
@@ -531,22 +595,27 @@ class profile
       Return:
               void
       Description:
-              This function displays the avatar visualization to the screen
-              at a certain coordinate point
+              This function displays the pokemon objects in A pseudo table to
+              the output stream
     */
     void poketable(ostream&);
 
     /*
       Precondition:
-              a profile object exists with avatar attributes assigned
+              a profile object exists
+              an output stream exists
+              an input stream exists
       Postcondition:
-              The avatar attributes remain unchanged
-              The avatar visualization is displayed to stdout
+              Any number of the pokemon, if any, in myPokemon, may be written
+              over and deleted
       Return:
               void
       Description:
-              This function displays the avatar visualization to the screen
-              at a certain coordinate point
+              This function displays and numbers the pokemon in myPokemon in a
+              pseudo table and then prompts the user to enter a number of a
+              pokemon they want to delete or the kill number. If a pokemon
+              number is entered, that pokemon object is written over. If the
+              kill number is entered, the function ends
     */
     void managePokemon(ostream&, istream&);
 

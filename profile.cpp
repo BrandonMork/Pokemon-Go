@@ -206,6 +206,7 @@ profile::profile(string a, string b, string c, string d, string e, string f, str
   XP = xp;
   myBack = mypack;
 }
+
 void profile::setHair(ostream& out, istream& in)
 {
   profHairColor = hairColor(out, in);
@@ -286,22 +287,27 @@ string profile::getUser() const
 {
   return user;
 }
+
 string profile::getHair() const
 {
   return profHairColor;
 }
+
 string profile::getSkin() const
 {
   return profSkinColor;
 }
+
 string profile::getEye() const
 {
   return profEyeColor;
 }
+
 string profile::getOutfit() const
 {
   return profOutColor;
 }
+
 string profile::getGender() const
 {
   return profGender;
@@ -378,8 +384,9 @@ void profile::managePokemon(ostream& out, istream& in)
       if(count > 0)
         out << "Invalid number....Please Enter Another";
 
-      out << "\n\nType in the number of the pokemon you would like to delete "
-          << "and press 'ENTER'.\n\nIf you want to exit, enter '99'";
+      out << "\n\nType in the number of the pokemon you would like to send "
+          << "to the Professor and press 'ENTER'.\n\nIf you want to exit, "
+          << "enter '99'";
       in >> select;
 
       count++;
@@ -445,7 +452,6 @@ void profile::poketable(ostream& out)
 
   writePokemon(out);
 }
-
 
 void profile::avatarDisplay(int x, int y)
 {

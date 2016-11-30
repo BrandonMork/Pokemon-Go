@@ -6,32 +6,12 @@ Green
 Red
 Male
 96
-22
+42
 5
 20
 5
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Haunter     Ghost     181   42    Tackle         Shadow_Ball    
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
-Kakuna      Bug       181   42    Tackle         Struggle       
 Kakuna      Bug       181   42    Tackle         Struggle       
 Kakuna      Bug       181   42    Tackle         Struggle       
