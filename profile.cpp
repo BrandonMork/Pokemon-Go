@@ -373,6 +373,8 @@ void profile::Pokestop()
   if(now - last >= 30)
   {
     srand(time(NULL));
+    myBack.pokeball += (rand() % 4) + 1;
+    myBack.potion += (rand() % 4) + 1;
     last = now;
   }
 
