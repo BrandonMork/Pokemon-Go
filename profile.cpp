@@ -124,42 +124,6 @@ string hairColor(ostream& out, istream& in)
   return color;
 }
 
-string skinColor(ostream& out, istream& in)
-{
-  char select;
-  int count = 0;
-  string color;
-  do
-  {
-    if (count > 0)
-    {
-      l.clear();
-      out << "Invalid choice...Please try again\n\n";
-    }
-
-    out << "Please choose your skin color: "
-       << "\n1. White\n2. Brown\n3. Black\n";
-    select = getch();
-
-    switch (select)
-    {
-      case '1':
-        color = "White";
-        break;
-      case '2':
-        color = "Brown";
-        break;
-      case '3':
-        color = "Black";
-    }
-    count++;
-
-  }while(select != '1' && select != '2' && select != '3');
-
-
-  return color;
-}
-
 string gender(ostream& out, istream& in)
 {
   char select;
@@ -192,18 +156,17 @@ string gender(ostream& out, istream& in)
   return gend;
 }
 
-profile::profile(string a, string b, string c, string d, string e, string f, string g, int x, int y, int xp, backpack mypack)
+profile::profile(string a, string b, string c, string e, string f,
+                 string g, int x, int y, backpack mypack)
 {
   user = a;
   pass = b;
   profHairColor = c;
-  profSkinColor = d;
   profEyeColor = e;
   profOutColor = f;
   profGender = g;
   currentX = x;
   currentY = y;
-  XP = xp;
   myBack = mypack;
 }
 
@@ -215,11 +178,6 @@ void profile::setHair(ostream& out, istream& in)
 void profile::setEye(ostream& out, istream& in)
 {
   profEyeColor = eyeColor(out, in);
-}
-
-void profile::setSkin(ostream& out, istream& in)
-{
-  profSkinColor = skinColor(out, in);
 }
 
 void profile::setGender(ostream& out, istream& in)
@@ -293,11 +251,6 @@ string profile::getHair() const
   return profHairColor;
 }
 
-string profile::getSkin() const
-{
-  return profSkinColor;
-}
-
 string profile::getEye() const
 {
   return profEyeColor;
@@ -316,10 +269,10 @@ string profile::getGender() const
 void profile::writeProfInfo(ostream& out)
 {
   out.clear();
-  out << user << endl << pass << endl << profHairColor << endl << profSkinColor
-      << endl << profEyeColor << endl << profOutColor << endl << profGender
-      << endl << currentX << endl << currentY << endl << XP << endl
-      << myBack.pokeball << endl << myBack.potion << endl;
+  out << user << endl << pass << endl << profHairColor << endl
+      << profEyeColor << endl << profOutColor << endl << profGender << endl
+      << currentX << endl << currentY << endl << myBack.pokeball << endl
+      << myBack.potion << endl;
 
   writePokemon(out);
 }
@@ -356,6 +309,12 @@ void profile::subtrPokeball()
     myBack.pokeball -= 1;
 }
 
+void profile::subtrPotion()
+{
+  if (myBack.potion > 0)
+    myBack.potion -= 1;
+}
+
 void profile::addPokemon(string a, string b, int c, int d, string e, string f)
 {
   myPokemon[numPokemon] = Pokemon(a, b, c, d, e, f);
@@ -372,13 +331,15 @@ void profile::managePokemon(ostream& out, istream& in)
     do
     {
       l.clear();
-      out << setw(2) << left << setw(12) << "NAME" << setw(10) << "TYPE" << setw(6) << "CP"
-        << setw(6) << "HP" << setw(15) << "MOVE 1" << setw(15) << "MOVE 2"
-        << endl;
+      out << setw(4) << " " << left << setw(12) << "NAME" << setw(10)
+          << "TYPE" << setw(6) << "CP" << setw(6) << "HP" << setw(15)
+          << "MOVE 1" << setw(15) << "MOVE 2" << endl;
 
       for(int j = 0; j < numPokemon; j++)
       {
         out << (j + 1) << ". ";
+        if (j < 9)
+          out << " ";
         myPokemon[j].writePokeInfo(out);
       }
       if(count > 0)
@@ -412,8 +373,6 @@ void profile::Pokestop()
   if(now - last >= 30)
   {
     srand(time(NULL));
-    myBack.pokeball += rand() % 4 + 1;
-    myBack.potion += rand() % 4 + 1;
     last = now;
   }
 
@@ -728,7 +687,8 @@ void profile::sortPokemon(ostream& out)
               myPokemon[i] = temp;
               swap = true;
             }
-            else if (myPokemon[i].getName()[0] == myPokemon[i + 1].getName()[0])
+            else if (myPokemon[i].getName()[0]
+                     == myPokemon[i + 1].getName()[0])
             {
               if (myPokemon[i].getCP() > myPokemon[i + 1].getCP())
               {

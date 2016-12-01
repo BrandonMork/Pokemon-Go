@@ -220,6 +220,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
   ink color;
   bool poke;
   bool caught;
+  int catchChance;
   int count;
   int currX = x;
   int currY = y;
@@ -263,22 +264,12 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
       //  If you want to add in specific block colors and objects
       //  do it here
-      /*
-      if(x > 27 && x < 29 && y > 15 && y < 17)
-      {
-        map2[x][y].color = red;
-        map2[x][y].character = SQUARE;
-      }
-      */
-      if(((x > 29 && x < 34) || (x > 150 && x < 155) || (x > 235 && x < 240)) && ((y > 15 && y < 18) || (y > 44 && y < 47)))
+      if(((x > 29 && x < 34) || (x > 150 && x < 155) || (x > 235 && x < 240))
+         && ((y > 15 && y < 18) || (y > 44 && y < 47)))
       {
         map2[x][y].color = purple;
         map2[x][y].character = SQUARE;
       }
-      //if(x == 96 && y == 44)
-      //  map2[x][y].color = red;
-      //if(x == 166 && y == 157)
-      //  map2[x][y].color = red;
 
 
     }
@@ -294,7 +285,6 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
         map1.plot(i, j, map2[i][j].getCharacter());
       }
     }
-    //map2[x][y] = Point(x, y, map2[x][y].character, map2[x][y].color);
 
     color = yellow;
     if (a.getOutfit() == "Red")
@@ -347,6 +337,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
         {
           map1.clear();
           poke = true;
+          caught = false;
           spawnPoke.randPokemon();
           spawnPoke.displayPokemon(115, 20);
 
@@ -357,7 +348,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
           map1.move(0, 0);
           map1.setColor(white);
 
-          if (a.getNumPokemon() == 250)
+          if (a.getNumPokemon() == 25)
           {
             out << "Too many Pokemon caught....Please delete some and come "
                 << "out again\n\n Running Away.....";
@@ -373,17 +364,19 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
           {
             out << "A wild " << spawnPoke.getName() << " has appeared!!\n\n"
                 << "What would you like to do?\n1. "
-                << "Throw a Pokeball\n2. Run Away\n";
-
+                << "Throw a Pokeball\n2. Throw a Razz Berry\n3. Run Away\n";
+          catchChance = 3;
             do
             {
               do
               {
                 key = getch();
-              }while(key != '1' && key != '2');
+              }while(key != '1' && key != '2' && key != '3');
 
               if (key == '1')
               {
+                a.subtrPokeball();
+
                 if(a.getPokeball() == 0)
                 {
                   map1.move(60, 3);
@@ -402,7 +395,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                   Sleep(1000);
                   clearPoke(95, 20);
 
-                  if(rand() % 3 == 1)
+                  if(rand() % catchChance == 1)
                   {
                     clearPokemon(115, 20);
                     pokeballArt(120, 35);
@@ -423,7 +416,25 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                   }
                 }
               }
-            }while (key == '1' && caught == false);
+              else if (key == '2')
+              {
+                if (a.getPotion() == 0)
+                {
+                  map1.move(0, 25);
+                  map1.setColor(white);
+                  out << "No More Potions....Please Visit a Pokestop for More\n\n"
+                      << "Throw a Pokeball or Run Away";
+                }
+                else
+                {
+                  catchChance = 2;
+                  a.subtrPotion();
+                  map1.move(0, 20);
+                  map1.setColor(white);
+                  out << "Razz Berry Thrown!";
+                }
+              }
+            }while ((key == '1' || key == '2')&& caught == false);
           }
 
         }

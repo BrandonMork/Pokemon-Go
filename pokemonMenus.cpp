@@ -69,8 +69,6 @@ void newUserCreation(ostream& out, istream& in)
   p.clear();
   out2 << hairColor(out, in) << endl;
   p.clear();
-  out2 << skinColor(out, in) << endl;
-  p.clear();
   out2 << eyeColor(out, in) << endl;
   p.clear();
   out2 << outfitColor(out, in) << endl;
@@ -175,13 +173,13 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
                 out << "Invalid choice, please try again...\n";
 
               cout << "What would you like to change?"
-                   << "\n1. Hair Color\n2. Outfit Color\n3. Eye Color\n4. Skin"
-                   << "Color\n5. Gender\n6. Back\n";
+                   << "\n1. Hair Color\n2. Outfit Color\n3. Eye Color\n"
+                   << "4. Gender\n5. Back\n";
               avChoice = getch();
 
               count2++;
             }while (avChoice != '1' && avChoice != '2' && avChoice != '3' &&
-                    avChoice != '4' && avChoice != '5' && avChoice != '6');
+                    avChoice != '4' && avChoice != '5');
 
             p.clear();
             if (avChoice != '6')
@@ -201,14 +199,10 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
                   break;
 
                 case '4':
-                  a.setSkin(out, in);
-                  break;
-
-                case '5':
                   a.setGender(out, in);
               }
             }
-          }while (avChoice != '6');
+          }while (avChoice != '5');
           break;
 
         case '3':

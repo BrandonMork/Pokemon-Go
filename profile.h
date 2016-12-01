@@ -16,7 +16,6 @@
   - profOutColor: string
   - profEyeColor: string
   - profHairColor: string
-  - profSkinColor: string
   - profGender: string
   - XP: int
   - numPokemon: int
@@ -27,7 +26,6 @@
   ************************************************
   + profile():
   + getHair() const: string
-  + getSkin() const: string
   + getEye() const: string
   + getOutfit() const: string
   + getGender() const: string
@@ -42,7 +40,6 @@
   + setPotion(int): void
   + setPassword(ostream&, istream&): void
   + setHair(ostream&, istream&): void
-  + setSkin(ostream&, istream&): void
   + setEye(ostream&, istream&): void
   + setOutfit(ostream&, istream&): void
   + setGender(ostream&, istream&): void
@@ -119,20 +116,6 @@ string hairColor(ostream&, istream&);
   Return:
           string
   Description:
-          This function displays a menu for the user to choose the skin color
-          of their avatar in gameplay and reads in their choice
-*/
-string skinColor(ostream&, istream&);
-
-/*
-  Precondition:
-          an input stream exists
-          an output stream exists
-  Postcondition:
-          A string, whose message is determined by the user, is returned
-  Return:
-          string
-  Description:
           This function displays a menu for the user to choose the gender
           of their avatar in gameplay and reads in their choice
 */
@@ -155,9 +138,7 @@ class profile
     string profOutColor;      //  avatar outfit color
     string profEyeColor;      //  avatar eyecolor
     string profHairColor;     //  avatar hair color
-    string profSkinColor;     //  avatar race/ethnicity
     string profGender;        //  avatar gender
-    int XP;                   //  profile XP
     int numPokemon;           //  total pokemon owned by user
     backpack myBack;          //  backpack of pokeballs and potions
     Pokemon myPokemon[25];    //  array of pokemon the user owns
@@ -179,7 +160,7 @@ class profile
               This function creates a profile object from the arguments passed
               to it
     */
-    profile(string, string, string, string, string, string, string, int, int,
+    profile(string, string, string, string, string, string, int,
             int, backpack);
 
     /*
@@ -196,21 +177,6 @@ class profile
               color of the avatar for the profile
     */
     string getHair() const;
-
-    /*
-      Precondition:
-              a profile object exists with a designated race/ethnicity color
-      Postcondition:
-              The string stored as the skin color of the profile avatar is
-              returned
-              The skin color remains unchanged
-      Return:
-              string
-      Description:
-              This function grabs and returns the string stored as the skin
-              color of the avatar for the profile
-    */
-    string getSkin() const;
 
     /*
       Precondition:
@@ -271,24 +237,6 @@ class profile
               username of the avatar for the profile
     */
     string getUser() const;
-
-    /*
-      Precondition:
-              a profile object exists with a designated outfit color
-              An ink color that corresponds with the avatars outfit color
-              exists
-      Postcondition:
-              The ink color that corresponds to the outfit color of the avatar
-              is returned
-              The outfit color remains unchanged
-      Return:
-              ink
-      Description:
-              This function grabs the string stored as the outfit color, finds
-              the ink variable that corresponds to the same color as the
-              avatar outfit, and returns that ink
-    */
-    //ink getMapDot() const;
 
     /*
       Precondition:
@@ -418,21 +366,6 @@ class profile
       Precondition:
               a profile object exists
       Postcondition:
-              The string stored as the skin color of the profile avatar is
-              changed
-      Return:
-              void
-      Description:
-              This function calls the function that displays a menu for the
-              user to go through the process to determine a new skin color for
-              their profile avatar
-    */
-    void setSkin(ostream&, istream&);
-
-    /*
-      Precondition:
-              a profile object exists
-      Postcondition:
               The string stored as the eye color of the profile avatar is
               changed
       Return:
@@ -485,6 +418,18 @@ class profile
               This function decreases the number of pokeballs in myBack by 1
     */
     void subtrPokeball();
+
+    /*
+      Precondition:
+              a profile object exists
+      Postcondition:
+              The value of potion in myBack decrements by 1
+      Return:
+              void
+      Description:
+              This function decreases the number of potions in myBack by 1
+    */
+    void subtrPotion();
 
     /*
       Precondition:

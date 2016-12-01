@@ -9,22 +9,17 @@
 */
 
 /*
-  Data Abstraction:
-
   Input:
 
-  Process:
+  Update:
 
-  Output:
-
-  Assumptions:
-
+  Draw:
 */
 
 #include <iostream>           //  cin >> cout <<
 #include <fstream>            //  open close
 #include "profile.h"          //  profile writeProfInfo
-#include "plotter.h"
+#include "plotter.h"          //  plotter clear
 #include <string>             //  string c_str()
 #include <stdlib.h>           //  system
 #include "pokemonMenus.h"     //  gameMenuLoop
@@ -37,7 +32,6 @@ int main()
   Plotter a;
   int count3 = 1;
   char usrChoice;
-  int XP = 0;
   int potion = 0;
   int pokeball = 0;
   int xCoor = 130;
@@ -49,7 +43,6 @@ int main()
   string hColor;          //  stores hair color
   string eColor;          //  stores eye color
   string oColor;          //  stores outfit color
-  string sColor;          //  stores skin color
   string gende;           //  stores gender
   ifstream in;            //  input file stream object
   ofstream out;           //  output file stream object
@@ -108,11 +101,11 @@ int main()
     {
 
 
-      in >> hColor >> sColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> XP >> pokeball >> potion;
+      in >> hColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> pokeball >> potion;
 
       backpack myPack(pokeball, potion);
 
-      profile profile(username, password, hColor, sColor, eColor, oColor, gende, xCoor, yCoor, XP, myPack);
+      profile profile(username, password, hColor, eColor, oColor, gende, xCoor, yCoor, myPack);
 
       profile.readPokemon(in);
 
