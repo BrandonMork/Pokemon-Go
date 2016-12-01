@@ -4,32 +4,31 @@ Blonde
 Blue
 Red
 Male
-234
-45
+232
+36
 50
-50
-Squirtle    Water     563   6     Quick_Attack   Water_Gun
-Pikachu     Electric  23    12    Quick_Attack   Thunderbolt
-Charmander  Fire      956   14    Tackle         Flamethrower
-Charmander  Fire      900   23    Tackle         Flamethrower
-Pikachu     Electric  396   23    Tackle         Thunderbolt
-Pikachu     Electric  424   24    Quick_Attack   Thunderbolt
-Squirtle    Water     245   24    Quick_Attack   Water_Gun
-Kakuna      Bug       470   28    Quick_Attack   Struggle
-Squirtle    Water     470   28    Quick_Attack   Water_Gun
-Haunter     Ghost     43    34    Quick_Attack   Shadow_Ball
-Pikachu     Electric  342   34    Quick_Attack   Thunderbolt
-Haunter     Ghost     670   35    Quick_Attack   Shadow_Ball
-Haunter     Ghost     523   39    Scratch        Shadow_Ball
-Kakuna      Bug       181   42    Tackle         Struggle
-Squirtle    Water     123   45    Quick_Attack   Water_Gun
-Squirtle    Water     893   55    Quick_Attack   Water_Gun
-Haunter     Ghost     978   57    Quick_Attack   Shadow_Ball
-Haunter     Ghost     970   62    Quick_Attack   Shadow_Ball
-Kakuna      Bug       498   64    Scratch        Struggle
-Haunter     Ghost     453   67    Quick_Attack   Shadow_Ball
-Kakuna      Bug       767   75    Quick_Attack   Struggle
-Squirtle    Water     928   80    Quick_Attack   Water_Gun
-Squirtle    Water     453   89    Quick_Attack   Water_Gun
-Squirtle    Water     468   89    Scratch        Water_Gun
-Pikachu     Electric  783   96    Quick_Attack   Thunderbolt
+49
+Squirtle    Water     563   6     Quick_Attack   Water_Gun      
+Charmander  Fire      956   14    Tackle         Flamethrower   
+Charmander  Fire      900   23    Tackle         Flamethrower   
+Pikachu     Electric  396   23    Tackle         Thunderbolt    
+Pikachu     Electric  424   24    Quick_Attack   Thunderbolt    
+Squirtle    Water     245   24    Quick_Attack   Water_Gun      
+Kakuna      Bug       470   28    Quick_Attack   Struggle       
+Squirtle    Water     470   28    Quick_Attack   Water_Gun      
+Haunter     Ghost     43    34    Quick_Attack   Shadow_Ball    
+Pikachu     Electric  342   34    Quick_Attack   Thunderbolt    
+Haunter     Ghost     670   35    Quick_Attack   Shadow_Ball    
+Haunter     Ghost     523   39    Scratch        Shadow_Ball    
+Kakuna      Bug       181   42    Tackle         Struggle       
+Squirtle    Water     123   45    Quick_Attack   Water_Gun      
+Squirtle    Water     893   55    Quick_Attack   Water_Gun      
+Haunter     Ghost     978   57    Quick_Attack   Shadow_Ball    
+Haunter     Ghost     970   62    Quick_Attack   Shadow_Ball    
+Kakuna      Bug       498   64    Scratch        Struggle       
+Haunter     Ghost     453   67    Quick_Attack   Shadow_Ball    
+Kakuna      Bug       767   75    Quick_Attack   Struggle       
+Squirtle    Water     928   80    Quick_Attack   Water_Gun      
+Squirtle    Water     453   89    Quick_Attack   Water_Gun      
+Squirtle    Water     468   89    Scratch        Water_Gun      
+Pikachu     Electric  783   96    Quick_Attack   Thunderbolt    

@@ -429,14 +429,13 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                 {
                   catchChance = 2;
                   a.subtrPotion();
-                  map1.move(0, 20);
+                  map1.move(10, 20);
                   map1.setColor(white);
                   out << "Razz Berry Thrown!";
                 }
               }
             }while ((key == '1' || key == '2')&& caught == false);
           }
-
         }
       }
     }
