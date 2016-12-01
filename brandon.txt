@@ -2,16 +2,19 @@ brandon
 123
 Blonde
 Black
-Green
+Blue
 Red
-Male
-96
-42
+Female
+153
+14
 5
-0
-5
+89
+65
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
 Haunter     Ghost     181   42    Tackle         Shadow_Ball    
 Kakuna      Bug       181   42    Tackle         Struggle       
 Kakuna      Bug       181   42    Tackle         Struggle       
+Kakuna      Bug       470   28    Quick_Attack   Struggle       
+Squirtle    Water     470   28    Quick_Attack   Water_Gun      
+Charmander  Fire      470   28    Quick_Attack   Flamethrower   

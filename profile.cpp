@@ -406,10 +406,10 @@ void profile::managePokemon(ostream& out, istream& in)
 
 void profile::Pokestop()
 {
-  time_t now = time(0);
-  static time_t last = 0;
+  unsigned int now = int(time(0));
+  static int last = now - 30;
 
-  if(now - last <= 0)
+  if(now - last >= 30)
   {
     srand(time(NULL));
     myBack.pokeball += rand() % 4;

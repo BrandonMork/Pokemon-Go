@@ -263,6 +263,22 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
       //  If you want to add in specific block colors and objects
       //  do it here
+      /*
+      if(x > 27 && x < 29 && y > 15 && y < 17)
+      {
+        map2[x][y].color = red;
+        map2[x][y].character = SQUARE;
+      }
+      */
+      if(((x > 29 && x < 34) || (x > 150 && x < 155) || (x > 235 && x < 240)) && ((y > 15 && y < 18) || (y > 44 && y < 47)))
+      {
+        map2[x][y].color = purple;
+        map2[x][y].character = SQUARE;
+      }
+      //if(x == 96 && y == 44)
+      //  map2[x][y].color = red;
+      //if(x == 166 && y == 157)
+      //  map2[x][y].color = red;
 
 
     }
@@ -317,6 +333,8 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
         map1.setColor(color);
         map1.plot(currX, currY, SQUARE);
 
+        if(map2[prevX][prevY].getColor() == purple)
+          a.Pokestop();
 
         prevX = currX;
         prevY = currY;
