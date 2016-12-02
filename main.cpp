@@ -10,10 +10,24 @@
 
 /*
   Input:
-        The user will be prompted for an initial input to tell whe
+        The user will be prompted for an initial input to tell what that would
+        like to do in the game, then, depending on their choice, whether they
+        choose to create a new user, use and existing user, or exit the game.
+        If they decide to play, then the user will be prompted for input
+        when needed and the program will read in data from their user file
+        that will be used throughout the game
   Update:
-
+        During gameplay and editing, user data like avatar attributes,
+        password, pokemon caught and place on the map. If the user changes
+        any of these values after they are read in at the beginning by either
+        playing the game or editing their profile, then the variables are
+        updated throughout the game
   Draw:
+        At the end of the program, when the user desires to end the game, if
+        they signed in with a profile, then the profile information inside the
+        profile object created for the user will write all of its data to the
+        user's data file in such a way that it could be re-read again when the
+        user signs back into the game and wants to play again.
 */
 
 #include <iostream>           //  cin >> cout <<
