@@ -24,7 +24,8 @@
   - currentX: int
   - currentY: int
   ************************************************
-  + profile():
+  + profile(string, string, string, string, string, string, int,
+            int, backpack):
   + getHair() const: string
   + getEye() const: string
   + getOutfit() const: string
