@@ -87,24 +87,29 @@ void Plotter::clear()
 
 void Plotter::cls( HANDLE hConsole )
 {
-  COORD coordScreen = { 0, 0 };    // here's where we'll home the cursor
+  // here's where we'll home the cursor
+  COORD coordScreen = { 0, 0 };
 
   DWORD cCharsWritten;
-  CONSOLE_SCREEN_BUFFER_INFO csbi; // to get buffer info
-  DWORD dwConSize;                 // number of character cells in the current buffer
+  // to get buffer info
+  CONSOLE_SCREEN_BUFFER_INFO csbi;
+  // number of character cells in the current buffer
+  DWORD dwConSize;
 
   // get the number of character cells in the current buffer
   GetConsoleScreenBufferInfo( hConsole, &csbi );
   dwConSize = csbi.dwSize.X * csbi.dwSize.Y;
 
   // fill the entire screen with blanks
-  FillConsoleOutputCharacter( hConsole, (TCHAR) ' ', dwConSize, coordScreen, &cCharsWritten );
+  FillConsoleOutputCharacter( hConsole, (TCHAR) ' ',
+                             dwConSize, coordScreen, &cCharsWritten );
 
   // get the current text attribute
   GetConsoleScreenBufferInfo( hConsole, &csbi );
 
   // now set the buffer's attributes accordingly
-  FillConsoleOutputAttribute( hConsole, csbi.wAttributes, dwConSize, coordScreen, &cCharsWritten );
+  FillConsoleOutputAttribute( hConsole, csbi.wAttributes,
+                             dwConSize, coordScreen, &cCharsWritten );
 
   // put the cursor at (0, 0)
   SetConsoleCursorPosition( hConsole, coordScreen );
@@ -381,7 +386,8 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                 {
                   map1.move(60, 3);
                   map1.setColor(white);
-                  out << "No More Pokeballs....Please Visit a Pokestop for More";
+                  out << "No More Pokeballs....Please Visit a Pokestop for "
+                      << "More";
                 }
                 else
                 {
@@ -422,8 +428,8 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                 {
                   map1.move(0, 25);
                   map1.setColor(white);
-                  out << "No More Potions....Please Visit a Pokestop for More\n\n"
-                      << "Throw a Pokeball or Run Away";
+                  out << "No More Potions....Please Visit a Pokestop for More"
+                      << "\n\nThrow a Pokeball or Run Away";
                 }
                 else
                 {

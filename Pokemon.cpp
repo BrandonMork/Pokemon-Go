@@ -115,8 +115,8 @@ void Pokemon::randPokemon()
 
 void Pokemon::writePokeInfo(ostream& out)
 {
-  out << left << setw(12) << name << setw(10) << type << setw(6) << cp << setw(6)
-      << hp << setw(15) << move1 << setw(15) << move2 << endl;
+  out << left << setw(12) << name << setw(10) << type << setw(6) << cp
+      << setw(6) << hp << setw(15) << move1 << setw(15) << move2 << endl;
 }
 
 Pokemon::Pokemon(string a, string b, int c, int d, string e, string f)
@@ -458,7 +458,8 @@ void displayCharmander(int x, int y)
           break;
 
         case 4:
-          if((j > 1 && j < 6) || (j > 7 && j < 11) || (j > 16 && j < 19) || j == 20)
+          if((j > 1 && j < 6) || (j > 7 && j < 11) ||
+             (j > 16 && j < 19) || j == 20)
             Charmander[j][i].color = red;
           else if(j == 19)
             Charmander[j][i].color = yellow;
@@ -623,7 +624,8 @@ void displayHaunter(int x, int y)
             Haunter[j][i].color = black;
           break;
         case 8:
-          if((j > 2 && j < 10) || (j > 21 && j < 27) || (j > 12 && j < 21) || j == 1)
+          if((j > 2 && j < 10) || (j > 21 && j < 27) ||
+             (j > 12 && j < 21) || j == 1)
             Haunter[j][i].color = purple;
           else if(j == 12)
             Haunter[j][i].color = white;
@@ -754,7 +756,8 @@ void displaySquirtle(int x, int y)
           break;
 
         case 4:
-          if((j > 1 && j < 6) || (j > 7 && j < 11) || (j > 15 && j < 18) || (j == 19))
+          if((j > 1 && j < 6) || (j > 7 && j < 11) ||
+             (j > 15 && j < 18) || (j == 19))
             Squirtle[j][i].color = cyan;
           else if(j == 6 || j == 11)
             Squirtle[j][i].color = white;

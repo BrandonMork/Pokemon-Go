@@ -106,7 +106,8 @@ char gameMainMenu(ostream& out, istream& in, profile& a)
   do
   {
     p.clear();
-    out << "Welcome " << a.getUser() << "!\n\n" << "What would you like to do?";
+    out << "Welcome " << a.getUser() << "!\n\n"
+        << "What would you like to do?";
 
     if (count > 1)
       out << "\n\nInvalid choice, please try again...";
