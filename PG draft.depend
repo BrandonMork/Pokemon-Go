@@ -143,7 +143,7 @@
 	<stdlib.h>
 	"pokemonMenus.h"
 
-1480701300 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.h
+1480701330 c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\profile.h
 	<string>
 	<iostream>
 	"Pokemon.h"
@@ -170,7 +170,7 @@
 	"plotter.h"
 	<iomanip>
 
-1480700454 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.cpp
+1480701999 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\plotter.cpp
 	"plotter.h"
 
 1480700759 source:c:\users\ryan\desktop\gittask\pokemon-go.git\trunk\pokemon.cpp

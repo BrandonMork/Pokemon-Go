@@ -245,22 +245,22 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
     if (kbhit())
       key = getch();
   }
+  //  Assigning map point characteristics
   for (int x = 0; x <= 260; x++)
   {
     for (y = 0; y <= 60; y++)
     {
+      //  default color and character for grass
       map2[x][y].color = green;
       map2[x][y].character = GRASS;
-      if ((x > 18 && x < 28) || (x > 86 && x < 96) || (x > 156 && x < 166) || (y > 18 && y < 22) || ((y > 40 && y < 44) && x < 157))
+      //  for roads
+      if ((x > 18 && x < 28) || (x > 86 && x < 96) || (x > 156 && x < 166)
+          || (y > 18 && y < 22) || ((y > 40 && y < 44) && x < 157))
       {
         map2[x][y].color = darkyellow;
         map2[x][y].character = SQUARE;
       }
-      /*if ()
-      {
-        map2[x][y].color = darkyellow;
-        map2[x][y].character = SQUARE;
-      }*/
+      //  for water
       if (x > 180 && x < 220 && y > 30 && y < 55)
       {
         map2[x][y].color = blue;
@@ -269,19 +269,20 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
       //  If you want to add in specific block colors and objects
       //  do it here
+
+      // for pokestops
       if(((x > 29 && x < 34) || (x > 150 && x < 155) || (x > 235 && x < 240))
          && ((y > 15 && y < 18) || (y > 44 && y < 47)))
       {
         map2[x][y].color = purple;
         map2[x][y].character = SQUARE;
       }
-
-
     }
   }
   do
   {
     poke = false;
+    //  display map
     for (int i = 0; i < 261; i++)
     {
       for (int j = 0; j < 61; j++)
@@ -291,13 +292,14 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
       }
     }
 
+    //  determine map pointer color
     color = yellow;
     if (a.getOutfit() == "Red")
       color = red;
     else if (a.getOutfit() == "Blue")
       color = blue;
 
-
+    //  movement input and rendering
     while(key != 'b' && poke == false)
     {
       if (kbhit)      // in conio
@@ -322,6 +324,8 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                 currY++;
         }
 
+        //  moving character, re plotting map as needed, assigning profile
+        //  current X and currentY
         Sleep(100);
         map1.setColor(map2[prevX][prevY].getColor());
         map1.plot(prevX, prevY, map2[prevX][prevY].getCharacter());
@@ -338,8 +342,10 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
       }
       if (key != 'b')
       {
+        //  determine if pokemon spawns
         if (rand() % 20 == 5)
         {
+          // display avatar and pokemon
           map1.clear();
           poke = true;
           caught = false;
@@ -373,6 +379,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
           catchChance = 3;
             do
             {
+              //  get pokemon screen command input
               do
               {
                 key = getch();
@@ -389,6 +396,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                 }
                 else
                 {
+                  //  display pokeball being thrown
                   pokeballArt(65, 20);
                   Sleep(1000);
                   clearPoke(65, 20);
@@ -399,6 +407,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                   Sleep(1000);
                   clearPoke(95, 20);
 
+                  //  determine if throw was a catch
                   if(rand() % catchChance == 1)
                   {
                     clearPokemon(115, 20);
@@ -423,6 +432,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
               }
               else if (key == '2')
               {
+                //  throwing a potion
                 if (a.getPotion() == 0)
                 {
                   map1.move(0, 25);
@@ -432,6 +442,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                 }
                 else
                 {
+                  //  changing chance of catch
                   catchChance = 2;
                   a.subtrPotion();
                   map1.move(10, 20);
@@ -447,7 +458,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
   }while(poke == true);
 
+  //  clearing screen and returning to previous function
   map1.setColor(white);
   map1.clear();
-
 }

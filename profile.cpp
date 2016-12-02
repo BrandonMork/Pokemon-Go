@@ -657,7 +657,7 @@ void profile::sortPokemon(ostream& out)
     count = 0;
     do
     {
-
+      //  choose what to sort by
       if (count > 0)
       {
         l.clear();
@@ -681,7 +681,7 @@ void profile::sortPokemon(ostream& out)
           swap = false;
           for (int i = 0; i < (numPokemon - 1); i++)
           {
-
+            //  comparing names
             if (myPokemon[i].getName()[0] > myPokemon[i + 1].getName()[0])
             {
               temp = myPokemon[i + 1];
