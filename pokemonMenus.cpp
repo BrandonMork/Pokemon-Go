@@ -20,7 +20,7 @@ char introMenu(ostream& out, istream& in)
    {
      count++;
 
-     if (count > 1)
+     if (count > 0)
      {
        p.clear();
        out << "Invalid Selection, Please select again...";
