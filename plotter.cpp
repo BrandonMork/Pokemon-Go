@@ -1,5 +1,5 @@
 /*
-* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Author:                 Ryan Keller, Brandon Mork, Alex Lee
 * Assignment Title:       plotter.cpp
 * Assignment Description: The implementation file for the plotter class
 * Due Date:               12/2/2016

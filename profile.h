@@ -1,5 +1,5 @@
 /*
-* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Author:                 Ryan Keller, Brandon Mork, Alex Lee
 * Assignment Title:       profile.h
 * Assignment Description: The header file for the profile class
 * Due Date:               12/2/2016

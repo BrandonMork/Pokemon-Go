@@ -1,5 +1,5 @@
 /*
-* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Author:                 Ryan Keller, Brandon Mork, Alex Lee
 * Assignment Title:       pokemonMenus.h
 * Assignment Description: The header file for main menu customization
 * Due Date:               12/2/2016

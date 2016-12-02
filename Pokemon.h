@@ -1,5 +1,5 @@
 /*
-* Author:                 Brandon Mork, Ryan Keller, Alex Lee
+* Author:                 Ryan Keller, Brandon Mork, Alex Lee
 * Assignment Title:       Pokemon.h
 * Assignment Description: The header file for the pokemon class
 * Due Date:               12/2/2016

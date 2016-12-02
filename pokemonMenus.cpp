@@ -1,5 +1,5 @@
 /*
-* Author:                 Brandon Mork, Ryan Keller, Alexander Lee
+* Author:                 Ryan Keller, Brandon Mork, Alex Lee
 * Assignment Title:       pokemonMenus.cpp
 * Assignment Description: The implementation file for the pokemon menus header
 * Due Date:               12/2/2016
