@@ -30,7 +30,7 @@ int main()
 {
   //  Data Abstraction
   Plotter a;              //  the map plotter
-  int count3 = 1;         //  count to make sure user signs in
+  int count = 1;         //  count to make sure user signs in
   char usrChoice;         //  the choice the user enters
   int potion = 0;         //  number of potions
   int pokeball = 0;       //  number of pokeballs
@@ -70,7 +70,7 @@ int main()
     {
       a.clear();
 
-      if (count3 > 1)
+      if (count > 1)
       {
         in.close();
         cout << "Invalid Username or Password, try again...\n";
@@ -92,8 +92,7 @@ int main()
 
         in >> username >> tempPassword;
       }
-
-      count3++;
+      count++;
 
     }while((!in.is_open() || password != tempPassword) && username != "exit");
 
@@ -120,7 +119,7 @@ int main()
       profile.writeProfInfo(out);
     }
   }
-  system("cls");
+  a.clear();
 
   cout << "\nThank You For Playing!! Come Back and Catch 'Em All!!\n\n";
 
