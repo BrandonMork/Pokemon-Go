@@ -251,16 +251,16 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
     {
       map2[x][y].color = green;
       map2[x][y].character = GRASS;
-      if ((x > 18 && x < 28) || (x > 86 && x < 96) || (x > 156 && x < 166))
+      if ((x > 18 && x < 28) || (x > 86 && x < 96) || (x > 156 && x < 166) || (y > 18 && y < 22) || ((y > 40 && y < 44) && x < 157))
       {
         map2[x][y].color = darkyellow;
         map2[x][y].character = SQUARE;
       }
-      if ((y > 18 && y < 22) || ((y > 40 && y < 44) && x < 157))
+      /*if ()
       {
         map2[x][y].color = darkyellow;
         map2[x][y].character = SQUARE;
-      }
+      }*/
       if (x > 180 && x < 220 && y > 30 && y < 55)
       {
         map2[x][y].color = blue;
@@ -380,8 +380,6 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
 
               if (key == '1')
               {
-                a.subtrPokeball();
-
                 if(a.getPokeball() == 0)
                 {
                   map1.move(60, 3);
@@ -421,6 +419,7 @@ void mapDisplay(ostream& out, int& x, int& y, profile& a)
                     clearPoke(95, 35);
                   }
                 }
+                a.subtrPokeball();
               }
               else if (key == '2')
               {

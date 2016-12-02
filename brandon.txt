@@ -4,9 +4,9 @@ Blonde
 Blue
 Red
 Male
-232
-36
-50
+230
+35
+48
 49
 Squirtle    Water     563   6     Quick_Attack   Water_Gun      
 Charmander  Fire      956   14    Tackle         Flamethrower   
@@ -32,3 +32,4 @@ Squirtle    Water     928   80    Quick_Attack   Water_Gun
 Squirtle    Water     453   89    Quick_Attack   Water_Gun      
 Squirtle    Water     468   89    Scratch        Water_Gun      
 Pikachu     Electric  783   96    Quick_Attack   Thunderbolt    
+Pikachu     Electric  195   66    Headbutt       Thunderbolt    
