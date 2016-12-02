@@ -95,43 +95,41 @@
 	"profile.h"
 	<stdlib.h>
 
-1479696821 source:c:\users\brandon\desktop\poke\trunk\plotter.cpp
-	<iostream>
+1480639066 source:c:\users\brandon\desktop\poke\trunk\plotter.cpp
 	"plotter.h"
-	<ctime>
-	<iostream>
-	"profile.h"
 
-1479696976 c:\users\brandon\desktop\poke\trunk\plotter.h
+1480640459 c:\users\brandon\desktop\poke\trunk\plotter.h
 	<windows.h>
 	<mmsystem.h>
 	<conio.h>
-
-1479698768 c:\users\brandon\desktop\poke\trunk\profile.h
-	<string>
-
-1479696821 source:c:\users\brandon\desktop\poke\trunk\pokemonmenus.cpp
-	<fstream>
-	<iostream>
+	<ctime>
 	"profile.h"
-	<stdlib.h>
-	"plotter.h"
-	"pokemonMenus.h"
-	<conio.h>
-
-1479696821 c:\users\brandon\desktop\poke\trunk\pokemonmenus.h
-
-1479699865 source:c:\users\brandon\desktop\poke\trunk\profile.cpp
 	<iostream>
+
+1480639468 c:\users\brandon\desktop\poke\trunk\profile.h
 	<string>
-	"profile.h"
-	<cstdlib>
+	<iostream>
+	"Pokemon.h"
 	<ctime>
 
-1479696821 source:c:\users\brandon\desktop\poke\trunk\main.cpp
+1480607470 source:c:\users\brandon\desktop\poke\trunk\pokemonmenus.cpp
+	"pokemonMenus.h"
+	"plotter.h"
+
+1480640230 c:\users\brandon\desktop\poke\trunk\pokemonmenus.h
+	<fstream>
+	"profile.h"
+
+1480607470 source:c:\users\brandon\desktop\poke\trunk\profile.cpp
+	"profile.h"
+	"plotter.h"
+	<iomanip>
+
+1480607470 source:c:\users\brandon\desktop\poke\trunk\main.cpp
 	<iostream>
 	<fstream>
 	"profile.h"
+	"plotter.h"
 	<string>
 	<stdlib.h>
 	"pokemonMenus.h"
@@ -233,4 +231,15 @@
 1480450609 source:h:\poke\trunk\profile.cpp
 	"profile.h"
 	"plotter.h"
+
+1480571079 source:c:\users\brandon\desktop\poke\trunk\pokemon.cpp
+	"Pokemon.h"
+	"plotter.h"
+	<iomanip>
+
+1480571079 c:\users\brandon\desktop\poke\trunk\pokemon.h
+	<string>
+	<cstdlib>
+	<time.h>
+	<fstream>
 

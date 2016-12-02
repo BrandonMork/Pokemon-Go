@@ -52,6 +52,7 @@
   + addPokemon(string, string, int, int, string, string, int): void
   + sortPokemon(ostream&): void
   + poketable(ostream&): void
+  + managePokemon(ostream&,istream&): void
   ************************************************
 */
 
@@ -462,6 +463,17 @@ class profile
     */
     void writeProfInfo(ostream&);
 
+    /*
+      Precondition:
+              The player is standing on a purple colored spaced
+      Postcondition:
+              Pokeballs and potions are added to backpack
+      Return:
+              void
+      Description:
+              This function adds pokeballs and potions to your Backpack
+              from 1-5 randomly with a cooldown timer of 30 seconds
+    */
     void Pokestop();
 
     /*

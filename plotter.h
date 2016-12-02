@@ -80,17 +80,102 @@ class Plotter
        char pChar;
        int pInk;
     public:
+
+        /*
+        Precondition:
+
+        Postcondiditon:
+
+        Return:
+
+        Description:
+
+      */
        Plotter();
+
+      /*
+        Precondition:
+
+        Postcondiditon:
+
+        Return:
+
+        Description:
+
+      */
        void clear();
+
+      /*
+        Precondition:
+
+        Postcondiditon:
+
+        Return:
+
+        Description:
+
+      */
        void move(int, int);
+
+      /*
+        Precondition:
+
+        Postcondiditon:
+
+        Return:
+
+        Description:
+
+      */
        void plot(int, int, char);
+
+      /*
+        Precondition:
+
+        Postcondiditon:
+
+        Return:
+
+        Description:
+
+      */
        void setColor(ink);
 };
 
+/*
+  Precondition:
+
+  Postcondiditon:
+
+  Return:
+
+  Description:
+
+*/
 void mapDisplay(ostream&, int&, int&, profile&);
 
+/*
+  Precondition:
+
+  Postcondiditon:
+
+  Return:
+
+  Description:
+
+*/
 void pokeballArt(int, int);
 
+/*
+  Precondition:
+
+  Postcondiditon:
+
+  Return:
+
+  Description:
+
+*/
 void clearPoke(int, int);
 
 //void avatarDisplay(int x, int y, profile);
