@@ -81,74 +81,81 @@ class Plotter
        int pInk;
     public:
 
-        /*
+      /*
         Precondition:
-
+          Default constructor has been called
         Postcondiditon:
-
+          A new constructor is created with x = 0,y = 0,green,square
         Return:
-
+          none
         Description:
-
+          Default constructor for a Plotter
       */
        Plotter();
 
       /*
         Precondition:
-
+          the functions has been called
+          Plotter exists
         Postcondiditon:
-
+          the plotters are removed from the screen
         Return:
-
+          void
         Description:
-
+          clears the screen from all plotters
       */
        void clear();
 
       /*
         Precondition:
-
+          two ints are passed through parameters
+          Plotter exists
         Postcondiditon:
-
+          plotter is moved to coordinates entered and cursor is moved
         Return:
-
+          void
         Description:
-
+          moves the plotter to the coordinates passed through the parameters
+          and move the cursor.
       */
        void move(int, int);
 
       /*
         Precondition:
-
+          two ints and a char are passed through parameters
+          Plotter exists
         Postcondiditon:
-
+          plotter is moved to coordinates entered and cursor is moved
+          the shape of the pixel is determined
         Return:
-
+          void
         Description:
-
+          moves the plotter to the coordinates passed through the parameters
+          and move the cursor and decides the shape of the plot
       */
        void plot(int, int, char);
 
       /*
         Precondition:
-
+          the function i called and an ink is colored through parameters
         Postcondiditon:
-
+          the ink color is set
         Return:
-
+          void
         Description:
-
+          sets the color of the plotter
       */
        void setColor(ink);
 };
 
 /*
   Precondition:
-
+    function is called with ostream&,int&,int&,and profile& passed through
+    parameters
   Postcondiditon:
 
   Return:
-
+    void
   Description:
 
 */
@@ -156,28 +163,27 @@ void mapDisplay(ostream&, int&, int&, profile&);
 
 /*
   Precondition:
-
+    two ints are passed through parameters and the function is called
   Postcondiditon:
-
+    a colored pokeball is plotted at the coordinates
   Return:
-
+    void
   Description:
-
+    plots a colored pokeball on the screen with the given coordinates
 */
 void pokeballArt(int, int);
 
 /*
   Precondition:
-
+    two ints are passed through parameters and the function is called
   Postcondiditon:
-
+    a black pokeball is plotted over the colored pokeball
   Return:
-
+    void
   Description:
+    plots over the pokeball in black with the given coordinates
 
 */
 void clearPoke(int, int);
-
-//void avatarDisplay(int x, int y, profile);
 
 #endif /*PLOTTER_H_*/
