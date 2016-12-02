@@ -2,9 +2,9 @@
 * Author:                 Brandon Mork, Ryan Keller, Alexander Lee
 * Assignment Title:       plotter.cpp
 * Assignment Description: The implementation file for the plotter class
-* Due Date:               11/29/2016
+* Due Date:               12/2/2016
 * Date Created:           11/7/2016
-* Date Last Modified:     11/28/2016
+* Date Last Modified:     11/30/2016
 */
 
 using namespace std;

@@ -2,9 +2,9 @@
 * Author:                 Brandon Mork, Ryan Keller, Alexander Lee
 * Assignment Title:       profile.h
 * Assignment Description: The header file for the profile class
-* Due Date:               11/29/2016
+* Due Date:               12/2/2016
 * Date Created:           11/7/2016
-* Date Last Modified:     11/28/2016
+* Date Last Modified:     11/30/2016
 */
 
 /*
@@ -37,7 +37,6 @@
   + getNumPokemon() const: int
   + setNumPokemon(int): void
   + setPokeball(int): void
-  + setPotion(int): void
   + setPotion(int): void
   + setPassword(ostream&, istream&): void
   + setHair(ostream&, istream&): void

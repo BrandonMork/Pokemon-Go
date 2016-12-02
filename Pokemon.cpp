@@ -2,9 +2,9 @@
 * Author:                 Brandon Mork, Ryan Keller, Alexander Lee
 * Assignment Title:       Pokemon.cpp
 * Assignment Description: The implementation file for the pokemon header
-* Due Date:               11/29/2016
+* Due Date:               12/2/2016
 * Date Created:           11/7/2016
-* Date Last Modified:     11/28/2016
+* Date Last Modified:     11/30/2016
 */
 
 #include "Pokemon.h"
@@ -168,7 +168,6 @@ void clearPokemon(int x, int y)
 void displayPikachu(int x, int y)
 {
   Plotter a;
-  ink color;
   Point Pikachu [19][19];
   for(int i = 0;i < 19;i ++)
   {
@@ -304,7 +303,6 @@ void displayPikachu(int x, int y)
 void displayKakuna(int x, int y)
 {
   Plotter a;
-  ink color;
   Point Kakuna[17][17];
 
   for(int i = 0; i < 17; i++)
@@ -420,7 +418,6 @@ void displayKakuna(int x, int y)
 void displayCharmander(int x, int y)
 {
   Plotter a;
-  ink color;
   Point Charmander[21][16];
 
   for(int i = 0; i < 16; i++)
@@ -568,7 +565,6 @@ void displayCharmander(int x, int y)
 void displayHaunter(int x, int y)
 {
   Plotter a;
-  ink color;
   Point Haunter [30][19];
   for(int i = 0;i < 19;i ++)
   {
@@ -687,7 +683,7 @@ void displayHaunter(int x, int y)
             Haunter[j][i].color = black;
           break;
         case 16:
-          if((j > 11 && j < 18) || j == 3 || j > 4 && j < 7)
+          if((j > 11 && j < 18) || j == 3 || (j > 4 && j < 7))
             Haunter[j][i].color = purple;
           else
             Haunter[j][i].color = black;
@@ -714,7 +710,6 @@ void displayHaunter(int x, int y)
 void displaySquirtle(int x, int y)
 {
   Plotter a;
-  ink color;
   Point Squirtle[21][15];
 
   for(int i = 0; i < 15; i++)

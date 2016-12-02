@@ -3,9 +3,9 @@
   Assignment Title:       Pokemon Go
   Assignment Description: This is a program that contains the game code for
                           Pokemon Go
-  Due Date:               12/3/16
+  Due Date:               12/2/16
   Date Created:           11/7/16
-  Date Last Modified:     11/18/16
+  Date Last Modified:     11/30/16
 */
 
 /*

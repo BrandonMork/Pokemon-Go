@@ -2,9 +2,9 @@
 * Author:                 Brandon Mork, Ryan Keller, Alexander Lee
 * Assignment Title:       profile.cpp
 * Assignment Description: The implementation file for the profile class
-* Due Date:               11/29/2016
+* Due Date:               12/2/2016
 * Date Created:           11/7/2016
-* Date Last Modified:     11/28/2016
+* Date Last Modified:     11/30/2016
 */
 
 #include "profile.h"
@@ -682,7 +682,7 @@ void profile::sortPokemon(ostream& out)
           for (int i = 0; i < (numPokemon - 1); i++)
           {
 
-            if (myPokemon[i].name[0] > myPokemon[i + 1].name[0])
+            if (myPokemon[i].getName()[0] > myPokemon[i + 1].getName()[0])
             {
               temp = myPokemon[i + 1];
               myPokemon[i + 1] = myPokemon[i];
@@ -729,7 +729,7 @@ void profile::sortPokemon(ostream& out)
             }
             else if(myPokemon[i].getCP() == myPokemon[i + 1].getCP())
             {
-              if (myPokemon[i].name[0] > myPokemon[i + 1].name[0])
+              if (myPokemon[i].getName()[0] > myPokemon[i + 1].getName()[0])
               {
                 temp = myPokemon[i + 1];
                 myPokemon[i + 1] = myPokemon[i];
@@ -767,7 +767,7 @@ void profile::sortPokemon(ostream& out)
             }
             else if(myPokemon[i].getHP() == myPokemon[i + 1].getHP())
             {
-              if (myPokemon[i].name[0] > myPokemon[i + 1].name[0])
+              if (myPokemon[i].getName()[0] > myPokemon[i + 1].getName()[0])
               {
                 temp = myPokemon[i + 1];
                 myPokemon[i + 1] = myPokemon[i];
