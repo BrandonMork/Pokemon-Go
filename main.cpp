@@ -29,14 +29,14 @@ using namespace std;
 int main()
 {
   //  Data Abstraction
-  Plotter a;
-  int count3 = 1;
-  char usrChoice;
-  int potion = 0;
-  int pokeball = 0;
-  int xCoor = 130;
-  int yCoor = 30;
-  string userFile;
+  Plotter a;              //  the map plotter
+  int count3 = 1;         //  count to make sure user signs in
+  char usrChoice;         //  the choice the user enters
+  int potion = 0;         //  number of potions
+  int pokeball = 0;       //  number of pokeballs
+  int xCoor = 130;        //  the default x coordinate
+  int yCoor = 30;         //  the default y coordinate
+  string userFile;        //  name of the file for the user
   string password;        //  stores password for account
   string tempPassword;    //  stores password to test validation of password
   string username;        //  stores username
@@ -101,11 +101,13 @@ int main()
     {
 
 
-      in >> hColor >> eColor >> oColor >> gende >> xCoor >> yCoor >> pokeball >> potion;
+      in >> hColor >> eColor >> oColor >> gende >> xCoor >> yCoor
+         >> pokeball >> potion;
 
       backpack myPack(pokeball, potion);
 
-      profile profile(username, password, hColor, eColor, oColor, gende, xCoor, yCoor, myPack);
+      profile profile(username, password, hColor, eColor, oColor,
+                      gende, xCoor, yCoor, myPack);
 
       profile.readPokemon(in);
 
