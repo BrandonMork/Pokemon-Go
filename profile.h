@@ -200,7 +200,7 @@ class profile
       Postcondition:
               The string stored as the outfit color of the profile avatar is
               returned
-              The hair color remains unchanged
+              The outfit color remains unchanged
       Return:
               string
       Description:
@@ -437,7 +437,7 @@ class profile
               a profile object exists
               4 strings and 2 ints exist
       Postcondition:
-              The value of teh strings and ints remains unchanged
+              The value of the strings and ints remains unchanged
               A pokemon object is created at the first available spot in the
               myPokemon array
       Return:
@@ -518,6 +518,7 @@ class profile
       Postcondition:
               The avatar attributes remain unchanged
               The avatar visualization is displayed to stdout
+              the ints remain unchanged
       Return:
               void
       Description:

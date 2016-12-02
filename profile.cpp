@@ -423,6 +423,7 @@ void profile::avatarDisplay(int x, int y)
   char character;
   Point man[40][20];
 
+  //  setting colors based upon avatar attributes
   if (profOutColor == "Red")
       color = red;
   else if (profOutColor == "Blue")
@@ -448,18 +449,21 @@ void profile::avatarDisplay(int x, int y)
             else
               man[j][i].color = black;
             break;
+
         case 1:
             if (j > 15 && j < 25)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 2:
             if (j > 15 && j < 30)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 3:
             if (j > 15 && j < 20)
               man[j][i].color = hair;
@@ -473,6 +477,7 @@ void profile::avatarDisplay(int x, int y)
               man[j][i].color = hair;
             }
             break;
+
         case 4:
             if (j == 23 || (j > 18 && j < 22))
               man[j][i].color = lightgrey;
@@ -489,6 +494,7 @@ void profile::avatarDisplay(int x, int y)
             }
             break;
 
+
         case 5:
             if (j < 25 && j > 15)
               man[j][i].color = lightgrey;
@@ -500,6 +506,7 @@ void profile::avatarDisplay(int x, int y)
               man[j][i].color = hair;
             }
             break;
+
         case 6:
             if (j < 24 && j > 15)
               man[j][i].color = lightgrey;
@@ -512,6 +519,7 @@ void profile::avatarDisplay(int x, int y)
               man[j][i].color = hair;
             }
             break;
+
         case 7:
             if (j < 30 && j > 9)
             {
@@ -524,6 +532,7 @@ void profile::avatarDisplay(int x, int y)
             else
               man[j][i].color = black;
             break;
+
         case 8:
             if (j < 30 && j > 9)
             {
@@ -535,6 +544,7 @@ void profile::avatarDisplay(int x, int y)
             else
               man[j][i].color = black;
             break;
+
         case 9:
             if (j < 30 && j > 9)
             {
@@ -542,10 +552,10 @@ void profile::avatarDisplay(int x, int y)
               if (j == 13 || j == 26)
                 man[j][i].color = cyan;
             }
-
             else
               man[j][i].color = black;
             break;
+
         case 10:
             if (j < 30 && j > 9)
             {
@@ -553,10 +563,10 @@ void profile::avatarDisplay(int x, int y)
               if (j == 13 || j == 26)
                 man[j][i].color = cyan;
             }
-
             else
               man[j][i].color = black;
             break;
+
         case 11:
             if (j < 30 && j > 9)
             {
@@ -564,10 +574,10 @@ void profile::avatarDisplay(int x, int y)
               if (j == 13 || j == 26)
                 man[j][i].color = black;
             }
-
             else
               man[j][i].color = black;
             break;
+
         case 12:
             if (j < 30 && j > 9)
             {
@@ -577,46 +587,52 @@ void profile::avatarDisplay(int x, int y)
               if (j == 13 || j == 26)
                 man[j][i].color = black;
             }
-
             else
               man[j][i].color = black;
             break;
+
         case 13:
             if (j < 26 && j > 13)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 14:
             if (j < 26 && j > 13)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 15:
             if (j < 26 && j > 13)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 16:
             if (j < 26 && j > 13)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 17:
             if (j < 26 && j > 13)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 18:
             if (j < 26 && j > 13)
               man[j][i].color = color;
             else
               man[j][i].color = black;
             break;
+
         case 19:
             if (j < 28 && j > 11)
               man[j][i].color = white;
@@ -692,6 +708,7 @@ void profile::sortPokemon(ostream& out)
             else if (myPokemon[i].getName()[0]
                      == myPokemon[i + 1].getName()[0])
             {
+              //  secondary sorts if names are same
               if (myPokemon[i].getCP() > myPokemon[i + 1].getCP())
               {
                 temp = myPokemon[i + 1];
@@ -720,6 +737,7 @@ void profile::sortPokemon(ostream& out)
           swap = false;
           for(int i = 0; i < (numPokemon - 1); i++)
           {
+            //  comparing cp
             if (myPokemon[i].getCP() > myPokemon[i + 1].getCP())
             {
               temp = myPokemon[i + 1];
@@ -729,6 +747,7 @@ void profile::sortPokemon(ostream& out)
             }
             else if(myPokemon[i].getCP() == myPokemon[i + 1].getCP())
             {
+              //  secondary sorts if cp is the same
               if (myPokemon[i].getName()[0] > myPokemon[i + 1].getName()[0])
               {
                 temp = myPokemon[i + 1];
@@ -758,6 +777,7 @@ void profile::sortPokemon(ostream& out)
           swap = false;
           for(int i = 0; i < (numPokemon - 1); i++)
           {
+            //  comparing hp
             if (myPokemon[i].getHP() > myPokemon[i + 1].getHP())
             {
               temp = myPokemon[i + 1];
@@ -767,6 +787,7 @@ void profile::sortPokemon(ostream& out)
             }
             else if(myPokemon[i].getHP() == myPokemon[i + 1].getHP())
             {
+              //  secondary sorts if hp is same
               if (myPokemon[i].getName()[0] > myPokemon[i + 1].getName()[0])
               {
                 temp = myPokemon[i + 1];

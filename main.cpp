@@ -10,7 +10,7 @@
 
 /*
   Input:
-
+        The user will be prompted for an initial input to tell whe
   Update:
 
   Draw:

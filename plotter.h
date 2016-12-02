@@ -155,13 +155,16 @@ class Plotter
   Postcondiditon:
     Map is displayed,Colors the player,Allows the player to move,Displays
     the menus and calculates random pokemon encounters
+    profile attributes are unchanged other than pokemon in array and current x
+    and y
   Return:
     void
   Description:
-    The map is created with pre-determined roads,lakes,and pokestops. The color
-    of the character is decided based off of the profile. Displays the menus to
-    catch the pokemon, display the pokemon, and clear the pokemon. Allows for
-    the movement of the user with restricted movement based on boundaries.
+    The map is created with pre-determined roads,lakes,and pokestops. The
+    color of the character is decided based off of the profile. Displays the
+    menus to catch the pokemon, display the pokemon, and clear the pokemon.
+    Allows for the movement of the user with restricted movement based on
+    boundaries. The profile x and y position is updated as well as the pokemon
 
 */
 void mapDisplay(ostream&, int&, int&, profile&);
@@ -171,6 +174,7 @@ void mapDisplay(ostream&, int&, int&, profile&);
     two ints are passed through parameters and the function is called
   Postcondiditon:
     a colored pokeball is plotted at the coordinates
+    the ints remain unchanged
   Return:
     void
   Description:
@@ -183,6 +187,7 @@ void pokeballArt(int, int);
     two ints are passed through parameters and the function is called
   Postcondiditon:
     a black pokeball is plotted over the colored pokeball
+    the ints remain unchanged
   Return:
     void
   Description:

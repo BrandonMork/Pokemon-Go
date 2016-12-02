@@ -20,7 +20,6 @@
         an output stream has been declared
   Postcondiditon:
         a char is returned
-
   Return:
         char
   Description:
@@ -53,11 +52,11 @@ void newUserCreation(ostream&, istream&);
         profile is passed through parameters
   Postcondiditon:
         Map is created or profile menu is called or game closes
-
+        profile attributes are changed as necessary by the processes called
   Return:
         void
   Description:
-        Depending one the user's choice, either the map is created,
+        Depending on the user's choice, either the map is created,
         the edit profile menu is displayed, or the game closes
 */
 void gameMenuLoop(ostream&, istream&, profile&);
@@ -69,7 +68,7 @@ void gameMenuLoop(ostream&, istream&, profile&);
         profile is passed through parameters
   Postcondiditon:
         a char is returned
-
+        profile attributes are changed as necessary by the processes called
   Return:
         char
   Description:
@@ -82,10 +81,11 @@ char gameMainMenu(ostream&, istream&, profile&);
   Precondition:
         an input stream has been declared
         an output stream has been declared
+        a profile object has been passed through parameters
   Postcondiditon:
         Display menu for the user to decide what they would like to change in
         their profile.
-
+        profile attributes are changed as necessary by the processes called
   Return:
         void
   Description:

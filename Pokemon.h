@@ -68,7 +68,7 @@ class Pokemon
 
     /*
       Precondition:
-          4 string and 2 int values  exist
+          4 string and 2 int values exist
       PostCondition:
           a pokemon object is created from the arguments
           the arguments remain unchanged
@@ -84,7 +84,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists with a designated name
       PostCondition:
-          name of the Pokemon object is returned
+          name of the Pokemon object is returned and unchanged
       Return:
           string
       Description:
@@ -96,7 +96,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists with a designated type
       PostCondition:
-          type of the Pokemon object is returned
+          type of the Pokemon object is returned and unchanged
       Return:
           string
       Description:
@@ -108,7 +108,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists with a designated cp
       PostCondition:
-          cp of the Pokemon object is returned
+          cp of the Pokemon object is returned and unchanged
       Return:
           int
       Description:
@@ -120,7 +120,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists with a designated hp
       PostCondition:
-          hp of the Pokemon object is returned
+          hp of the Pokemon object is returned and unchanged
       Return:
           int
       Description:
@@ -132,7 +132,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists with a designated first move
       PostCondition:
-          the first move of the Pokemon object is returned
+          the first move of the Pokemon object is returned and unchanged
       Return:
           string
       Description:
@@ -144,7 +144,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists with a designated second move
       PostCondition:
-          the second move of the Pokemon object is returned
+          the second move of the Pokemon object is returned and in unchanged
       Return:
           string
       Description:
@@ -154,31 +154,31 @@ class Pokemon
 
     /*
       Precondition:
-          a Pokemon object exists with a designated cp
+          a Pokemon object exists
       PostCondition:
           cp value is randomized from 10 to 1000 and returned
       Return:
           int
       Description:
-          this function randomizes the cp of a Pokemon object  from 10 to 1000
+          this function randomizes the cp of a Pokemon object from 10 to 1000
     */
     int randCP();
 
     /*
       Precondition:
-          a Pokemon object exists with a designated hp
+          a Pokemon object exists
       PostCondition:
           hp value is randomized from 10 to 100 and returned
       Return:
           int
       Description:
-          this function randomizes the hp of a Pokemon object  from 10 to 100
+          this function randomizes the hp of a Pokemon object from 10 to 100
     */
     int randHP();
 
     /*
       Precondition:
-          a Pokemon object exists with a designated move1
+          a Pokemon object exists
       PostCondition:
           first move is randomized from the list of possible first moves
            and is returned
@@ -194,7 +194,7 @@ class Pokemon
       Precondition:
           a Pokemon object exists
       PostCondition:
-          name, type, cp, hp, move1, move2 are all changed
+          a pokemon object is generated with random attributes
       Return:
           void
       Description:
@@ -222,26 +222,27 @@ class Pokemon
 
     /*
       Precondition:
-        The function is called with an x and y coordinate and a pokemon exists
+          The function is called with an x and y coordinate and a pokemon
+          exists
       Postcondiditon:
-        The pokemon selected is displayed on the screen
+          The pokemon selected is displayed on the screen
       Return:
-        void
+          void
       Description:
-        Plots the pokemon on the screen with the given x and y coordinates
-        from the user. The function decideds which pokemon to plot.
+          Plots the pokemon on the screen with the given x and y coordinates
+          from the user. The function decideds which pokemon to plot.
     */
     void displayPokemon(int, int);
 
     /*
       Precondition:
-        The function is called and a pokemon exists
+          a pokemon object exists
       Postcondiditon:
-        The pokemon and it's attributes is deleted
+          The pokemon and it's attributes are cleared
       Return:
-        void
+          void
       Description:
-        Removes the pokemon and all of its attributes
+          Removes the pokemon and all of its attributes
     */
     void clearPokeData();
 
@@ -250,79 +251,86 @@ class Pokemon
 
 /*
   Precondition:
-    The function is called with an x and y coordinate
+      Two integer values exist
   Postcondiditon:
-    The squirtle pokemon is plotted to the screen based on the x and y coords
+      The squirtle pokemon is plotted to the screen based on the x and y
+      coords
+      The integers remain unchanged
   Return:
-    void
+      void
   Description:
-    The color of each pixel is decided as it runs through the dimensions of the
-    pokemon and is plotted with the specified color.
+      The color of each space is decided as it runs through the dimensions of
+      the pokemon and is plotted with the specified color.
 */
 void displaySquirtle(int, int);
 
 /*
   Precondition:
-    The function is called with an x and y coordinate
+      Two integer values exist
   Postcondiditon:
-    The pikachu pokemon is plotted to the screen based on the x and y coords
+      The pikachu pokemon is plotted to the screen based on the x and y coords
+      The integers remain unchanged
   Return:
-    void
+      void
   Description:
-    The color of each pixel is decided as it runs through the dimensions of the
-    pokemon and is plotted with the specified color.
+      The color of each space is decided as it runs through the dimensions of
+      the pokemon and is plotted with the specified color.
 */
 void displayPikachu(int, int);
 
 /*
   Precondition:
-    The function is called with an x and y coordinate
+      Two integer values exist
   Postcondiditon:
-    The charmander pokemon is plotted to the screen based on the x and y coords
+      The charmander pokemon is plotted to the screen based on the x and y
+      coords
   Return:
-    void
+      void
   Description:
-    The color of each pixel is decided as it runs through the dimensions of the
-    pokemon and is plotted with the specified color.
+      The color of each spot is decided as it runs through the dimensions of
+      the pokemon and is plotted with the specified color.
 */
 void displayCharmander(int, int);
 
 /*
   Precondition:
-    The function is called with an x and y coordinate
+      Two integer values exist
   Postcondiditon:
-    The kakuna pokemon is plotted to the screen based on the x and y coords
+      The kakuna pokemon is plotted to the screen based on the x and y coords
+      The integers remain unchanged
   Return:
-    void
+      void
   Description:
-    The color of each pixel is decided as it runs through the dimensions of the
-    pokemon and is plotted with the specified color.
+      The color of each pixel is decided as it runs through the dimensions of
+      the pokemon and is plotted with the specified color.
 */
 void displayKakuna(int, int);
 
 /*
   Precondition:
-    The function is called with an x and y coordinate
+      Two integer values exist
   Postcondiditon:
-    The haunter pokemon is plotted to the screen based on the x and y coords
+      The haunter pokemon is plotted to the screen based on the x and y coords
+      The integers remain unchanged
   Return:
-    void
+      void
   Description:
-    The color of each pixel is decided as it runs through the dimensions of the
-    pokemon and is plotted with the specified color.
+      The color of each spot is decided as it runs through the dimensions of
+      the pokemon and is plotted with the specified color.
 */
 void displayHaunter(int, int);
 
 /*
   Precondition:
-    the function is called with an x and y coordinate
+      Two integer values exist
   Postcondiditon:
-    Black sqaures are plotted over the specified location
+      Black squares are plotted over the specified location
+      The integers remain unchanged
   Return:
-    void
+      void
   Description:
-    The pokemon will be plotted over with this function so that it looks like
-    it vanished
+      The pokemon will be plotted over with this function so that it looks
+      like it vanished
 */
 void clearPokemon(int, int);
 

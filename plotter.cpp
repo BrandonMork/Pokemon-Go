@@ -122,7 +122,6 @@ void pokeballArt(int x, int y)
   Plotter pokeball;
   char character;
   Point pok[14][7];
-  ink color;
 
   for (int i = 0; i < 7; i++)
   {
