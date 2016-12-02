@@ -98,7 +98,7 @@
 1480639066 source:c:\users\brandon\desktop\poke\trunk\plotter.cpp
 	"plotter.h"
 
-1480641645 c:\users\brandon\desktop\poke\trunk\plotter.h
+1480642777 c:\users\brandon\desktop\poke\trunk\plotter.h
 	<windows.h>
 	<mmsystem.h>
 	<conio.h>
@@ -237,7 +237,7 @@
 	"plotter.h"
 	<iomanip>
 
-1480571079 c:\users\brandon\desktop\poke\trunk\pokemon.h
+1480642531 c:\users\brandon\desktop\poke\trunk\pokemon.h
 	<string>
 	<cstdlib>
 	<time.h>

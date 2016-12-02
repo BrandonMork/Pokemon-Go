@@ -32,6 +32,8 @@
   + randMove1(): string
   + randPokemon(): void
   + writePokeInfo(ostream&): void
+  + displayPokemon(int, int): void
+  + clearPokeData(): void
   ************************************************
 */
 
@@ -216,24 +218,112 @@ class Pokemon
     */
     void writePokeInfo(ostream&);
 
+    /*
+      Precondition:
+        The function is called with an x and y coordinate and a pokemon exists
+      Postcondiditon:
+        The pokemon selected is displayed on the screen
+      Return:
+        void
+      Description:
+        Plots the pokemon on the screen with the given x and y coordinates
+        from the user. The function decideds which pokemon to plot.
+    */
     void displayPokemon(int, int);
 
+    /*
+      Precondition:
+        The function is called and a pokemon exists
+      Postcondiditon:
+        The pokemon and it's attributes is deleted
+      Return:
+        void
+      Description:
+        Removes the pokemon and all of its attributes
+    */
     void clearPokeData();
 
 
 };
 
+/*
+  Precondition:
+    The function is called with an x and y coordinate
+  Postcondiditon:
+    The squirtle pokemon is plotted to the screen based on the x and y coords
+  Return:
+    void
+  Description:
+    The color of each pixel is decided as it runs through the dimensions of the
+    pokemon and is plotted with the specified color.
+*/
 void displaySquirtle(int, int);
 
+/*
+  Precondition:
+    The function is called with an x and y coordinate
+  Postcondiditon:
+    The pikachu pokemon is plotted to the screen based on the x and y coords
+  Return:
+    void
+  Description:
+    The color of each pixel is decided as it runs through the dimensions of the
+    pokemon and is plotted with the specified color.
+*/
 void displayPikachu(int, int);
 
+/*
+  Precondition:
+    The function is called with an x and y coordinate
+  Postcondiditon:
+    The charmander pokemon is plotted to the screen based on the x and y coords
+  Return:
+    void
+  Description:
+    The color of each pixel is decided as it runs through the dimensions of the
+    pokemon and is plotted with the specified color.
+*/
 void displayCharmander(int, int);
 
+/*
+  Precondition:
+    The function is called with an x and y coordinate
+  Postcondiditon:
+    The kakuna pokemon is plotted to the screen based on the x and y coords
+  Return:
+    void
+  Description:
+    The color of each pixel is decided as it runs through the dimensions of the
+    pokemon and is plotted with the specified color.
+*/
 void displayKakuna(int, int);
 
+/*
+  Precondition:
+    The function is called with an x and y coordinate
+  Postcondiditon:
+    The haunter pokemon is plotted to the screen based on the x and y coords
+  Return:
+    void
+  Description:
+    The color of each pixel is decided as it runs through the dimensions of the
+    pokemon and is plotted with the specified color.
+*/
 void displayHaunter(int, int);
 
+/*
+  Precondition:
+    the function is called with an x and y coordinate
+  Postcondiditon:
+    Black sqaures are plotted over the specified location
+  Return:
+    void
+  Description:
+    The pokemon will be plotted over with this function so that it looks like
+    it vanished
+*/
 void clearPokemon(int, int);
+
 #endif // POKEMON_H
 
 

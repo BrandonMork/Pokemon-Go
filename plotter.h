@@ -153,10 +153,15 @@ class Plotter
     function is called with ostream&,int&,int&,and profile& passed through
     parameters
   Postcondiditon:
-
+    Map is displayed,Colors the player,Allows the player to move,Displays
+    the menus and calculates random pokemon encounters
   Return:
     void
   Description:
+    The map is created with pre-determined roads,lakes,and pokestops. The color
+    of the character is decided based off of the profile. Displays the menus to
+    catch the pokemon, display the pokemon, and clear the pokemon. Allows for
+    the movement of the user with restricted movement based on boundaries.
 
 */
 void mapDisplay(ostream&, int&, int&, profile&);
