@@ -183,7 +183,7 @@ void editProfileMenu(ostream& out, istream& in, profile& a)
                     avChoice != '4' && avChoice != '5');
 
             p.clear();
-            if (avChoice != '6')
+            if (avChoice != '5')
             {
               switch (avChoice)
               {
