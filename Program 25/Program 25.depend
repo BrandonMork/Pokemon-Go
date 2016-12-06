@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1480995693 source:c:\users\mork.ecs\desktop\program 25\main.cpp
+	<iostream>
+	<fstream>
+	<iomanip>
+	"prog25Functions.h"
+
+1480994984 c:\users\mork.ecs\desktop\program 25\prog25functions.h
+	<string>
+
+1480995061 source:c:\users\mork.ecs\desktop\program 25\prog25functions.cpp
+	"prog25Functions.h"
+
