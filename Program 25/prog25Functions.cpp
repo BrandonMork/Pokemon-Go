@@ -16,16 +16,14 @@ Transactions::Transactions()
 {
   TransID = 1;
   CatID = 1;
-  Description = "Pay Check";
   Deposit = "D";
   Amount = 0.0;
 }
 
-Transactions::Transactions(int t,int i,double a,string des, string dep)
+Transactions::Transactions(int t,int i,double a,string dep)
 {
   TransID = t;
   CatID = i;
-  Description = des;
   Deposit = dep;
   Amount = a;
 }

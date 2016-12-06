@@ -1,6 +1,32 @@
+
+/*
+*************************************************
+                  Transactions
+*************************************************
+ - TransID: int
+ - CatID: int
+ - Amount: double
+ - Deposit: string
+*************************************************
+ + Transactions()
+ + Transactions(int,int,double,string);
+ + getTransID() const: int
+ + int getCatID() const: int
+ + string getDeposit() const: string
+ + double getAmount() const: double
+ + void setAmount(double): void
+ + void setTransID(int): void
+ + void setCatID(int): void
+ + void setDeposit(string): void
+ + double calcBalance(): double
+*************************************************
+*/
+
 #ifndef PROG25FUNCTIONS_H
 #define PROG25FUNCTIONS_H
+
 #include <string>
+
 using namespace std;
 
 struct Categories
@@ -18,22 +44,19 @@ class Transactions
     int TransID;
     int CatID;
     double Amount;
-    string Description;
     string Deposit;
 
   public:
     Transactions();
-    Transactions(int,int,double,string,string);
+    Transactions(int,int,double,string);
     int getTransID() const;
     int getCatID() const;
     string getDeposit() const;
-    //string getDescription() const;
     double getAmount() const;
     void setAmount(double);
     void setTransID(int);
     void setCatID(int);
     void setDeposit(string);
-    //void setDescription(string);
     double calcBalance();
 
 };
